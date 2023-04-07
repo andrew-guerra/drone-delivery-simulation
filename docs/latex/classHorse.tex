@@ -1,0 +1,317 @@
+\hypertarget{classHorse}{}\doxysection{Horse Class Reference}
+\label{classHorse}\index{Horse@{Horse}}
+
+
+A spawnable creature that walks around like a lil guy.  
+
+
+
+
+{\ttfamily \#include $<$Horse.\+h$>$}
+
+
+
+Inheritance diagram for Horse\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=128pt]{classHorse__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Horse\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=128pt]{classHorse__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classHorse_a608213bad930e41e4eb7f7d5f5ee364c}{Horse}} (Json\+Object \&obj)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classHorse}{Horse}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classHorse_a99fa977e45cd260c8c87076ceae6b501}{$\sim$\+Horse}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{classHorse}{Horse}} object. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classHorse_a51e66e108bff39c5e95f51469fd6f39e}{Get\+Speed}} () const
+\begin{DoxyCompactList}\small\item\em Gets the speed of the \mbox{\hyperlink{classHorse}{Horse}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVector3}{Vector3}} \mbox{\hyperlink{classHorse_ae5a5bb4c8f6809ff4d0648c7310a246c}{Get\+Position}} () const
+\begin{DoxyCompactList}\small\item\em Gets the position of the \mbox{\hyperlink{classHorse}{Horse}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVector3}{Vector3}} \mbox{\hyperlink{classHorse_a6099d74a25196d2c06458b4f78ee7005}{Get\+Direction}} () const
+\begin{DoxyCompactList}\small\item\em Gets the direction of the \mbox{\hyperlink{classHorse}{Horse}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVector3}{Vector3}} \mbox{\hyperlink{classHorse_ab8bb0bf7f19beacd0b9819a336d3a420}{Get\+Destination}} () const
+\begin{DoxyCompactList}\small\item\em Gets the destination of the \mbox{\hyperlink{classHorse}{Horse}}. \end{DoxyCompactList}\item 
+Json\+Object \mbox{\hyperlink{classHorse_a5b0294f6eceefc61fd7f325e10ab68e1}{Get\+Details}} () const
+\begin{DoxyCompactList}\small\item\em Gets the details information of the \mbox{\hyperlink{classHorse}{Horse}}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classHorse_a94c718fdccabee4e2a7a2227858cadd9}{Get\+Availability}} () const
+\begin{DoxyCompactList}\small\item\em Gets the availability of the \mbox{\hyperlink{classHorse}{Horse}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVector3}{Vector3}} \mbox{\hyperlink{classHorse_a4917161b79726beaf7785403553af32d}{Get\+Random\+Dest}} ()
+\begin{DoxyCompactList}\small\item\em Get a random destination on the map. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHorse_ac507238920606677c90d45260168ba12}{Update}} (double dt, std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$ scheduler)
+\begin{DoxyCompactList}\small\item\em Updates the \mbox{\hyperlink{classHorse}{Horse}}\textquotesingle{}s position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHorse_a7c7f012a70098bbf2947809fc2f82e4a}{Set\+Position}} (\mbox{\hyperlink{classVector3}{Vector3}} pos\+\_\+)
+\begin{DoxyCompactList}\small\item\em Sets the position of the \mbox{\hyperlink{classHorse}{Horse}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHorse_a12026514ddcc466dc2d6d5b8718b3a68}{Set\+Direction}} (\mbox{\hyperlink{classVector3}{Vector3}} dir\+\_\+)
+\begin{DoxyCompactList}\small\item\em Sets the direction of the \mbox{\hyperlink{classHorse}{Horse}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHorse_a307c28d71adb6411c73a57e86121a885}{Set\+Destination}} (\mbox{\hyperlink{classVector3}{Vector3}} des\+\_\+)
+\begin{DoxyCompactList}\small\item\em Sets the destination of the \mbox{\hyperlink{classHorse}{Horse}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHorse_aeb72f3b1fc47483ca0701487ae51c38a}{Rotate}} (double angle)
+\begin{DoxyCompactList}\small\item\em Rotates the \mbox{\hyperlink{classHorse}{Horse}} by a specified angle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A spawnable creature that walks around like a lil guy. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classHorse_a608213bad930e41e4eb7f7d5f5ee364c}\label{classHorse_a608213bad930e41e4eb7f7d5f5ee364c}} 
+\index{Horse@{Horse}!Horse@{Horse}}
+\index{Horse@{Horse}!Horse@{Horse}}
+\doxysubsubsection{\texorpdfstring{Horse()}{Horse()}}
+{\footnotesize\ttfamily Horse\+::\+Horse (\begin{DoxyParamCaption}\item[{Json\+Object \&}]{obj }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classHorse}{Horse}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & json details \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classHorse_a99fa977e45cd260c8c87076ceae6b501}\label{classHorse_a99fa977e45cd260c8c87076ceae6b501}} 
+\index{Horse@{Horse}!````~Horse@{$\sim$Horse}}
+\index{````~Horse@{$\sim$Horse}!Horse@{Horse}}
+\doxysubsubsection{\texorpdfstring{$\sim$Horse()}{~Horse()}}
+{\footnotesize\ttfamily Horse\+::$\sim$\+Horse (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destroy the \mbox{\hyperlink{classHorse}{Horse}} object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classHorse_a94c718fdccabee4e2a7a2227858cadd9}\label{classHorse_a94c718fdccabee4e2a7a2227858cadd9}} 
+\index{Horse@{Horse}!GetAvailability@{GetAvailability}}
+\index{GetAvailability@{GetAvailability}!Horse@{Horse}}
+\doxysubsubsection{\texorpdfstring{GetAvailability()}{GetAvailability()}}
+{\footnotesize\ttfamily bool Horse\+::\+Get\+Availability (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Gets the availability of the \mbox{\hyperlink{classHorse}{Horse}}. 
+
+\begin{DoxyReturn}{Returns}
+The availability of the \mbox{\hyperlink{classHorse}{Horse}} 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity_a90348881691a37d5c3d63265ed3463b1}{I\+Entity}}.
+
+\mbox{\Hypertarget{classHorse_ab8bb0bf7f19beacd0b9819a336d3a420}\label{classHorse_ab8bb0bf7f19beacd0b9819a336d3a420}} 
+\index{Horse@{Horse}!GetDestination@{GetDestination}}
+\index{GetDestination@{GetDestination}!Horse@{Horse}}
+\doxysubsubsection{\texorpdfstring{GetDestination()}{GetDestination()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVector3}{Vector3}} Horse\+::\+Get\+Destination (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Gets the destination of the \mbox{\hyperlink{classHorse}{Horse}}. 
+
+\begin{DoxyReturn}{Returns}
+The destination of the \mbox{\hyperlink{classHorse}{Horse}} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIEntity_a0dcaf865938ab1fb49c8389b5e580d90}{I\+Entity}}.
+
+\mbox{\Hypertarget{classHorse_a5b0294f6eceefc61fd7f325e10ab68e1}\label{classHorse_a5b0294f6eceefc61fd7f325e10ab68e1}} 
+\index{Horse@{Horse}!GetDetails@{GetDetails}}
+\index{GetDetails@{GetDetails}!Horse@{Horse}}
+\doxysubsubsection{\texorpdfstring{GetDetails()}{GetDetails()}}
+{\footnotesize\ttfamily Json\+Object Horse\+::\+Get\+Details (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Gets the details information of the \mbox{\hyperlink{classHorse}{Horse}}. 
+
+\begin{DoxyReturn}{Returns}
+The details information of the \mbox{\hyperlink{classHorse}{Horse}} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIEntity_a97c799400ce05e2ff2566adc4d7b9634}{I\+Entity}}.
+
+\mbox{\Hypertarget{classHorse_a6099d74a25196d2c06458b4f78ee7005}\label{classHorse_a6099d74a25196d2c06458b4f78ee7005}} 
+\index{Horse@{Horse}!GetDirection@{GetDirection}}
+\index{GetDirection@{GetDirection}!Horse@{Horse}}
+\doxysubsubsection{\texorpdfstring{GetDirection()}{GetDirection()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVector3}{Vector3}} Horse\+::\+Get\+Direction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Gets the direction of the \mbox{\hyperlink{classHorse}{Horse}}. 
+
+\begin{DoxyReturn}{Returns}
+The direction of the \mbox{\hyperlink{classHorse}{Horse}} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIEntity_aa99a8fef8b22195a5113c38ef51f086d}{I\+Entity}}.
+
+\mbox{\Hypertarget{classHorse_ae5a5bb4c8f6809ff4d0648c7310a246c}\label{classHorse_ae5a5bb4c8f6809ff4d0648c7310a246c}} 
+\index{Horse@{Horse}!GetPosition@{GetPosition}}
+\index{GetPosition@{GetPosition}!Horse@{Horse}}
+\doxysubsubsection{\texorpdfstring{GetPosition()}{GetPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVector3}{Vector3}} Horse\+::\+Get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Gets the position of the \mbox{\hyperlink{classHorse}{Horse}}. 
+
+\begin{DoxyReturn}{Returns}
+The position of the \mbox{\hyperlink{classHorse}{Horse}} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIEntity_a9bc32587aab91761fc0e718612498199}{I\+Entity}}.
+
+\mbox{\Hypertarget{classHorse_a4917161b79726beaf7785403553af32d}\label{classHorse_a4917161b79726beaf7785403553af32d}} 
+\index{Horse@{Horse}!GetRandomDest@{GetRandomDest}}
+\index{GetRandomDest@{GetRandomDest}!Horse@{Horse}}
+\doxysubsubsection{\texorpdfstring{GetRandomDest()}{GetRandomDest()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVector3}{Vector3}} Horse\+::\+Get\+Random\+Dest (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get a random destination on the map. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classVector3}{Vector3}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classHorse_a51e66e108bff39c5e95f51469fd6f39e}\label{classHorse_a51e66e108bff39c5e95f51469fd6f39e}} 
+\index{Horse@{Horse}!GetSpeed@{GetSpeed}}
+\index{GetSpeed@{GetSpeed}!Horse@{Horse}}
+\doxysubsubsection{\texorpdfstring{GetSpeed()}{GetSpeed()}}
+{\footnotesize\ttfamily float Horse\+::\+Get\+Speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Gets the speed of the \mbox{\hyperlink{classHorse}{Horse}}. 
+
+\begin{DoxyReturn}{Returns}
+The speed of the \mbox{\hyperlink{classHorse}{Horse}} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIEntity_a6520d2b1dc71d092bab38ef9f5cc9ff4}{I\+Entity}}.
+
+\mbox{\Hypertarget{classHorse_aeb72f3b1fc47483ca0701487ae51c38a}\label{classHorse_aeb72f3b1fc47483ca0701487ae51c38a}} 
+\index{Horse@{Horse}!Rotate@{Rotate}}
+\index{Rotate@{Rotate}!Horse@{Horse}}
+\doxysubsubsection{\texorpdfstring{Rotate()}{Rotate()}}
+{\footnotesize\ttfamily void Horse\+::\+Rotate (\begin{DoxyParamCaption}\item[{double}]{angle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Rotates the \mbox{\hyperlink{classHorse}{Horse}} by a specified angle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em angle} & Angle to rotate \mbox{\hyperlink{classHorse}{Horse}} by \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity_a4c109baa4179c28422623a7d3b2e9f82}{I\+Entity}}.
+
+\mbox{\Hypertarget{classHorse_a307c28d71adb6411c73a57e86121a885}\label{classHorse_a307c28d71adb6411c73a57e86121a885}} 
+\index{Horse@{Horse}!SetDestination@{SetDestination}}
+\index{SetDestination@{SetDestination}!Horse@{Horse}}
+\doxysubsubsection{\texorpdfstring{SetDestination()}{SetDestination()}}
+{\footnotesize\ttfamily void Horse\+::\+Set\+Destination (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVector3}{Vector3}}}]{des\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Sets the destination of the \mbox{\hyperlink{classHorse}{Horse}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em des\+\_\+} & The new destination of the \mbox{\hyperlink{classHorse}{Horse}} \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity_aa473000823f673e9d7b89aed3cd3fc5c}{I\+Entity}}.
+
+\mbox{\Hypertarget{classHorse_a12026514ddcc466dc2d6d5b8718b3a68}\label{classHorse_a12026514ddcc466dc2d6d5b8718b3a68}} 
+\index{Horse@{Horse}!SetDirection@{SetDirection}}
+\index{SetDirection@{SetDirection}!Horse@{Horse}}
+\doxysubsubsection{\texorpdfstring{SetDirection()}{SetDirection()}}
+{\footnotesize\ttfamily void Horse\+::\+Set\+Direction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVector3}{Vector3}}}]{dir\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Sets the direction of the \mbox{\hyperlink{classHorse}{Horse}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dir\+\_\+} & The new direction of the \mbox{\hyperlink{classHorse}{Horse}} \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity_a64bfaa448a929ca71693ff3e2edb9d97}{I\+Entity}}.
+
+\mbox{\Hypertarget{classHorse_a7c7f012a70098bbf2947809fc2f82e4a}\label{classHorse_a7c7f012a70098bbf2947809fc2f82e4a}} 
+\index{Horse@{Horse}!SetPosition@{SetPosition}}
+\index{SetPosition@{SetPosition}!Horse@{Horse}}
+\doxysubsubsection{\texorpdfstring{SetPosition()}{SetPosition()}}
+{\footnotesize\ttfamily void Horse\+::\+Set\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVector3}{Vector3}}}]{pos\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Sets the position of the \mbox{\hyperlink{classHorse}{Horse}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos\+\_\+} & The new position of the \mbox{\hyperlink{classHorse}{Horse}} \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity_af0475048b09dc13ed6cf8e7c7be2ae6b}{I\+Entity}}.
+
+\mbox{\Hypertarget{classHorse_ac507238920606677c90d45260168ba12}\label{classHorse_ac507238920606677c90d45260168ba12}} 
+\index{Horse@{Horse}!Update@{Update}}
+\index{Update@{Update}!Horse@{Horse}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Horse\+::\+Update (\begin{DoxyParamCaption}\item[{double}]{dt,  }\item[{std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$}]{scheduler }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Updates the \mbox{\hyperlink{classHorse}{Horse}}\textquotesingle{}s position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & Delta time \\
+\hline
+{\em scheduler} & Vector containing all the entities in the system \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity_a9a8e8588fd85c7b0d813d60686d4dc2c}{I\+Entity}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/brock450/csci3081w/csci-\/3081w-\/\+S23/\+Team-\/010-\/31-\/homework4/libs/transit/include/Horse.\+h\item 
+/home/brock450/csci3081w/csci-\/3081w-\/\+S23/\+Team-\/010-\/31-\/homework4/libs/transit/src/Horse.\+cc\end{DoxyCompactItemize}

@@ -1,0 +1,333 @@
+\hypertarget{classHelicopter}{}\doxysection{Helicopter Class Reference}
+\label{classHelicopter}\index{Helicopter@{Helicopter}}
+
+
+\mbox{\hyperlink{classHelicopter}{Helicopter}} that goes float float chop chop Spawn one in when sim is started.  
+
+
+
+
+{\ttfamily \#include $<$Helicopter.\+h$>$}
+
+
+
+Inheritance diagram for Helicopter\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=147pt]{classHelicopter__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Helicopter\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=147pt]{classHelicopter__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classHelicopter_a729e9ff6a148d20c9112818f950a177a}{Helicopter}} (Json\+Object \&obj)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classHelicopter}{Helicopter}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classHelicopter_ac8d3ea9aa358c9758096a26616fae953}{$\sim$\+Helicopter}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{classHelicopter}{Helicopter}} object. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classHelicopter_aff4570a488480c2cf70a6f96cec52d37}{Get\+Speed}} () const
+\begin{DoxyCompactList}\small\item\em Get the Speed float. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVector3}{Vector3}} \mbox{\hyperlink{classHelicopter_a8db916733a82877fa98f9223854cdd54}{Get\+Position}} () const
+\begin{DoxyCompactList}\small\item\em Get the Position vector. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVector3}{Vector3}} \mbox{\hyperlink{classHelicopter_aef5fe3c3a5029d6da923f123ed308898}{Get\+Direction}} () const
+\begin{DoxyCompactList}\small\item\em Get the Direction vector. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVector3}{Vector3}} \mbox{\hyperlink{classHelicopter_adc65020147c682911cc8f15ab6bb11d6}{Get\+Destination}} () const
+\begin{DoxyCompactList}\small\item\em Get the Destination vector. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVector3}{Vector3}} \mbox{\hyperlink{classHelicopter_a6a514bedb196d943bfceb63aaee5aa18}{Get\+Random\+Dest}} ()
+\begin{DoxyCompactList}\small\item\em Get a random destination for the helicopter to go to. \end{DoxyCompactList}\item 
+Json\+Object \mbox{\hyperlink{classHelicopter_ae2d381f2ea007904fd7a5f5e6418cb83}{Get\+Details}} () const
+\begin{DoxyCompactList}\small\item\em Get the Details of the object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHelicopter_a40a86f3aee09c2825dfe27851072791c}{Update}} (double dt, std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$ scheduler)
+\begin{DoxyCompactList}\small\item\em Move the helicopter with the sim. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHelicopter_a0a7386badb41e8f39b14095ffbfd4efd}{Set\+Position}} (\mbox{\hyperlink{classVector3}{Vector3}} pos\+\_\+)
+\begin{DoxyCompactList}\small\item\em Set the Position vector. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHelicopter_a00794cb2f624ca1b3d01c5920377afaf}{Set\+Direction}} (\mbox{\hyperlink{classVector3}{Vector3}} dir\+\_\+)
+\begin{DoxyCompactList}\small\item\em Set the Direction vector. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHelicopter_a2ed1e8574f7b4d2dcf4f521008cf7286}{Set\+Destination}} (\mbox{\hyperlink{classVector3}{Vector3}} des\+\_\+)
+\begin{DoxyCompactList}\small\item\em Set the Destination vector. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHelicopter_ad1211b18d9db476bfa2c61afead9ffb8}{Rotate}} (double angle)
+\begin{DoxyCompactList}\small\item\em Rotate the helicopter based on some angle. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classHelicopter_ac5367f0bff526ed489110d45792d9b55}{Helicopter}} (const \mbox{\hyperlink{classHelicopter}{Helicopter}} \&helicopter)=delete
+\begin{DoxyCompactList}\small\item\em Delete copy constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classHelicopter}{Helicopter}} \& \mbox{\hyperlink{classHelicopter_ad66763e415f619d0904409d7f2cdc13e}{operator=}} (const \mbox{\hyperlink{classHelicopter}{Helicopter}} \&helicopter)=delete
+\begin{DoxyCompactList}\small\item\em Delete equals op. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classHelicopter}{Helicopter}} that goes float float chop chop Spawn one in when sim is started. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classHelicopter_a729e9ff6a148d20c9112818f950a177a}\label{classHelicopter_a729e9ff6a148d20c9112818f950a177a}} 
+\index{Helicopter@{Helicopter}!Helicopter@{Helicopter}}
+\index{Helicopter@{Helicopter}!Helicopter@{Helicopter}}
+\doxysubsubsection{\texorpdfstring{Helicopter()}{Helicopter()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Helicopter\+::\+Helicopter (\begin{DoxyParamCaption}\item[{Json\+Object \&}]{obj }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classHelicopter}{Helicopter}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classHelicopter_ac8d3ea9aa358c9758096a26616fae953}\label{classHelicopter_ac8d3ea9aa358c9758096a26616fae953}} 
+\index{Helicopter@{Helicopter}!````~Helicopter@{$\sim$Helicopter}}
+\index{````~Helicopter@{$\sim$Helicopter}!Helicopter@{Helicopter}}
+\doxysubsubsection{\texorpdfstring{$\sim$Helicopter()}{~Helicopter()}}
+{\footnotesize\ttfamily Helicopter\+::$\sim$\+Helicopter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destroy the \mbox{\hyperlink{classHelicopter}{Helicopter}} object. 
+
+\mbox{\Hypertarget{classHelicopter_ac5367f0bff526ed489110d45792d9b55}\label{classHelicopter_ac5367f0bff526ed489110d45792d9b55}} 
+\index{Helicopter@{Helicopter}!Helicopter@{Helicopter}}
+\index{Helicopter@{Helicopter}!Helicopter@{Helicopter}}
+\doxysubsubsection{\texorpdfstring{Helicopter()}{Helicopter()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Helicopter\+::\+Helicopter (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classHelicopter}{Helicopter}} \&}]{helicopter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Delete copy constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em helicopter} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classHelicopter_adc65020147c682911cc8f15ab6bb11d6}\label{classHelicopter_adc65020147c682911cc8f15ab6bb11d6}} 
+\index{Helicopter@{Helicopter}!GetDestination@{GetDestination}}
+\index{GetDestination@{GetDestination}!Helicopter@{Helicopter}}
+\doxysubsubsection{\texorpdfstring{GetDestination()}{GetDestination()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVector3}{Vector3}} Helicopter\+::\+Get\+Destination (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Get the Destination vector. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classVector3}{Vector3}} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIEntity_a0dcaf865938ab1fb49c8389b5e580d90}{I\+Entity}}.
+
+\mbox{\Hypertarget{classHelicopter_ae2d381f2ea007904fd7a5f5e6418cb83}\label{classHelicopter_ae2d381f2ea007904fd7a5f5e6418cb83}} 
+\index{Helicopter@{Helicopter}!GetDetails@{GetDetails}}
+\index{GetDetails@{GetDetails}!Helicopter@{Helicopter}}
+\doxysubsubsection{\texorpdfstring{GetDetails()}{GetDetails()}}
+{\footnotesize\ttfamily Json\+Object Helicopter\+::\+Get\+Details (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Get the Details of the object. 
+
+\begin{DoxyReturn}{Returns}
+Json\+Object 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIEntity_a97c799400ce05e2ff2566adc4d7b9634}{I\+Entity}}.
+
+\mbox{\Hypertarget{classHelicopter_aef5fe3c3a5029d6da923f123ed308898}\label{classHelicopter_aef5fe3c3a5029d6da923f123ed308898}} 
+\index{Helicopter@{Helicopter}!GetDirection@{GetDirection}}
+\index{GetDirection@{GetDirection}!Helicopter@{Helicopter}}
+\doxysubsubsection{\texorpdfstring{GetDirection()}{GetDirection()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVector3}{Vector3}} Helicopter\+::\+Get\+Direction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Get the Direction vector. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classVector3}{Vector3}} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIEntity_aa99a8fef8b22195a5113c38ef51f086d}{I\+Entity}}.
+
+\mbox{\Hypertarget{classHelicopter_a8db916733a82877fa98f9223854cdd54}\label{classHelicopter_a8db916733a82877fa98f9223854cdd54}} 
+\index{Helicopter@{Helicopter}!GetPosition@{GetPosition}}
+\index{GetPosition@{GetPosition}!Helicopter@{Helicopter}}
+\doxysubsubsection{\texorpdfstring{GetPosition()}{GetPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVector3}{Vector3}} Helicopter\+::\+Get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Get the Position vector. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classVector3}{Vector3}} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIEntity_a9bc32587aab91761fc0e718612498199}{I\+Entity}}.
+
+\mbox{\Hypertarget{classHelicopter_a6a514bedb196d943bfceb63aaee5aa18}\label{classHelicopter_a6a514bedb196d943bfceb63aaee5aa18}} 
+\index{Helicopter@{Helicopter}!GetRandomDest@{GetRandomDest}}
+\index{GetRandomDest@{GetRandomDest}!Helicopter@{Helicopter}}
+\doxysubsubsection{\texorpdfstring{GetRandomDest()}{GetRandomDest()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVector3}{Vector3}} Helicopter\+::\+Get\+Random\+Dest (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get a random destination for the helicopter to go to. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classVector3}{Vector3}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classHelicopter_aff4570a488480c2cf70a6f96cec52d37}\label{classHelicopter_aff4570a488480c2cf70a6f96cec52d37}} 
+\index{Helicopter@{Helicopter}!GetSpeed@{GetSpeed}}
+\index{GetSpeed@{GetSpeed}!Helicopter@{Helicopter}}
+\doxysubsubsection{\texorpdfstring{GetSpeed()}{GetSpeed()}}
+{\footnotesize\ttfamily float Helicopter\+::\+Get\+Speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Get the Speed float. 
+
+\begin{DoxyReturn}{Returns}
+float 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIEntity_a6520d2b1dc71d092bab38ef9f5cc9ff4}{I\+Entity}}.
+
+\mbox{\Hypertarget{classHelicopter_ad66763e415f619d0904409d7f2cdc13e}\label{classHelicopter_ad66763e415f619d0904409d7f2cdc13e}} 
+\index{Helicopter@{Helicopter}!operator=@{operator=}}
+\index{operator=@{operator=}!Helicopter@{Helicopter}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classHelicopter}{Helicopter}}\& Helicopter\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classHelicopter}{Helicopter}} \&}]{helicopter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Delete equals op. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em helicopter} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classHelicopter}{Helicopter}}\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classHelicopter_ad1211b18d9db476bfa2c61afead9ffb8}\label{classHelicopter_ad1211b18d9db476bfa2c61afead9ffb8}} 
+\index{Helicopter@{Helicopter}!Rotate@{Rotate}}
+\index{Rotate@{Rotate}!Helicopter@{Helicopter}}
+\doxysubsubsection{\texorpdfstring{Rotate()}{Rotate()}}
+{\footnotesize\ttfamily void Helicopter\+::\+Rotate (\begin{DoxyParamCaption}\item[{double}]{angle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Rotate the helicopter based on some angle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em angle} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity_a4c109baa4179c28422623a7d3b2e9f82}{I\+Entity}}.
+
+\mbox{\Hypertarget{classHelicopter_a2ed1e8574f7b4d2dcf4f521008cf7286}\label{classHelicopter_a2ed1e8574f7b4d2dcf4f521008cf7286}} 
+\index{Helicopter@{Helicopter}!SetDestination@{SetDestination}}
+\index{SetDestination@{SetDestination}!Helicopter@{Helicopter}}
+\doxysubsubsection{\texorpdfstring{SetDestination()}{SetDestination()}}
+{\footnotesize\ttfamily void Helicopter\+::\+Set\+Destination (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVector3}{Vector3}}}]{des\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Set the Destination vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em des\+\_\+} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity_aa473000823f673e9d7b89aed3cd3fc5c}{I\+Entity}}.
+
+\mbox{\Hypertarget{classHelicopter_a00794cb2f624ca1b3d01c5920377afaf}\label{classHelicopter_a00794cb2f624ca1b3d01c5920377afaf}} 
+\index{Helicopter@{Helicopter}!SetDirection@{SetDirection}}
+\index{SetDirection@{SetDirection}!Helicopter@{Helicopter}}
+\doxysubsubsection{\texorpdfstring{SetDirection()}{SetDirection()}}
+{\footnotesize\ttfamily void Helicopter\+::\+Set\+Direction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVector3}{Vector3}}}]{dir\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Set the Direction vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dir\+\_\+} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity_a64bfaa448a929ca71693ff3e2edb9d97}{I\+Entity}}.
+
+\mbox{\Hypertarget{classHelicopter_a0a7386badb41e8f39b14095ffbfd4efd}\label{classHelicopter_a0a7386badb41e8f39b14095ffbfd4efd}} 
+\index{Helicopter@{Helicopter}!SetPosition@{SetPosition}}
+\index{SetPosition@{SetPosition}!Helicopter@{Helicopter}}
+\doxysubsubsection{\texorpdfstring{SetPosition()}{SetPosition()}}
+{\footnotesize\ttfamily void Helicopter\+::\+Set\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVector3}{Vector3}}}]{pos\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Set the Position vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos\+\_\+} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity_af0475048b09dc13ed6cf8e7c7be2ae6b}{I\+Entity}}.
+
+\mbox{\Hypertarget{classHelicopter_a40a86f3aee09c2825dfe27851072791c}\label{classHelicopter_a40a86f3aee09c2825dfe27851072791c}} 
+\index{Helicopter@{Helicopter}!Update@{Update}}
+\index{Update@{Update}!Helicopter@{Helicopter}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Helicopter\+::\+Update (\begin{DoxyParamCaption}\item[{double}]{dt,  }\item[{std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$}]{scheduler }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Move the helicopter with the sim. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & sim time \\
+\hline
+{\em scheduler} & entity scheduler/interaction \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity_a9a8e8588fd85c7b0d813d60686d4dc2c}{I\+Entity}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/brock450/csci3081w/csci-\/3081w-\/\+S23/\+Team-\/010-\/31-\/homework4/libs/transit/include/Helicopter.\+h\item 
+/home/brock450/csci3081w/csci-\/3081w-\/\+S23/\+Team-\/010-\/31-\/homework4/libs/transit/src/Helicopter.\+cc\end{DoxyCompactItemize}

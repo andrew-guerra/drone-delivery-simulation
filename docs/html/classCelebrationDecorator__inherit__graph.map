@@ -1,0 +1,6 @@
+<map id="CelebrationDecorator" name="CelebrationDecorator">
+<area shape="rect" id="node1" title="A decorator that adds a celebration to the end of a strategy." alt="" coords="55,80,216,107"/>
+<area shape="rect" id="node3" href="$classJumpDecorator.html" title="A decorator that adds a jump to the end of a strategy." alt="" coords="5,155,124,181"/>
+<area shape="rect" id="node4" href="$classSpinDecorator.html" title="A decorator that adds a spin to the end of a strategy." alt="" coords="149,155,263,181"/>
+<area shape="rect" id="node2" href="$classIStrategy.html" title="Interface for different pathing strategies." alt="" coords="95,5,176,32"/>
+</map>
