@@ -1,5 +1,6 @@
 #ifndef BATTERY_DECORATOR_H_
 #define BATTERY_DECORATOR_H_
+#include "IEntity.h"
 
 class BatteryDecorator{
     protected:
@@ -13,5 +14,7 @@ class BatteryDecorator{
 
         void Update(double dt);
 
-        float CalculateDistance(vector3 destination, IStrategy *movement_strategy);
-}
+        double GetStrategyDistance();
+};
+
+#endif
