@@ -9,24 +9,34 @@ BatteryDecorator::BatteryDecorator(IEntity *entity){
 // }
 
 void BatteryDecorator::Update(double dt){
+    //Maybe battery drain is just a function of time. 
+    //Then the drone finds the time it will take to travel the destination 
     this->battery_life -= dt;
-    
 }
 
-double BatteryDecorator::GetStrategyDistance(){
+double BatteryDecorator::GetDistanceToDestination(){
     std::string strategyName = entity->GetStrategyName();
-    EuclideanDistance dist(); //Declare a new EuclidianDistance obj called dist for the Calculate method
+    EuclideanDistance dist = EuclideanDistance(); //Declare a new EuclidianDistance obj called dist for the Calculate method
     std::vector< std::vector<float> > path;
     double distance = 0;
+    std::vector<float> pos;
+    std::vector<float> des;
+    
+    pos[0] = entity->GetPosition().x;
+    pos[1] = entity->GetPosition().y;
+    pos[2] = entity->GetPosition().z;
+    des[0] = entity->GetDestination().x;
+    des[1] = entity->GetDestination().y;
+    des[2] = entity->GetDestination().z;
     
     if (strategyName.compare("astar") == 0) {
-        path = entity->graph->GetPath(entity->GetPosition(),entity->GetDestination(), AStar::Default());
+        path = entity->GetGraph()->GetPath(pos, des, AStar::Default());
 
     } else if (strategyName.compare("dfs") == 0) {
-        path = entity->graph->GetPath(entity->GetPosition(),entity->GetDestination(), DepthFirstSearch::Default());
+        path = entity->GetGraph()->GetPath(pos, des, DepthFirstSearch::Default());
 
     } else if (strategyName.compare("dijkstra") == 0) {
-        path = entity->graph->GetPath(entity->GetPosition(),entity->GetDestination(), Dijkstra::Default());
+        path = entity->GetGraph()->GetPath(pos, des, Dijkstra::Default());
     }
 
     //calculate the distance between every point
@@ -35,4 +45,9 @@ double BatteryDecorator::GetStrategyDistance(){
     }
 
     return distance;
+}
+
+bool BatteryDecorator::CanReachDestination(){
+    double distance = GetDistanceToDestination();
+    
 }

@@ -116,6 +116,13 @@ class IEntity {
   void SetGraph(const IGraph* graph) { this->graph = graph; }
 
   /**
+   * @brief Get the Graph object
+   * 
+   * @return IGraph* 
+   */
+  const IGraph *GetGraph() { return graph; }
+
+  /**
    * @brief Sets the position of the entity.
    * @param pos_ The desired position of the entity.
    */
