@@ -14,6 +14,10 @@ ChargingStation::ChargingStation(JsonObject& obj) : details(obj) {
     speed = obj["speed"];
 }
 
+void ChargingStation::Update(double dt, std::vector<IEntity*> scheduler) {
+    std::cout << "updated 1 tick" << std::endl;
+}
+
 ChargingStation::~ChargingStation(){
     delete graph;
 }
