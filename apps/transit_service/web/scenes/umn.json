@@ -67,10 +67,11 @@
             "type": "charging_station",
             "name": "Charging-Station-Humphrey",
             "mesh": "assets/model/charging_station.glb",
-            "position": [172, 254.1, -167.623],
-            "scale": [0.005, 0.005, 0.005],
+            "position": [172, 300.1, -50.623],
+            "scale": [0.5, 0.5, 0.5],
             "rotation": [0, 0, 0, 0],
             "direction": [1,0,0],
+            "speed": 0.0,
             "offset": [0, -0.5, 0]
         }
     },
