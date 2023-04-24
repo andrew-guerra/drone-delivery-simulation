@@ -86,6 +86,12 @@ class Drone : public IEntity {
   void GetNearestEntity(std::vector<IEntity*> scheduler);
 
   /**
+   * @brief Gets the nearest entity 
+   * @return Returns the drone's nearest entity
+  */
+  IEntity *GetEntity() {return nearestEntity};
+
+  /**
    * @brief Updates the drone's position
    * @param dt Delta time
    * @param scheduler Vector containing all the entities in the system
