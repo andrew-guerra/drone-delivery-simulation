@@ -4,11 +4,26 @@
 #include "IEntity.h"
 #include "math/vector3.h"
 
-
+/**
+ * @brief The ChargingStation object itself
+ * 
+ * Holds the required IEntity virtual functionality, but 
+ * the ChargingStation does not actually do much work
+ * 
+ */
 class ChargingStation : public IEntity {
 
     public:
+        /**
+         * @brief Construct a new Charging Station object
+         * 
+         * @param obj 
+         */
         ChargingStation(JsonObject& obj);
+        /**
+         * @brief Destroy the Charging Station object
+         * 
+         */
         ~ChargingStation();
         float GetSpeed() const { return speed; }
         /**
