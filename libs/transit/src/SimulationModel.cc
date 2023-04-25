@@ -37,8 +37,8 @@ void SimulationModel::CreateEntity(JsonObject& entity) {
   myNewEntity->SetGraph(graph);
 
   // Wrap newly-created drones with the battery decorator. 
-  if(myNewEntity.GetId().compare("drone") == 0){
-    myNewEntity = BatteryDecorator(myNewEntity);
+  if(name.compare("drone") == 0){
+    myNewEntity = new BatteryDecorator(myNewEntity);
   }
   
   // Call AddEntity to add it to the view

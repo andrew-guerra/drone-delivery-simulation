@@ -89,7 +89,7 @@ class Drone : public IEntity {
    * @brief Gets the nearest entity 
    * @return Returns the drone's nearest entity
   */
-  IEntity *GetEntity() {return nearestEntity};
+  IEntity *GetEntity() {return nearestEntity;}
 
   /**
    * @brief Updates the drone's position

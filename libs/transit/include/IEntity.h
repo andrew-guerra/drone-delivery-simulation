@@ -158,6 +158,12 @@ class IEntity {
    */
   virtual void Jump(double height) {}
 
+  /**
+   * @brief Get the entity object associated with the class (if it exists)
+   * @return The IEntity object associated with the class
+  */
+  virtual IEntity* GetEntity() {}
+
  protected:
   int id;
   const IGraph* graph;
