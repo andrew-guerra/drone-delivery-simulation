@@ -42,6 +42,7 @@ void SimulationModel::CreateEntity(JsonObject& entity) {
   if(name.compare("drone") == 0){
     myNewEntity = new BatteryDecorator(myNewEntity);
   }
+  // myNewEntity->SetGraph(graph);  //unsure if this is needed
   
   // Call AddEntity to add it to the view
   controller.AddEntity(*myNewEntity);
@@ -74,6 +75,11 @@ void SimulationModel::ScheduleTrip(JsonObject& details) {
 /// Updates the simulation
 void SimulationModel::Update(double dt) {
   for (int i = 0; i < entities.size(); i++) {
+    JsonObject details = entities[i]->GetDetails();
+    std::string type = details["type"];
+    if(type.compare("drone")==0){
+      std::cout << entities[i]->GetSpeed() << std::endl;
+    }
     entities[i]->Update(dt, scheduler);
     controller.UpdateEntity(*entities[i]);
   }

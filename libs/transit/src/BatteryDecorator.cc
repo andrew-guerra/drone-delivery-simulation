@@ -6,10 +6,6 @@ BatteryDecorator::BatteryDecorator(IEntity *entity){
     this->charging = false;
 }
 
-// BatteryDecorator::~BatteryDecorator(){
-    // delete entity;
-// }
-
 
 double BatteryDecorator::GetDistanceToDestination(IEntity *entity){
     std::string strategyName = entity->GetStrategyName();
@@ -45,13 +41,17 @@ double BatteryDecorator::GetDistanceToDestination(IEntity *entity){
     return distance;
 }
 
-IEntity * GetClosestChargingStation(std::vector<float> location, std::vector<IEntity*> scheduler){
+IEntity * BatteryDecorator::GetClosestChargingStation(std::vector<float> location, std::vector<IEntity*> scheduler){
     IEntity* closest;
     EuclideanDistance eucDist;
     double minDist = 9999999999999999.0;
     for(int i = 0; i<scheduler.size(); i++){
-        //might have to change id name
-        if(instanceof<ChargingStation> scheduler[i]){
+        //Get the entity's details 
+        JsonObject details = scheduler[i]->GetDetails();
+        std::string name = details["type"];
+        //If the entity is a charging station then get its position and compare
+        if(name.compare("charging_station") == 0){
+            std::cout << "found one" << std::endl;
             std::vector<float> curr;
             curr.push_back(scheduler[i]->GetPosition().x);
             curr.push_back(scheduler[i]->GetPosition().y);
@@ -95,6 +95,17 @@ void BatteryDecorator::Update(double dt, std::vector<IEntity*> scheduler){
     // Maybe battery drain is just a function of time. 
     // Then the drone finds the time it will take to travel the destination 
 
+    // enum options {charging, routing}
+    // enum options opts;
+    // switch(opts){
+    //     case charging:
+
+    //         break;
+    //     case routing:
+
+    //         break;
+    // }
+    
     if(charging){
         this->battery_life += 4*dt;
         if(battery_life >= MAX_BATTERY){
@@ -115,8 +126,22 @@ void BatteryDecorator::Update(double dt, std::vector<IEntity*> scheduler){
     }
 }
 
-// Vector3 BatteryDecorator::GetPosition() const {};
-// Vector3 BatteryDecorator::GetDirection() const {};
-// Vector3 BatteryDecorator::GetDestination() const {};
-// JsonObject BatteryDecorator::GetDetails() const {};
-// float BatteryDecorator::GetSpeed() const {};
+Vector3 BatteryDecorator::GetPosition() const {
+    return entity->GetPosition();
+}
+
+Vector3 BatteryDecorator::GetDirection() const {
+    return entity->GetDirection();
+}
+
+Vector3 BatteryDecorator::GetDestination() const {
+    return entity->GetDestination();
+}
+
+JsonObject BatteryDecorator::GetDetails() const {
+    return entity->GetDetails();
+}
+
+float BatteryDecorator::GetSpeed() const {
+    return entity->GetSpeed();
+}
