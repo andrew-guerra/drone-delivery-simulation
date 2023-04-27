@@ -13,6 +13,7 @@
 #include "CelebrationDecorator.h"
 #include "JumpDecorator.h"
 #include "SpinDecorator.h"
+#include "BatteryDecorator.h"
 #include "math/vector3.h"
 
 // Represents a drone in a physical system.
@@ -83,6 +84,12 @@ class Drone : public IEntity {
    * @param scheduler Vector containing all the entities in the system
    */
   void GetNearestEntity(std::vector<IEntity*> scheduler);
+
+  /**
+   * @brief Gets the nearest entity 
+   * @return Returns the drone's nearest entity
+  */
+  IEntity *GetEntity() {return nearestEntity;}
 
   /**
    * @brief Updates the drone's position
