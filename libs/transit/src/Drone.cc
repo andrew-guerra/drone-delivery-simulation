@@ -44,6 +44,7 @@ void Drone::GetNearestEntity(std::vector<IEntity*> scheduler) {
 }
 
 void Drone::Update(double dt, std::vector<IEntity*> scheduler) {
+  // std::cout << "drone update" << std::endl;
   if (available) {
     GetNearestEntity(scheduler);
   }

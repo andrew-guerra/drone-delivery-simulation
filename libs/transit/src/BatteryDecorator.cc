@@ -95,6 +95,8 @@ void BatteryDecorator::Update(double dt, std::vector<IEntity*> scheduler){
     // Maybe battery drain is just a function of time. 
     // Then the drone finds the time it will take to travel the destination 
 
+    std::cout << "Battery update" << std::endl;
+    entity->Update(dt, scheduler);
     // enum options {charging, routing}
     // enum options opts;
     // switch(opts){
@@ -106,24 +108,25 @@ void BatteryDecorator::Update(double dt, std::vector<IEntity*> scheduler){
     //         break;
     // }
     
-    if(charging){
-        this->battery_life += 4*dt;
-        if(battery_life >= MAX_BATTERY){
-            charging = false;
-        }
-    }else{
-        this->battery_life -= dt;
-    }
+    // if(charging){
+    //     this->battery_life += 4*dt;
+    //     if(battery_life >= MAX_BATTERY){
+    //         charging = false;
+    //     }
+    // }else{
+    //     this->battery_life -= dt;
+    // }
 
-    if(!entity->GetAvailability()){
-        // If drone has picked up an entity then we can do calculations on that entity. 
-        if(CanReachDestination(scheduler)){
+    // if(!entity->GetAvailability()){
+    //     // If drone has picked up an entity then we can do calculations on that entity. 
+    //     if(CanReachDestination(scheduler)){
             
-        }
-    }
-    else{
-        entity->Update(dt, scheduler);
-    }
+    //     }
+    // }
+    // else{
+    //     entity->Update(dt, scheduler);
+    // }
+
 }
 
 Vector3 BatteryDecorator::GetPosition() const {
