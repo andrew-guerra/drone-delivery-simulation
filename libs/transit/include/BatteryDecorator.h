@@ -1,16 +1,15 @@
 #ifndef BATTERY_DECORATOR_H_
 #define BATTERY_DECORATOR_H_
-#include "IEntity.h"
+// #include "IEntity.h"
+// #include "IStrategy.h"
+#include "BeelineStrategy.h"
 #include "../include/routing/astar.h"
 #include "../include/routing/depth_first_search.h"
 #include "../include/routing/dijkstra.h"
 // #include "../include/routing/beeline.h"
 
-// Simulation dimensions x -> [0,1000], z -> [0, 600]
-// let's make the drone battery large enough to go from corner to corner before a recharge-> 1166.19 units
-// thus 1166.19 / (30 units/sec) = 38.87 seconds before recharge
-// This means battery life is just the number of seconds the drone can fly for (or stay idle it's all the same)
-const double MAX_BATTERY = 38.87;
+// Battery life is just the number of seconds the drone can fly for (or stay idle it's all the same)
+const double MAX_BATTERY = 70.00;
 
 class BatteryDecorator : public IEntity{
     protected:
@@ -19,6 +18,12 @@ class BatteryDecorator : public IEntity{
         // This is the number of units of time (seconds?) that the drone can stay in the air
         double battery_life;
         bool charging;
+        Vector3 entity_dest;
+        std::vector<IEntity*> sim_entities;
+        bool needToCalcDist;
+        bool canReach;
+        enum options {toCharger, Charging, Default};
+
 
     public:
 
@@ -26,9 +31,11 @@ class BatteryDecorator : public IEntity{
 
         ~BatteryDecorator() {};
 
+        void AddSimEntities(std::vector<IEntity*> entities);
+
         void Update(double dt, std::vector<IEntity*> scheduler);
 
-        bool CanReachDestination(std::vector<IEntity*> scheduler);
+        bool CanReachDestination();
 
         IEntity* GetClosestChargingStation(std::vector<float> location, std::vector<IEntity*> scheduler);
 

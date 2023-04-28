@@ -72,7 +72,7 @@ void SimulationModel::Update(double dt) {
     JsonObject details = entities[i]->GetDetails();
     std::string type = details["type"];
     if(type.compare("drone")==0){
-      // std::cout << entities[i]->GetSpeed() << std::endl;
+      static_cast<BatteryDecorator*>(entities[i])->AddSimEntities(entities);
     }
     entities[i]->Update(dt, scheduler);
     controller.UpdateEntity(*entities[i]);
