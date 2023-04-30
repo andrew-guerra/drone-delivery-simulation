@@ -18,6 +18,8 @@ class BatteryDecorator : public IEntity{
         // This is the number of units of time (seconds?) that the drone can stay in the air
         double battery_life;
         bool charging;
+        bool travelingToCharge;
+        bool deliveringRobot;
         Vector3 entity_dest;
         std::vector<IEntity*> sim_entities;
         bool needToCalcDist;
