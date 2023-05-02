@@ -40,9 +40,6 @@ void Drone::GetNearestEntity(std::vector<IEntity*> scheduler) {
     available = false;
     pickedUp = false;
     destination = nearestEntity->GetPosition();
-  
-    // Add one to number of passengers picked up
-
   }
 }
 
@@ -85,16 +82,23 @@ void Drone::Update(double dt, std::vector<IEntity*> scheduler) {
     if (pickedUp) {
       pathStrategy->Move(this, dt);
       nearestEntity->SetPosition(position);
+      // Add a new position to the Drone's and Robot's position log
+      dataCollection->addNewPositionDrone(this, GetPosition());
+      dataCollection->addNewPositionRobot(nearestEntity, nearestEntity->GetPosition());
       if(pathStrategy->IsCompleted()){  //when strategy completes, update availability
         available = true;
 
         // Add one to passengers dropped off
-        dataCollection->
+        dataCollection->addPassenger(this);
+        // Mark the time of delivery down
+        dataCollection->addNewDeliveryTime(this)
       }
     } else {
       // use bee line strategy to move to robot
       pathStrategy = new BeelineStrategy(position, destination);
       pathStrategy->Move(this, dt);
+      // Add a new position to the Drone's position log
+      dataCollection->addNewPositionDrone(this, GetPosition());
     }
   }
 }

@@ -29,15 +29,15 @@ class DataCollection {
         void generateCSV();
 
         // update number of charge station stops
-        void updateNumStationStops(IEntity *drone);
+        void addStationStop(IEntity *drone);
         // update distance traveled for drone
         void updateDistanceDrone(IEntity* drone);
         // update number of passengers picked up
-        void updateNumPassengers(IEntity* drone);
+        void addPassenger(IEntity* drone);
         // add new position
         void addNewPositionDrone(IEntity* drone, Vector3 pos);
-        // add a new time for delivery
-        void addNewDeliveryTime(IEntity* drone, double dt);
+        // add a new time for delivery (uses current simulation time)
+        void addNewDeliveryTime(IEntity* drone);
 
         // update distance traveled for robot
         void updateDistanceRobot(IEntity* robot);

@@ -81,7 +81,7 @@ IEntity * BatteryDecorator::GetClosestChargingStation(Vector3 location){
             double currDist = GetDistanceToLocation(location, sim_entities[i]->GetPosition());
             
             if(currDist < minDist){
-                std::string chargerName = details["name"];
+                chargerName = details["name"];
                 minDist = currDist;
                 closest = sim_entities[i];
             }
@@ -277,7 +277,8 @@ void BatteryDecorator::Update(double dt, std::vector<IEntity*> scheduler){
                 battery_life = MAX_BATTERY;
                 charging = false;
                 needToCalcDist = true;
-                dataCollection->
+                // Add in one stop at a charging station after the charging completes
+                dataCollection->addStationStop(entity);
             }
             break;
 
@@ -289,6 +290,8 @@ void BatteryDecorator::Update(double dt, std::vector<IEntity*> scheduler){
             } else {
                 IStrategy *pathStrategy = new BeelineStrategy(GetPosition(), closestChargerPosition);
                 pathStrategy->Move(entity, dt);
+                // Add a new point to the drone's position
+                dataCollection->addNewPositionDrone(entity, entity->GetPosition());
             }
             break;
 

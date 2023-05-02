@@ -70,7 +70,7 @@ void SimulationModel::ScheduleTrip(JsonObject& details) {
 
 /// Updates the simulation
 void SimulationModel::Update(double dt) {
-  dataCollection->total_elapsed_time += dt;
+  dataCollection->updateSimTime(dt);
 
   for (int i = 0; i < entities.size(); i++) {
     JsonObject details = entities[i]->GetDetails();
