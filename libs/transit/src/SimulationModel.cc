@@ -5,6 +5,7 @@
 #include "HelicopterFactory.h"
 #include "HumanFactory.h"
 #include "HorseFactory.h"
+#include "ChargingStationFactory.h"
 
 SimulationModel::SimulationModel(IController& controller)
     : controller(controller) {
@@ -14,6 +15,7 @@ SimulationModel::SimulationModel(IController& controller)
   AddFactory(new HelicopterFactory());
   AddFactory(new HumanFactory());
   AddFactory(new HorseFactory());
+  AddFactory(new ChargingStationFactory());
 }
 
 SimulationModel::~SimulationModel() {
@@ -35,7 +37,7 @@ void SimulationModel::CreateEntity(JsonObject& entity) {
 
   IEntity* myNewEntity = compFactory->CreateEntity(entity);
   myNewEntity->SetGraph(graph);
-
+  
   // Call AddEntity to add it to the view
   controller.AddEntity(*myNewEntity);
   entities.push_back(myNewEntity);
@@ -67,6 +69,11 @@ void SimulationModel::ScheduleTrip(JsonObject& details) {
 /// Updates the simulation
 void SimulationModel::Update(double dt) {
   for (int i = 0; i < entities.size(); i++) {
+    JsonObject details = entities[i]->GetDetails();
+    std::string type = details["type"];
+    if(type.compare("drone")==0){
+      static_cast<BatteryDecorator*>(entities[i])->AddSimEntities(entities);
+    }
     entities[i]->Update(dt, scheduler);
     controller.UpdateEntity(*entities[i]);
   }

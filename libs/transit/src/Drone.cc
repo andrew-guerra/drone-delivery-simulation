@@ -58,14 +58,14 @@ void Drone::Update(double dt, std::vector<IEntity*> scheduler) {
         destination = nearestEntity->GetDestination();
         std::string strategyName = nearestEntity->GetStrategyName();
         if (strategyName.compare("astar") == 0) {
-          pathStrategy = new AstarStrategy(position, destination, graph);
+          pathStrategy = new AstarStrategy(position, destination, nearestEntity->GetGraph());
           pathStrategy = new JumpDecorator(pathStrategy);
         } else if (strategyName.compare("dfs") == 0) {
-          pathStrategy = new DfsStrategy(position, destination, graph);
+          pathStrategy = new DfsStrategy(position, destination, nearestEntity->GetGraph());
           pathStrategy = new JumpDecorator(pathStrategy);
           pathStrategy = new SpinDecorator(pathStrategy);
         } else if (strategyName.compare("dijkstra") == 0) {
-          pathStrategy = new DijkstraStrategy(position, destination, graph);
+          pathStrategy = new DijkstraStrategy(position, destination, nearestEntity->GetGraph());
           pathStrategy = new SpinDecorator(pathStrategy);
           pathStrategy = new JumpDecorator(pathStrategy);
         }
@@ -78,6 +78,7 @@ void Drone::Update(double dt, std::vector<IEntity*> scheduler) {
         return;
       }
     }
+
     if (pickedUp) {
       pathStrategy->Move(this, dt);
       nearestEntity->SetPosition(position);

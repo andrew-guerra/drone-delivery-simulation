@@ -113,7 +113,14 @@ class IEntity {
    * @brief Sets the graph object used by the entity in the simulation.
    * @param graph The IGraph object to be used.
    */
-  void SetGraph(const IGraph* graph) { this->graph = graph; }
+  virtual void SetGraph(const IGraph* graph) { this->graph = graph; }
+
+  /**
+   * @brief Get the Graph object
+   * 
+   * @return IGraph* 
+   */
+  const IGraph *GetGraph() { return graph; }
 
   /**
    * @brief Sets the position of the entity.
@@ -150,6 +157,12 @@ class IEntity {
    * @param height The height to make the entity jump.
    */
   virtual void Jump(double height) {}
+
+  /**
+   * @brief Get the entity object associated with the class (if it exists)
+   * @return The IEntity object associated with the class
+  */
+  virtual IEntity* GetEntity() {}
 
  protected:
   int id;
