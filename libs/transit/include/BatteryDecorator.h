@@ -20,7 +20,7 @@ class BatteryDecorator : public IEntity{
         bool charging;
         bool travelingToCharge;
         bool deliveringRobot;
-        Vector3 entity_dest;
+        Vector3 closestChargerPosition;
         std::vector<IEntity*> sim_entities;
         bool needToCalcDist;
         bool canReach;
@@ -39,9 +39,23 @@ class BatteryDecorator : public IEntity{
 
         bool CanReachDestination();
 
-        IEntity* GetClosestChargingStation(std::vector<float> location, std::vector<IEntity*> scheduler);
+        bool CanMakeTrip();
+
+        bool CanReachLocation(Vector3 location);
+
+        bool CanReachLocation(Vector3 location, double battery);
+
+        bool CanReachCharger(Vector3 location);
+
+        bool CanReachCharger(Vector3 location, double battery);
+
+        IEntity* GetClosestChargingStation(Vector3 location);
+
+        IEntity* GetClosestReachableChargingStation(Vector3 location);
 
         double GetDistanceToDestination(IEntity *entity);
+
+        double GetDistanceToLocation(Vector3 start, Vector3 des);
 
         Vector3 GetPosition() const;
         Vector3 GetDirection() const;

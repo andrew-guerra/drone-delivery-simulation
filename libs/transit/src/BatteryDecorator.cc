@@ -5,7 +5,6 @@ BatteryDecorator::BatteryDecorator(IEntity *entity){
     this->battery_life = MAX_BATTERY; 
     this->charging = false;
     this->travelingToCharge = false;
-    this->entity_dest = Vector3();
     this->needToCalcDist = true;
     this->canReach = true;
 }
@@ -42,35 +41,76 @@ double BatteryDecorator::GetDistanceToDestination(IEntity *entity){
     }
 
     // calculate the distance between every point
-    for(int i = 0; i<path.size()-2; i++){
+    for(int i = 0; i < path.size() - 2; i++){
         distance += eucDist.Calculate(path[i], path[i+1]);
     }
 
     return distance;
 }
 
-IEntity * BatteryDecorator::GetClosestChargingStation(std::vector<float> location, std::vector<IEntity*> entities){
+double BatteryDecorator::GetDistanceToLocation(Vector3 start, Vector3 dest) {
+    EuclideanDistance eucDist;
+    
+    std::vector<float> startVec;
+    startVec.push_back(start.x);
+    startVec.push_back(start.y);
+    startVec.push_back(start.z);
+
+    std::vector<float> destVec;
+    destVec.push_back(dest.x);
+    destVec.push_back(dest.y);
+    destVec.push_back(dest.z);
+
+    return eucDist.Calculate(startVec, destVec);
+}
+
+IEntity * BatteryDecorator::GetClosestChargingStation(Vector3 location){
     IEntity* closest = NULL;
     EuclideanDistance eucDist;
     double minDist = 9999999999999999.0;
-    for(int i = 0; i<sim_entities.size(); i++){
+    std::string chargerName;
+
+    for(int i = 0; i < sim_entities.size(); i++){
         //Get the entity's details 
         JsonObject details = sim_entities[i]->GetDetails();
         std::string name = details["type"];
+
         //If the entity is a charging station then get its position and compare
         if(name.compare("charging_station") == 0){
-            // std::cout << "found one" << std::endl;
-            std::vector<float> curr;
-            curr.push_back(sim_entities[i]->GetPosition().x);
-            curr.push_back(sim_entities[i]->GetPosition().y);
-            curr.push_back(sim_entities[i]->GetPosition().z);
-            double currDist = eucDist.Calculate(location, curr);
+            double currDist = GetDistanceToLocation(location, sim_entities[i]->GetPosition());
+            
             if(currDist < minDist){
+                std::string chargerName = details["name"];
                 minDist = currDist;
                 closest = sim_entities[i];
             }
         }   
     }
+
+    return closest;
+}
+
+IEntity * BatteryDecorator::GetClosestReachableChargingStation(Vector3 location){
+    IEntity* closest = NULL;
+    EuclideanDistance eucDist;
+    double minDist = 9999999999999999.0;
+
+    for(int i = 0; i < sim_entities.size(); i++){
+        //Get the entity's details 
+        JsonObject details = sim_entities[i]->GetDetails();
+        std::string name = details["type"];
+
+        //If the entity is a charging station then get its position and compare
+        if(name.compare("charging_station") == 0){
+            double currDist = GetDistanceToLocation(location, sim_entities[i]->GetPosition());
+
+            if(CanReachLocation(sim_entities[i]->GetPosition()) && currDist < minDist){
+                minDist = currDist;
+                closest = sim_entities[i];
+            }
+        }   
+    }
+
     return closest;
 }
 
@@ -84,13 +124,8 @@ bool BatteryDecorator::CanReachDestination(){
         // Add in distance from the drone to the robot
         distance += entity->GetPosition().Distance(entity->GetEntity()->GetPosition());
 
-        std::vector<float> curPos;
-        curPos.push_back(entity->GetEntity()->GetDestination().x);
-        curPos.push_back(entity->GetEntity()->GetDestination().y);
-        curPos.push_back(entity->GetEntity()->GetDestination().z);
-
         // get the location of the closest charging station 
-        IEntity* closestCharger = GetClosestChargingStation(curPos, sim_entities);
+        IEntity* closestCharger = GetClosestChargingStation(entity->GetEntity()->GetDestination());
         if(closestCharger == NULL){
             std::cout << "no charger found" << std::endl;
         }
@@ -98,7 +133,7 @@ bool BatteryDecorator::CanReachDestination(){
         // Add in the distance from the robot's location to the closest charger
         Vector3 dest = entity->GetEntity()->GetDestination();
         Vector3 pos = closestCharger->GetPosition();
-        dest.Print();
+       
         distance += pos.Distance(dest);
     } else {
         distance = entity->GetPosition().Distance(entity->GetDestination());
@@ -111,10 +146,82 @@ bool BatteryDecorator::CanReachDestination(){
     return time < battery_life;
 }
 
+bool BatteryDecorator::CanMakeTrip() {
+    double distance = 0;
+
+    if(!CanReachLocation(entity->GetDestination())) {
+        IEntity* charger = GetClosestReachableChargingStation(entity->GetDestination());
+
+        // distance to charging station closest to robot
+        distance += GetDistanceToLocation(GetPosition(), charger->GetPosition());
+
+        // distance from charing station to robot
+        distance += GetDistanceToLocation(charger->GetPosition(), GetDestination());
+    } else {
+        // distance to robot
+        distance += GetDistanceToDestination(entity->GetEntity());
+    }
+
+    // distance of robot trip
+    distance += GetDistanceToDestination(entity->GetEntity()->GetEntity());
+
+    // distance from robot destination to nearest charger
+    distance += GetDistanceToLocation(entity->GetEntity()->GetEntity()->GetPosition(), entity->GetEntity()->GetEntity()->GetDestination());
+
+    // drone speed = 30 units/time unit
+    // Calculate the time it will take to reach the destination. 
+    double time = distance / entity->GetSpeed();
+
+    return time < battery_life;
+}
+
+bool BatteryDecorator::CanReachCharger(Vector3 location) {
+    // get the location of the closest charging station 
+    IEntity* closestCharger = GetClosestChargingStation(location);
+
+    double time = (location.Distance(closestCharger->GetPosition())) / entity->GetSpeed();
+
+    return CanReachLocation(closestCharger->GetPosition(), battery_life - time);
+}
+
+bool BatteryDecorator::CanReachCharger(Vector3 location, double battery) {
+    // get the location of the closest charging station 
+    IEntity* closestCharger = GetClosestChargingStation(location);
+
+    double time = (location.Distance(closestCharger->GetPosition())) / entity->GetSpeed();
+
+    return CanReachLocation(closestCharger->GetPosition(), battery - time);
+}
+
+
+// Returns true if the drone can make it location using a beeline strategy
+bool BatteryDecorator::CanReachLocation(Vector3 location) {
+    // Get the distance from the entity's position to the location
+    double distance = entity->GetPosition().Distance(location);
+    
+    // drone speed = 30 units/time unit
+    // Calculate the time it will take to reach the destination. 
+    double time = distance / entity->GetSpeed();
+
+    return time < battery_life;
+}
+
+// Returns true if the drone can make it location using a beeline strategy
+bool BatteryDecorator::CanReachLocation(Vector3 location, double battery) {
+    // Get the distance from the entity's position to the location
+    double distance = entity->GetPosition().Distance(location);
+    
+    // drone speed = 30 units/time unit
+    // Calculate the time it will take to reach the destination. 
+    double time = distance / entity->GetSpeed();
+
+    return time < battery;
+}
+
 void BatteryDecorator::Update(double dt, std::vector<IEntity*> scheduler){
     // Maybe battery drain is just a function of time. 
     // Then the drone finds the time it will take to travel the destination 
-    std::cout << battery_life << std::endl;
+    //std::cout << battery_life << std::endl;
 
     options opts;
 
@@ -127,100 +234,62 @@ void BatteryDecorator::Update(double dt, std::vector<IEntity*> scheduler){
             canReach = CanReachDestination();
             needToCalcDist = false;
         }
-        if(canReach){
+
+        if(canReach) {
             deliveringRobot = true;
             opts = Default;
-        }else{
-            deliveringRobot = false;
+        } else {
+            //find the closest charging station
+            IEntity *charger = GetClosestChargingStation(GetPosition());
+
+            //set the new destination to be the charger
+            closestChargerPosition = charger->GetPosition();
+
+            deliveringRobot = true;
             travelingToCharge = true;
             opts = toCharger;
-
-            entity_dest = entity->GetDestination();
-            std::vector<float> pos;
-            pos.push_back(entity->GetPosition().x);
-            pos.push_back(entity->GetPosition().y);
-            pos.push_back(entity->GetPosition().z);
-            //find the closest charging station
-            IEntity *charger = GetClosestChargingStation(pos, sim_entities);
-            //set the new destination to be the charger
-            entity->SetDestination(charger->GetPosition());
         }
 
-    }else{
-        //Drone avail and not charging
+    } else {
+        //Drone avail and dormant
         deliveringRobot = false;
         needToCalcDist = true;
 
-        std::vector<float> pos;
-        pos.push_back(entity->GetPosition().x);
-        pos.push_back(entity->GetPosition().y);
-        pos.push_back(entity->GetPosition().z);
-
         //find the closest charging station
-        IEntity *charger = GetClosestChargingStation(pos, sim_entities);
-        //set the new destination to be the charger
-        entity->SetDestination(charger->GetPosition());
+        IEntity *charger = GetClosestChargingStation(GetPosition());
 
-        if(!CanReachDestination()) {
+        if(!CanReachLocation(charger->GetPosition())) {
             travelingToCharge = true;
-            opts = toCharger;
-
-            entity_dest = entity->GetPosition();
             
-            //find the closest charging station
-            IEntity *charger = GetClosestChargingStation(pos, sim_entities);
             //set the new destination to be the charger
-            entity->SetDestination(charger->GetPosition());
+            closestChargerPosition = charger->GetPosition();
+            opts = toCharger;
         } else {
-            entity->SetDestination(GetPosition());
+            opts = Default;
         }
-
-        opts = Default;
     }
 
     switch(opts){
         case Charging:
-            std::cout << "charging" << std::endl;
-
             if(battery_life >= MAX_BATTERY){
                 battery_life = MAX_BATTERY;
                 charging = false;
-                //set the drone's destination back to the robot
-                entity->SetDestination(entity_dest);
-                //reset entity_dest's y val to 0
-                //entity_dest.y = 0;
-
-                //make drone availible
-                //entity->SetAvailability
+                needToCalcDist = true;
             }
             break;
-        case toCharger:
-            std::cout << "to charger" << std::endl;
-            
-            //if the entity_dest's y is 0 it's not a valid destination (unless we make tunnels in the future);
-            /*if(entity_dest.y == 0){
-                //store the entity's old destination 
-                entity_dest = entity->GetDestination();
-                std::vector<float> pos;
-                pos.push_back(entity->GetPosition().x);
-                pos.push_back(entity->GetPosition().y);
-                pos.push_back(entity->GetPosition().z);
-                //find the closest charging station
-                IEntity *charger = GetClosestChargingStation(pos, sim_entities);
-                //set the new destination to be the charger
-                entity->SetDestination(charger->GetPosition());
 
-            }else */if(entity->GetPosition().Distance(entity->GetDestination()) < 1){
+        case toCharger:
+            if(GetPosition().Distance(closestChargerPosition) < 1){
                 //here we have reached the charging station
                 charging = true;
                 travelingToCharge = false;
-            }else{
-                IStrategy *pathStrategy = new BeelineStrategy(entity->GetPosition(), entity->GetDestination());
+            } else {
+                IStrategy *pathStrategy = new BeelineStrategy(GetPosition(), closestChargerPosition);
                 pathStrategy->Move(entity, dt);
             }
             break;
+
         case Default:
-            std::cout << "dflt" << std::endl;
             entity->Update(dt, scheduler);
             break;
     }
