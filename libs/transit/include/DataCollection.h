@@ -24,12 +24,13 @@ class DataCollection {
 
         void addDrone(IEntity* drone);
         void addRobot(IEntity* robot);
-
         
         void generateCSV();
 
         // update number of charge station stops
-        void addStationStop(IEntity *drone);
+        void addStationStop(IEntity *drone){
+
+        }
         // update distance traveled for drone
         void updateDistanceDrone(IEntity* drone);
         // update number of passengers picked up
@@ -50,30 +51,31 @@ class DataCollection {
     private:
         
         DataCollection();
-
         static DataCollection* instancePtr;
 
         struct DroneData {
+            DroneData(){
+                num_deliveries = 0;
+                distance_traveled = 0.0;
+            }
             std::vector<Vector3> positions;
-            std::vector<std::time_t> time_per_delivery;
+            std::vector<double> delivery_times;
             int num_deliveries;
-            int distance_traveled;
-        } droneData;
+            double distance_traveled;
+        };
 
         struct RobotData {
-            int distance_traveled;
+            RobotData(){
+                distance_traveled = 0.0;
+            }
+            double distance_traveled;
             std::vector<Vector3> positions;
-        } robotData;
+        };
 
         double total_elapsed_time;
+        std::map<std::string , DroneData> drone_data;
+        std::map<std::string , RobotData> robot_data;
 
-        std::vector<DataCollection::DroneData> drone_data;
-        
-        std::vector<DataCollection::RobotData> robot_data;
-
-        std::vector<IEntity*> drones;
-        
-        std::vector<IEntity*> robots;
         
 };
 
