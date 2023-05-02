@@ -3,9 +3,60 @@
         "command": "CreateEntity",
       	"params": {
       	    "type": "drone",
-            "name": "Drone",
+            "name": "Drone-1",
       	    "mesh": "assets/model/drone.glb",
-      	    "position": [498.292, 270, -228.623],
+      	    "position": [-800, 270.1, -100],
+      	    "scale": [0.1, 0.1, 0.1],
+      	    "rotation": [0, 0, 0, 0],
+            "direction": [1,0,0],
+            "speed": 30.0,
+            "radius": 1.0,
+      	    "start": 2.0,
+      	    "duration": 2.0,
+            "offset": [0, 0.6, 0]
+    	  }
+    },
+    {
+        "command": "CreateEntity",
+      	"params": {
+      	    "type": "drone",
+            "name": "Drone-2",
+      	    "mesh": "assets/model/drone.glb",
+      	    "position": [-960, 270.1, 340],
+      	    "scale": [0.1, 0.1, 0.1],
+      	    "rotation": [0, 0, 0, 0],
+            "direction": [1,0,0],
+            "speed": 30.0,
+            "radius": 1.0,
+      	    "start": 2.0,
+      	    "duration": 2.0,
+            "offset": [0, 0.6, 0]
+    	  }
+    },
+    {
+        "command": "CreateEntity",
+      	"params": {
+      	    "type": "drone",
+            "name": "Drone-3",
+      	    "mesh": "assets/model/drone.glb",
+      	    "position": [570, 270.1, -350],
+      	    "scale": [0.1, 0.1, 0.1],
+      	    "rotation": [0, 0, 0, 0],
+            "direction": [1,0,0],
+            "speed": 30.0,
+            "radius": 1.0,
+      	    "start": 2.0,
+      	    "duration": 2.0,
+            "offset": [0, 0.6, 0]
+    	  }
+    },
+    {
+        "command": "CreateEntity",
+      	"params": {
+      	    "type": "drone",
+            "name": "Drone-4",
+      	    "mesh": "assets/model/drone.glb",
+      	    "position": [630, 270.1, 250],
       	    "scale": [0.1, 0.1, 0.1],
       	    "rotation": [0, 0, 0, 0],
             "direction": [1,0,0],

@@ -7,6 +7,7 @@ BatteryDecorator::BatteryDecorator(IEntity *entity){
     this->travelingToCharge = false;
     this->needToCalcDist = true;
     this->canReach = true;
+    this->dataCollection = DataCollection::GetInstance();
 }
 
 void BatteryDecorator::AddSimEntities(std::vector<IEntity*> entities){
@@ -220,9 +221,10 @@ bool BatteryDecorator::CanReachLocation(Vector3 location, double battery) {
 
 void BatteryDecorator::Update(double dt, std::vector<IEntity*> scheduler){
     // Maybe battery drain is just a function of time. 
-    // Then the drone finds the time it will take to travel the destination 
-    //std::cout << battery_life << std::endl;
-
+    // Then the drone finds the time it will take to travel to the destination 
+    // JsonObject obj = entity->GetDetails();
+    // std::string name = obj["name"];
+    // std::cout << name << ": " << battery_life << std::endl;
     options opts;
 
     if(charging){
@@ -275,6 +277,7 @@ void BatteryDecorator::Update(double dt, std::vector<IEntity*> scheduler){
                 battery_life = MAX_BATTERY;
                 charging = false;
                 needToCalcDist = true;
+                dataCollection->
             }
             break;
 

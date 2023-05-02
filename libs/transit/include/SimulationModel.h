@@ -7,6 +7,7 @@
 #include "IEntity.h"
 #include "Robot.h"
 #include "graph.h"
+// #include "DataCollection.h"
 using namespace routing;
 
 //--------------------  Model ----------------------------
@@ -68,6 +69,7 @@ class SimulationModel {
   std::vector<IEntity*> scheduler;
   const IGraph* graph;
   CompositeFactory* compFactory;
+  DataCollection* dataCollection;
 };
 
 #endif

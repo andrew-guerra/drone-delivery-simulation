@@ -167,6 +167,7 @@ class IEntity {
  protected:
   int id;
   const IGraph* graph;
+
 };
 
 #endif

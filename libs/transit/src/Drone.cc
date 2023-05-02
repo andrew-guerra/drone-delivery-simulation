@@ -40,6 +40,9 @@ void Drone::GetNearestEntity(std::vector<IEntity*> scheduler) {
     available = false;
     pickedUp = false;
     destination = nearestEntity->GetPosition();
+  
+    // Add one to number of passengers picked up
+
   }
 }
 
@@ -84,6 +87,9 @@ void Drone::Update(double dt, std::vector<IEntity*> scheduler) {
       nearestEntity->SetPosition(position);
       if(pathStrategy->IsCompleted()){  //when strategy completes, update availability
         available = true;
+
+        // Add one to passengers dropped off
+        dataCollection->
       }
     } else {
       // use bee line strategy to move to robot

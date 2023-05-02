@@ -16,6 +16,8 @@ SimulationModel::SimulationModel(IController& controller)
   AddFactory(new HumanFactory());
   AddFactory(new HorseFactory());
   AddFactory(new ChargingStationFactory());
+
+  dataCollection = DataCollection::GetInstance();
 }
 
 SimulationModel::~SimulationModel() {
@@ -68,6 +70,8 @@ void SimulationModel::ScheduleTrip(JsonObject& details) {
 
 /// Updates the simulation
 void SimulationModel::Update(double dt) {
+  dataCollection->total_elapsed_time += dt;
+
   for (int i = 0; i < entities.size(); i++) {
     JsonObject details = entities[i]->GetDetails();
     std::string type = details["type"];

@@ -15,6 +15,7 @@
 #include "SpinDecorator.h"
 #include "BatteryDecorator.h"
 #include "math/vector3.h"
+#include "DataCollection.h"
 
 // Represents a drone in a physical system.
 // Drones move using euler integration based on a specified
@@ -160,6 +161,7 @@ class Drone : public IEntity {
   bool pickedUp;
   IEntity* nearestEntity = NULL;
   IStrategy* pathStrategy = NULL;
+  DataCollection* dataCollection;
 };
 
 #endif

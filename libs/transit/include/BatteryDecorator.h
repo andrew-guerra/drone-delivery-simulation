@@ -25,7 +25,7 @@ class BatteryDecorator : public IEntity{
         bool needToCalcDist;
         bool canReach;
         enum options {toCharger, Charging, Default};
-
+        DataCollection* dataCollection;
 
     public:
 
