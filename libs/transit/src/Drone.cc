@@ -89,7 +89,7 @@ void Drone::Update(double dt, std::vector<IEntity*> scheduler) {
         available = true;
 
         // Add one to passengers dropped off
-        dataCollection->addPassenger(this);
+        dataCollection->addDelivery(this);
         // Mark the time of delivery down
         dataCollection->addNewDeliveryTime(this)
       }

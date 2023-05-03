@@ -3,6 +3,8 @@
 
 #include <vector>
 #include <ctime>
+#include <string>
+#include <fstream>
 #include "math/vector3.h"
 #include "IEntity.h"
 
@@ -10,43 +12,97 @@
 
 class DataCollection {
     public:
+        ~DataCollection();
+
         /**
         * Singletons should not be assignable.
         */
         void operator=(const DataCollection &) = delete;
+
         /**
-        * This is the static method that controls the access to the singleton
-        * instance. On the first run, it creates a singleton object and places it
-        * into the static field. On subsequent runs, it returns the client existing
-        * object stored in the static field.
-        */
+         * @brief Get the Instance object (on first run it creates it. On subsequent runs it returns the existing static object)
+         * 
+         * @return DataCollection* 
+         */
         DataCollection* GetInstance();
 
+        /**
+         * @brief track a new drone's data
+         * 
+         * @param drone a pointer to a drone object
+         */
         void addDrone(IEntity* drone);
+
+        /**
+         * @brief track a new robot's data
+         * 
+         * @param robot a pointer to a new robot object
+         */
         void addRobot(IEntity* robot);
-        
-        void generateCSV();
 
-        // update number of charge station stops
-        void addStationStop(IEntity *drone){
+        /**
+         * @brief update number of charge station stops
+         * 
+         * @param drone pointer to a drone object
+         */
+        void addStationStop(IEntity *drone);
 
-        }
-        // update distance traveled for drone
+        /**
+         * @brief update distance traveled for drone
+         * 
+         * @param drone pointer to a drone object
+         */
         void updateDistanceDrone(IEntity* drone);
-        // update number of passengers picked up
-        void addPassenger(IEntity* drone);
-        // add new position
-        void addNewPositionDrone(IEntity* drone, Vector3 pos);
-        // add a new time for delivery (uses current simulation time)
+
+        /**
+         * @brief update number of passengers dropped off
+         * 
+         * @param drone pointer to a drone object
+         */
+        void addDelivery(IEntity* drone);
+
+        /**
+         * @brief add a new time for delivery (uses current simulation time)
+         * 
+         * @param drone 
+         */
         void addNewDeliveryTime(IEntity* drone);
 
-        // update distance traveled for robot
+        /**
+         * @brief add a new position to the vector of previous positions
+         * 
+         * @param drone pointer to a drone object
+         * @param pos The position to be added (Usually the drone's new location)
+         */
+        void addNewPositionDrone(IEntity* drone, Vector3 pos);
+
+        /**
+         * @brief update distance traveled for robot
+         * 
+         * @param robot pointer to a robot object
+         */
         void updateDistanceRobot(IEntity* robot);
-        // add new position
+
+        /**
+         * @brief add a new position to the vector of previous positions
+         * 
+         * @param robot pointer to a robot object
+         * @param pos 
+         */
         void addNewPositionRobot(IEntity* robot, Vector3 pos);
 
+        /**
+         * @brief update the total simulation 
+         * 
+         * @param dt amount to adjust total time by 
+         */
         void updateSimTime(double dt);
 
+        /**
+         * @brief creates a csv file with all of the simulation's current data
+         * 
+         */
+        void generateJSON();
 
     private:
         
@@ -56,11 +112,13 @@ class DataCollection {
         struct DroneData {
             DroneData(){
                 num_deliveries = 0;
+                num_charging_station_stops = 0;
                 distance_traveled = 0.0;
             }
             std::vector<Vector3> positions;
             std::vector<double> delivery_times;
             int num_deliveries;
+            int num_charging_station_stops;
             double distance_traveled;
         };
 
@@ -73,9 +131,9 @@ class DataCollection {
         };
 
         double total_elapsed_time;
-        std::map<std::string , DroneData> drone_data;
-        std::map<std::string , RobotData> robot_data;
-
+        std::map<std::string , DroneData*> drone_data;
+        std::map<std::string , RobotData*> robot_data;
+        
         
 };
 
