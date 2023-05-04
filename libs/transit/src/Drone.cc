@@ -92,6 +92,7 @@ void Drone::Update(double dt, std::vector<IEntity*> scheduler) {
         dataCollection->addDelivery(this);
         // Mark the time of delivery down
         dataCollection->addNewDeliveryTime(this);
+        dataCollection->generateJSON();
       }
     } else {
       // use bee line strategy to move to robot
