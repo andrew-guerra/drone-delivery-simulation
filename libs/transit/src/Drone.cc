@@ -91,7 +91,7 @@ void Drone::Update(double dt, std::vector<IEntity*> scheduler) {
         // Add one to passengers dropped off
         dataCollection->addDelivery(this);
         // Mark the time of delivery down
-        dataCollection->addNewDeliveryTime(this)
+        dataCollection->addNewDeliveryTime(this);
       }
     } else {
       // use bee line strategy to move to robot

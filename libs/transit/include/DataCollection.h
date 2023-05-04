@@ -1,5 +1,5 @@
-#ifndef BATTERY_DECORATOR_H_
-#define BATTERY_DECORATOR_H_
+#ifndef DATA_COLLECTION_H_
+#define DATA_COLLECTION_H_
 
 #include <vector>
 #include <ctime>
@@ -7,8 +7,6 @@
 #include <fstream>
 #include "math/vector3.h"
 #include "IEntity.h"
-
-//using namespace routing;
 
 class DataCollection {
     public:
@@ -24,7 +22,7 @@ class DataCollection {
          * 
          * @return DataCollection* 
          */
-        DataCollection* GetInstance();
+        static DataCollection* GetInstance();
 
         /**
          * @brief track a new drone's data

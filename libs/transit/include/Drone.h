@@ -16,7 +16,6 @@
 #include "BatteryDecorator.h"
 #include "math/vector3.h"
 #include "DataCollection.h"
-
 // Represents a drone in a physical system.
 // Drones move using euler integration based on a specified
 // velocity and direction.

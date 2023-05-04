@@ -1,12 +1,11 @@
 #ifndef BATTERY_DECORATOR_H_
 #define BATTERY_DECORATOR_H_
-// #include "IEntity.h"
-// #include "IStrategy.h"
-#include "DataCollection.h"
+#include "IEntity.h"
 #include "BeelineStrategy.h"
 #include "../include/routing/astar.h"
 #include "../include/routing/depth_first_search.h"
 #include "../include/routing/dijkstra.h"
+#include "DataCollection.h"
 
 // Battery life is just the number of seconds the drone can fly for (or stay idle it's all the same)
 const double MAX_BATTERY = 70.00;
@@ -15,7 +14,7 @@ class BatteryDecorator : public IEntity{
     protected:
         IEntity *entity;
         
-        // This is the number of units of time (seconds?) that the drone can stay in the air
+        // This is the number of units of time (seconds) that the drone can stay in the air
         double battery_life;
         bool charging;
         bool travelingToCharge;

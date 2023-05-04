@@ -6,7 +6,6 @@
 #include "HumanFactory.h"
 #include "HorseFactory.h"
 #include "ChargingStationFactory.h"
-// #include "DataCollection.h"
 
 SimulationModel::SimulationModel(IController& controller)
     : controller(controller) {

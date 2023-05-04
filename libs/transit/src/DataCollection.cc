@@ -1,4 +1,8 @@
-#include "DataCollection.h"
+#include "../include/DataCollection.h"
+
+// Define the instance pointer
+DataCollection* DataCollection::instancePtr = nullptr;
+
 DataCollection::~DataCollection(){
     std::map<std::string, DroneData*>::iterator it;
     std::map<std::string, RobotData*>::iterator it2;
@@ -14,10 +18,10 @@ DataCollection::~DataCollection(){
 }
 
 DataCollection* DataCollection::GetInstance() {
-    if (instancePtr == NULL) {
-        instancePtr = new DataCollection();
+    if (DataCollection::instancePtr == NULL) {
+        DataCollection::instancePtr = new DataCollection();
     } 
-    return instancePtr;
+    return DataCollection::instancePtr;
 }
 
 DataCollection::DataCollection() {
@@ -138,7 +142,7 @@ void DataCollection::generateJSON(){
     std::string stamp = std::string(timestamp);
     stamp += ".json";
 
-    ofstream outfile(stamp);
+    std::ofstream outfile(stamp);
     if(!outfile){
         std::cout<< "Failed to open json file for output" << std::endl;
         exit(1);
@@ -164,13 +168,15 @@ void DataCollection::generateJSON(){
         outfile << "\"positions\": [\n\t\t\t\t";
         size = it->second->positions.size();
         for(int j = 0; j<size; j++){
-            outfile << it->second->positions[i].Print();
+            outfile << "{" << it->second->positions[i].x << ", "
+                    << it->second->positions[i].y << ", "
+                    << it->second->positions[i].z << "}";
             if(j != size - 1){
                 outfile << ",\n\t\t\t\t";
             }
         }
         outfile << "\n\t\t\t]";
-        outfile << "\n\t\t}," // close "drone_i": {
+        outfile << "\n\t\t},"; // close "drone_i": {
         i++;
     }
     outfile << "\n\t},"; // close "drones": {
@@ -183,16 +189,18 @@ void DataCollection::generateJSON(){
         outfile << "\"positions\": [\n\t\t\t\t";
         size = it2->second->positions.size();
         for(int j = 0; j<size; j++){
-            outfile << it2->second->positions[i].Print();
+            outfile << "{" << it->second->positions[i].x << ", "
+                    << it->second->positions[i].y << ", "
+                    << it->second->positions[i].z << "}";
             if(j != size - 1){
                 outfile << ",\n\t\t\t\t";
             }
         }
         outfile << "\n\t\t\t]";
-        outfile << "\n\t\t}," // close "robot_i": {
+        outfile << "\n\t\t},"; // close "robot_i": {
         i++;
     }
-    outfile << "\n\t},"; // close "robots": {
+    outfile << "\n\t}"; // close "robots": {
     outfile << "\n}"; // close json data
     outfile.close();
 }

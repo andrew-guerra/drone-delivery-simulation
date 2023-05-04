@@ -81,7 +81,7 @@ IEntity * BatteryDecorator::GetClosestChargingStation(Vector3 location){
             double currDist = GetDistanceToLocation(location, sim_entities[i]->GetPosition());
             
             if(currDist < minDist){
-                chargerName = details["name"];
+                chargerName = static_cast<std::string>(details["name"]);
                 minDist = currDist;
                 closest = sim_entities[i];
             }
