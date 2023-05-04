@@ -13,6 +13,7 @@ Drone::Drone(JsonObject& obj) : details(obj) {
   speed = obj["speed"];
 
   available = true;
+  this->dataCollection = DataCollection::GetInstance();
 }
 
 Drone::~Drone() {

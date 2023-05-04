@@ -4,6 +4,7 @@
 DataCollection* DataCollection::instancePtr = nullptr;
 
 DataCollection::~DataCollection(){
+    std::cout << "Destroying data collection" << std::endl;
     std::map<std::string, DroneData*>::iterator it;
     std::map<std::string, RobotData*>::iterator it2;
 
@@ -29,10 +30,11 @@ DataCollection::DataCollection() {
 }
 
 void DataCollection::addDrone(IEntity* drone){
-    std::cout << "Added Drone to data collection\n";
+    std::cout << "Added Drone to data collection: ";
     DroneData *new_drone_data = new DroneData();
     JsonObject details = drone->GetDetails();
     std::string name = details["name"];
+    // std::cout << "name: " << name << std::endl;
 
     // Map the drone's name to the new DroneData object
     this->drone_data[name] = new_drone_data;
@@ -74,32 +76,28 @@ void DataCollection::addNewDeliveryTime(IEntity* drone){
 }
 
 void DataCollection::addNewPositionDrone(IEntity* drone, Vector3 pos){
-    std::cout << "Added new drone position to data collection\n";
+    // std::cout << "Adding new drone position to data collection\n";
     JsonObject details = drone->GetDetails();
     std::string name = details["name"];
-    std::cout << 1 << std::endl;
     Vector3 previous_position;
-    std::cout << 1.25 << std::endl;
-    if(this->drone_data[name]->positions.size() > 0){
-        std::cout << 1.5 << std::endl;
+    // std::cout << name << std::endl;
+    if(this->drone_data[name]->positions.empty()){
         this->drone_data[name]->positions.back(); // The last element of the vector
     }else{
-        std::cout << 1.75 << std::endl;
         previous_position = drone->GetPosition();
     }
-    std::cout << 2 << std::endl;
 
     this->drone_data[name]->positions.push_back(pos); // Add the new position to the vector
-    std::cout << 3 << std::endl;
 
     this->drone_data[name]->distance_traveled += previous_position.Distance(pos); // Add the (linear) distance between the two positions
-    std::cout << "fin\n";
+    // std::cout << "fin\n";
 }
 
 void DataCollection::addNewPositionRobot(IEntity* robot, Vector3 pos){
-    std::cout << "Added new robot position to data collection\n";
+    // std::cout << "Adding new robot position to data collection\n";
     JsonObject details = robot->GetDetails();
     std::string name = details["name"];
+    // std::cout << name << std::endl;
 
     Vector3 previous_position;
     if(this->robot_data[name]->positions.size() > 0){
@@ -110,7 +108,7 @@ void DataCollection::addNewPositionRobot(IEntity* robot, Vector3 pos){
     this->robot_data[name]->positions.push_back(pos); // Add the new position to the vector
 
     this->robot_data[name]->distance_traveled += previous_position.Distance(pos); // Add the (linear) distance between the two positions}
-    std::cout << "fin\n";
+    // std::cout << "fin\n";
 
 }
 

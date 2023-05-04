@@ -291,6 +291,7 @@ void BatteryDecorator::Update(double dt, std::vector<IEntity*> scheduler){
                 IStrategy *pathStrategy = new BeelineStrategy(GetPosition(), closestChargerPosition);
                 pathStrategy->Move(entity, dt);
                 // Add a new point to the drone's position
+
                 dataCollection->addNewPositionDrone(entity, entity->GetPosition());
             }
             break;

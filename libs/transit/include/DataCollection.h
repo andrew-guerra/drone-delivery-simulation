@@ -3,6 +3,7 @@
 
 #include <vector>
 #include <ctime>
+#include <map>
 #include <string>
 #include <fstream>
 #include "math/vector3.h"
@@ -131,8 +132,6 @@ class DataCollection {
         double total_elapsed_time;
         std::map<std::string , DroneData*> drone_data;
         std::map<std::string , RobotData*> robot_data;
-        
-        
 };
 
 #endif
