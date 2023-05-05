@@ -241,9 +241,9 @@ void DataCollection::generateJSON() {
     outfile << "\"positions\": [\n\t\t\t\t";
     size = it->second->positions.size();
     for (int j = 0; j < size; j++) {
-      outfile << "{" << it->second->positions[j].x << ", "
+      outfile << "[" << it->second->positions[j].x << ", "
               << it->second->positions[j].y << ", "
-              << it->second->positions[j].z << "}";
+              << it->second->positions[j].z << "]";
       if (j != size - 1) {
         outfile << ",\n\t\t\t\t";
       }
