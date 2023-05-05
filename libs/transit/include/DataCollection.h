@@ -8,6 +8,7 @@
 #include <fstream>
 #include "math/vector3.h"
 #include "IEntity.h"
+#include "GUIDataObserver.h"
 
 typedef struct DroneData {
     DroneData() {
@@ -123,6 +124,19 @@ class DataCollection {
         void updateSimTime(double dt);
 
         /**
+         * @brief 
+         * 
+         */
+        void Notify();
+
+        /**
+         * @brief 
+         * 
+         * @return JsonObject 
+         */
+        JsonObject generateWebJSON();
+
+        /**
          * @brief creates a csv file with all of the simulation's current data
          * 
          */
@@ -131,7 +145,7 @@ class DataCollection {
     private:
         DataCollection();
         static DataCollection* instancePtr;
-
+        GUIDataObserver* observer;
         double total_elapsed_time;
         std::map<std::string , DroneData*> drone_data;
         std::map<std::string , RobotData*> robot_data;

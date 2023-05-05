@@ -27,6 +27,7 @@ DataCollection* DataCollection::GetInstance() {
 
 DataCollection::DataCollection() {
     this->total_elapsed_time = 0.0;
+    this->observer = GUIDataObserver::GetInstance();
 }
 
 void DataCollection::addDrone(IEntity* drone){
@@ -112,9 +113,19 @@ void DataCollection::addNewPositionRobot(IEntity* robot, Vector3 pos){
 
 }
 
+
 // updates the total time of the simulation
 void DataCollection::updateSimTime(double dt){
     this->total_elapsed_time += dt;
+    this->Notify();
+}
+
+JsonObject DataCollection::generateWebJSON(){
+    return JsonObject();
+}
+
+void DataCollection::Notify() {
+    this->observer->Update(generateWebJSON());
 }
 
 void DataCollection::generateJSON(){
@@ -158,7 +169,7 @@ void DataCollection::generateJSON(){
 
     // Creates a new timestamp of the current date and time to use as the file name
     std::time_t now = std::time(nullptr);
-    char timestamp[20];
+    char timestamp[40];
     std::strftime(timestamp, sizeof(timestamp), "%Y-%m-%d::%H-%M-%S", std::localtime(&now));
     std::string stamp = std::string(timestamp);
     stamp += ".json";
@@ -172,9 +183,9 @@ void DataCollection::generateJSON(){
 
     outfile << "{\n\t";
     outfile << "\"simulation_time\": " << total_elapsed_time << ",\n\t";
-    outfile << "\"drones\": {\n\t\t";
+    outfile << "\"drones\": {";
     for (it = this->drone_data.begin(); it != this->drone_data.end(); it++){
-        outfile << "\"drone_" << i << "\": {\n\t\t\t";
+        outfile << "\n\t\t\"drone_" << i << "\": {\n\t\t\t";
         outfile << "\"distance_traveled\": " << it->second->distance_traveled << ",\n\t\t\t";
         outfile << "\"number_of_charging_station_visits\": " << it->second->num_charging_station_stops << ",\n\t\t\t";
         outfile << "\"number_of_deliveries\": " << it->second->num_deliveries << ",\n\t\t\t";
@@ -190,20 +201,25 @@ void DataCollection::generateJSON(){
         outfile << "\"positions\": [\n\t\t\t\t";
         size = it->second->positions.size();
         for(int j = 0; j<size; j++){
-            outfile << "{" << it->second->positions[i].x << ", "
-                    << it->second->positions[i].y << ", "
-                    << it->second->positions[i].z << "}";
+            outfile << "{" << it->second->positions[j].x << ", "
+                    << it->second->positions[j].y << ", "
+                    << it->second->positions[j].z << "}";
             if(j != size - 1){
                 outfile << ",\n\t\t\t\t";
             }
         }
         outfile << "\n\t\t\t]";
-        outfile << "\n\t\t},"; // close "drone_i": {
+        if (std::next(it) == drone_data.end()){
+            outfile << "\n\t\t}";
+        }
+        else{
+            outfile << "\n\t\t},"; // close "drone_i": {
+        }
         i++;
     }
     outfile << "\n\t},"; // close "drones": {
     // Begin outputting robot data
-    outfile << "\"robots\": {\n\t\t";
+    outfile << "\n\t\"robots\": {\n\t\t";
     i = 1;
     for (it2 = this->robot_data.begin(); it2 != this->robot_data.end(); it2++){
         outfile << "\"robot_" << i << "\": {\n\t\t\t";
@@ -211,18 +227,26 @@ void DataCollection::generateJSON(){
         outfile << "\"positions\": [\n\t\t\t\t";
         size = it2->second->positions.size();
         for(int j = 0; j<size; j++){
-            outfile << "{" << it->second->positions[i].x << ", "
-                    << it->second->positions[i].y << ", "
-                    << it->second->positions[i].z << "}";
+            outfile << "{" << it2->second->positions[j].x << ", "
+                    << it2->second->positions[j].y << ", "
+                    << it2->second->positions[j].z << "}";
             if(j != size - 1){
                 outfile << ",\n\t\t\t\t";
             }
         }
         outfile << "\n\t\t\t]";
-        outfile << "\n\t\t},"; // close "robot_i": {
+        if (std::next(it2) == robot_data.end()){
+            outfile << "\n\t\t}";
+        }
+        else{
+            outfile << "\n\t\t},"; // close "robot_i": {
+        } 
         i++;
     }
+
     outfile << "\n\t}"; // close "robots": {
     outfile << "\n}"; // close json data
     outfile.close();
+    std::cout << "end" << std::endl;
+
 }

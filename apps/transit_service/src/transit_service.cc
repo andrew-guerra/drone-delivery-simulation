@@ -14,6 +14,7 @@ public:
         routing::RoutingAPI api;
         routing::IGraph* graph = api.LoadFromFile("libs/routing/data/umn.osm");
         model.SetGraph(graph);
+        this->observer = GUIDataObserver::GetInstance();
     }
 
     /// Handles specific commands from the web server
@@ -52,7 +53,21 @@ public:
                 // Send updated entities
                 SendEntity("UpdateEntity", *it->second, false);
             }
+            
+            // get observer's current json
+            JsonObject newJson = observer->GetJSON();
+            // total elapsed sim time
+            // Drone battery lives
+            // dist for each drone
+            // num passengers picked up for each drone
+            // SendEventToView("data_update", newJson);
         }
+        else if (cmd == "generateJSON") {
+            DataCollection* dataCollection = DataCollection::GetInstance();
+            dataCollection->generateJSON();
+        }
+
+
     }
 
     void SendEntity(const std::string& event, const IEntity& entity, bool includeDetails) {
@@ -111,6 +126,7 @@ public:
     void SendEventToView(const std::string& event, const JsonObject& details) {
         JsonObject eventData;
         eventData["event"] = event;
+        std::cout << "event = " << event << std::endl;
         eventData["details"] = details;
         sendMessage(eventData.ToString());
     }
@@ -124,6 +140,9 @@ private:
     double time;
     // Current entities to update
     std::map<int, const IEntity*> updateEntites;
+    // Observer for GUI data
+    GUIDataObserver* observer;
+
 };
 
 

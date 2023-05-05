@@ -10,6 +10,7 @@ function WSApi(host = null) {
 
     this.socket.onmessage = function (msg) {
         var data = JSON.parse(msg.data);
+        console.log("message = ",msg);
 
         if (typeof(data) == 'number') {
             self.id = +msg.data;

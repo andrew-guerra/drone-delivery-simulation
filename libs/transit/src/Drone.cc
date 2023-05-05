@@ -13,6 +13,7 @@ Drone::Drone(JsonObject& obj) : details(obj) {
   speed = obj["speed"];
 
   available = true;
+  pickedUp = false;
   this->dataCollection = DataCollection::GetInstance();
 }
 
@@ -84,22 +85,26 @@ void Drone::Update(double dt, std::vector<IEntity*> scheduler) {
       pathStrategy->Move(this, dt);
       nearestEntity->SetPosition(position);
       // Add a new position to the Drone's and Robot's position log
+      std::cout << "strategy move\n";
       dataCollection->addNewPositionDrone(this, GetPosition());
       dataCollection->addNewPositionRobot(nearestEntity, nearestEntity->GetPosition());
       if(pathStrategy->IsCompleted()){  //when strategy completes, update availability
         available = true;
+        pickedUp = false;
+        nearestEntity->SetAvailability(false);
 
         // Add one to passengers dropped off
         dataCollection->addDelivery(this);
         // Mark the time of delivery down
         dataCollection->addNewDeliveryTime(this);
-        dataCollection->generateJSON();
+        // dataCollection->generateJSON();
       }
     } else {
       // use bee line strategy to move to robot
       pathStrategy = new BeelineStrategy(position, destination);
       pathStrategy->Move(this, dt);
       // Add a new position to the Drone's position log
+      std::cout << "beeline move\n";
       dataCollection->addNewPositionDrone(this, GetPosition());
     }
   }
