@@ -151,7 +151,7 @@ bool BatteryDecorator::CanReachDestination() {
   // Calculate the time it will take to reach the destination.
   double time = distance / entity->GetSpeed();
 
-  return time < battery_life;
+  return time < battery_life - BATTERY_DELTA_THREASHOLD;
 }
 
 bool BatteryDecorator::CanMakeTrip() {
@@ -183,7 +183,7 @@ bool BatteryDecorator::CanMakeTrip() {
   // Calculate the time it will take to reach the destination.
   double time = distance / entity->GetSpeed();
 
-  return time < battery_life;
+  return time < battery_life - BATTERY_DELTA_THREASHOLD;
 }
 
 bool BatteryDecorator::CanReachCharger(Vector3 location) {
@@ -215,7 +215,7 @@ bool BatteryDecorator::CanReachLocation(Vector3 location) {
   // Calculate the time it will take to reach the destination.
   double time = distance / entity->GetSpeed();
 
-  return time < battery_life;
+  return time < battery_life - BATTERY_DELTA_THREASHOLD;
 }
 
 // Returns true if the drone can make it location using a beeline strategy
@@ -227,7 +227,7 @@ bool BatteryDecorator::CanReachLocation(Vector3 location, double battery) {
   // Calculate the time it will take to reach the destination.
   double time = distance / entity->GetSpeed();
 
-  return time < battery;
+  return time < battery - BATTERY_DELTA_THREASHOLD;
 }
 
 void BatteryDecorator::Update(double dt, std::vector<IEntity*> scheduler) {
