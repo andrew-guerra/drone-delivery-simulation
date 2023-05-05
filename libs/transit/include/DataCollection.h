@@ -9,6 +9,31 @@
 #include "math/vector3.h"
 #include "IEntity.h"
 
+typedef struct DroneData {
+    DroneData() {
+        num_deliveries = 0;
+        num_charging_station_stops = 0;
+        distance_traveled = 0.0;
+        positions = std::vector<Vector3>();
+        delivery_times = std::vector<double>();
+    }
+
+    std::vector<Vector3> positions;
+    std::vector<double> delivery_times;
+    int num_deliveries;
+    int num_charging_station_stops;
+    double distance_traveled;
+} DroneData;
+
+typedef struct RobotData {
+    RobotData() {
+        distance_traveled = 0.0;
+    }
+
+    double distance_traveled;
+    std::vector<Vector3> positions;
+} RobotData;
+
 class DataCollection {
     public:
         ~DataCollection();
@@ -104,30 +129,8 @@ class DataCollection {
         void generateJSON();
 
     private:
-        
         DataCollection();
         static DataCollection* instancePtr;
-
-        struct DroneData {
-            DroneData(){
-                num_deliveries = 0;
-                num_charging_station_stops = 0;
-                distance_traveled = 0.0;
-            }
-            std::vector<Vector3> positions;
-            std::vector<double> delivery_times;
-            int num_deliveries;
-            int num_charging_station_stops;
-            double distance_traveled;
-        };
-
-        struct RobotData {
-            RobotData(){
-                distance_traveled = 0.0;
-            }
-            double distance_traveled;
-            std::vector<Vector3> positions;
-        };
 
         double total_elapsed_time;
         std::map<std::string , DroneData*> drone_data;

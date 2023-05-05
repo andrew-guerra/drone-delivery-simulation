@@ -82,9 +82,9 @@ void DataCollection::addNewPositionDrone(IEntity* drone, Vector3 pos){
     Vector3 previous_position;
     // std::cout << name << std::endl;
     if(this->drone_data[name]->positions.empty()){
-        this->drone_data[name]->positions.back(); // The last element of the vector
-    }else{
         previous_position = drone->GetPosition();
+    }else{
+        previous_position = this->drone_data[name]->positions.back(); // The last element of the vector
     }
 
     this->drone_data[name]->positions.push_back(pos); // Add the new position to the vector
@@ -100,10 +100,10 @@ void DataCollection::addNewPositionRobot(IEntity* robot, Vector3 pos){
     // std::cout << name << std::endl;
 
     Vector3 previous_position;
-    if(this->robot_data[name]->positions.size() > 0){
-        previous_position = this->robot_data[name]->positions.back(); // The last element of the vector
-    }else{
+    if(this->robot_data[name]->positions.empty()){
         previous_position = robot->GetPosition();
+    }else{
+        previous_position = this->robot_data[name]->positions.back(); // The last element of the vector
     }
     this->robot_data[name]->positions.push_back(pos); // Add the new position to the vector
 
@@ -163,6 +163,7 @@ void DataCollection::generateJSON(){
     std::string stamp = std::string(timestamp);
     stamp += ".json";
 
+    std::cout << stamp << std::endl;
     std::ofstream outfile(stamp);
     if(!outfile){
         std::cout<< "Failed to open json file for output" << std::endl;

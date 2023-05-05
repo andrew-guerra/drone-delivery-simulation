@@ -8,7 +8,7 @@ IEntity* DroneFactory::CreateEntity(JsonObject& entity) {
     nDrone = new BatteryDecorator(nDrone);
     DataCollection* dataCollection = DataCollection::GetInstance();
     dataCollection->addDrone(nDrone);
-    dataCollection->addNewPositionDrone(nDrone, nDrone->GetPosition());
+    
     return nDrone;
   }
   return nullptr;
