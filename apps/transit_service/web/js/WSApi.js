@@ -33,7 +33,9 @@ function WSApi(host = null) {
             $('#drone2-battery').css("color", "hsl(" + hue2 + ", " + saturation + "%, " + lightness + "%)");
             $('#drone3-battery').css("color", "hsl(" + hue3 + ", " + saturation + "%, " + lightness + "%)");
             $('#drone4-battery').css("color", "hsl(" + hue4 + ", " + saturation + "%, " + lightness + "%)");
-
+            
+            $('#time-elapsed').text(`Time Elapsed: ${dataJson["time-elapsed"]}`)
+            
             $('#drone1-battery').text(`Battery: ${dataJson["Drone-1"]["battery-percentage"].toFixed(2)}%`)
             $('#drone1-distance').text(`Distance Traveled: ${dataJson["Drone-1"]["distance"]}`)
             $('#drone1-passengers-delivered').text(`Passengers Delivered: ${dataJson["Drone-1"]["deliveries"]}`)

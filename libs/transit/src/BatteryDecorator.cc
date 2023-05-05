@@ -3,6 +3,7 @@
 BatteryDecorator::BatteryDecorator(IEntity* entity) {
   this->entity = entity;
   this->battery_life = MAX_BATTERY;
+  this->battery_discharge_rate_bias = 0;
   this->charging = false;
   this->travelingToCharge = false;
   this->needToCalcDist = true;
@@ -151,7 +152,7 @@ bool BatteryDecorator::CanReachDestination() {
   // Calculate the time it will take to reach the destination.
   double time = distance / entity->GetSpeed();
 
-  return time < battery_life;
+  return time * battery_discharge_rate_bias < battery_life - BATTERY_DELTA_THREASHOLD;
 }
 
 bool BatteryDecorator::CanMakeTrip() {
@@ -183,7 +184,7 @@ bool BatteryDecorator::CanMakeTrip() {
   // Calculate the time it will take to reach the destination.
   double time = distance / entity->GetSpeed();
 
-  return time < battery_life;
+  return time * battery_discharge_rate_bias < battery_life - BATTERY_DELTA_THREASHOLD;
 }
 
 bool BatteryDecorator::CanReachCharger(Vector3 location) {
@@ -215,7 +216,7 @@ bool BatteryDecorator::CanReachLocation(Vector3 location) {
   // Calculate the time it will take to reach the destination.
   double time = distance / entity->GetSpeed();
 
-  return time < battery_life;
+  return time * battery_discharge_rate_bias < battery_life - BATTERY_DELTA_THREASHOLD;
 }
 
 // Returns true if the drone can make it location using a beeline strategy
@@ -227,7 +228,7 @@ bool BatteryDecorator::CanReachLocation(Vector3 location, double battery) {
   // Calculate the time it will take to reach the destination.
   double time = distance / entity->GetSpeed();
 
-  return time < battery;
+  return time * battery_discharge_rate_bias < battery - BATTERY_DELTA_THREASHOLD;
 }
 
 void BatteryDecorator::Update(double dt, std::vector<IEntity*> scheduler) {
@@ -237,6 +238,7 @@ void BatteryDecorator::Update(double dt, std::vector<IEntity*> scheduler) {
   // std::string name = obj["name"];
   // std::cout << name << ": " << battery_life << std::endl;
   options opts;
+  battery_discharge_rate_bias = 1;
 
   if (charging) {
     opts = Charging;
@@ -244,14 +246,18 @@ void BatteryDecorator::Update(double dt, std::vector<IEntity*> scheduler) {
     opts = toCharger;
   } else if (!entity->GetAvailability()) {
     if (needToCalcDist) {
+      battery_discharge_rate_bias = BATTERY_MOVEMENT_BIAS * BATTERY_ROBOT_LOAD_BIAS;
       canReach = CanReachDestination();
       needToCalcDist = false;
+
+      battery_discharge_rate_bias = 1;
     }
 
     if (canReach) {
       deliveringRobot = true;
       opts = Default;
     } else {
+      battery_discharge_rate_bias = BATTERY_MOVEMENT_BIAS * BATTERY_ROBOT_LOAD_BIAS;
       // find the closest charging station
       IEntity* charger = GetClosestChargingStation(GetPosition());
 
@@ -271,6 +277,8 @@ void BatteryDecorator::Update(double dt, std::vector<IEntity*> scheduler) {
     // find the closest charging station
     IEntity* charger = GetClosestChargingStation(GetPosition());
 
+    battery_discharge_rate_bias = BATTERY_MOVEMENT_BIAS;
+
     if (!CanReachLocation(charger->GetPosition())) {
       travelingToCharge = true;
 
@@ -280,6 +288,16 @@ void BatteryDecorator::Update(double dt, std::vector<IEntity*> scheduler) {
     } else {
       opts = Default;
     }
+  }
+
+  // is moving
+  if(travelingToCharge || deliveringRobot) {
+    battery_discharge_rate_bias *= BATTERY_MOVEMENT_BIAS;
+  }
+
+  // is carrying robot
+  if(deliveringRobot) {
+    battery_discharge_rate_bias *= BATTERY_ROBOT_LOAD_BIAS;
   }
 
   switch (opts) {
@@ -316,7 +334,7 @@ void BatteryDecorator::Update(double dt, std::vector<IEntity*> scheduler) {
   if (charging == true) {
     this->battery_life += 4 * dt;
   } else {
-    this->battery_life -= dt;
+    this->battery_life -= dt * battery_discharge_rate_bias;
   }
 
   // std::cout << this->GetBattery() << std::endl;
