@@ -3,19 +3,19 @@
 
 #include <vector>
 
+#include "AstarStrategy.h"
+#include "BatteryDecorator.h"
+#include "BeelineStrategy.h"
+#include "CelebrationDecorator.h"
+#include "DataCollection.h"
+#include "DfsStrategy.h"
+#include "DijkstraStrategy.h"
 #include "IEntity.h"
 #include "IStrategy.h"
-#include "BeelineStrategy.h"
-#include "PathStrategy.h"
-#include "AstarStrategy.h"
-#include "DijkstraStrategy.h"
-#include "DfsStrategy.h"
-#include "CelebrationDecorator.h"
 #include "JumpDecorator.h"
+#include "PathStrategy.h"
 #include "SpinDecorator.h"
-#include "BatteryDecorator.h"
 #include "math/vector3.h"
-#include "DataCollection.h"
 // Represents a drone in a physical system.
 // Drones move using euler integration based on a specified
 // velocity and direction.
@@ -86,10 +86,10 @@ class Drone : public IEntity {
   void GetNearestEntity(std::vector<IEntity*> scheduler);
 
   /**
-   * @brief Gets the nearest entity 
+   * @brief Gets the nearest entity
    * @return Returns the drone's nearest entity
-  */
-  IEntity *GetEntity() {return nearestEntity;}
+   */
+  IEntity* GetEntity() { return nearestEntity; }
 
   /**
    * @brief Updates the drone's position
@@ -141,9 +141,9 @@ class Drone : public IEntity {
   Drone(const Drone& drone) = delete;
   /**
    * @brief An overloaded = operator for the drone
-   * 
-   * @param drone 
-   * @return Drone& 
+   *
+   * @param drone
+   * @return Drone&
    */
   Drone& operator=(const Drone& drone) = delete;
 

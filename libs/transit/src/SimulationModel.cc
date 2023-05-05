@@ -1,11 +1,11 @@
 #include "SimulationModel.h"
 
-#include "DroneFactory.h"
-#include "RobotFactory.h"
-#include "HelicopterFactory.h"
-#include "HumanFactory.h"
-#include "HorseFactory.h"
 #include "ChargingStationFactory.h"
+#include "DroneFactory.h"
+#include "HelicopterFactory.h"
+#include "HorseFactory.h"
+#include "HumanFactory.h"
+#include "RobotFactory.h"
 
 SimulationModel::SimulationModel(IController& controller)
     : controller(controller) {
@@ -39,7 +39,7 @@ void SimulationModel::CreateEntity(JsonObject& entity) {
 
   IEntity* myNewEntity = compFactory->CreateEntity(entity);
   myNewEntity->SetGraph(graph);
-  
+
   // Call AddEntity to add it to the view
   controller.AddEntity(*myNewEntity);
   entities.push_back(myNewEntity);
@@ -75,7 +75,7 @@ void SimulationModel::Update(double dt) {
   for (int i = 0; i < entities.size(); i++) {
     JsonObject details = entities[i]->GetDetails();
     std::string type = details["type"];
-    if(type.compare("drone")==0){
+    if (type.compare("drone") == 0) {
       static_cast<BatteryDecorator*>(entities[i])->AddSimEntities(entities);
     }
     entities[i]->Update(dt, scheduler);

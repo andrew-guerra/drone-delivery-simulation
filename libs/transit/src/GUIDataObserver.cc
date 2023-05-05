@@ -2,23 +2,17 @@
 
 GUIDataObserver* GUIDataObserver::instancePtr = nullptr;
 
-GUIDataObserver::GUIDataObserver(){
-    this->obj = JsonObject();
-}
+GUIDataObserver::GUIDataObserver() { this->obj = JsonObject(); }
 
 GUIDataObserver* GUIDataObserver::GetInstance() {
-    if (GUIDataObserver::instancePtr == nullptr) {
-        GUIDataObserver::instancePtr = new GUIDataObserver();
-    } 
-    return GUIDataObserver::instancePtr;
+  if (GUIDataObserver::instancePtr == nullptr) {
+    GUIDataObserver::instancePtr = new GUIDataObserver();
+  }
+  return GUIDataObserver::instancePtr;
 }
 
 GUIDataObserver::~GUIDataObserver() {}
 
-JsonObject GUIDataObserver::GetJSON(){
-    return this->obj;
-}
+JsonObject GUIDataObserver::GetJSON() { return this->obj; }
 
-void GUIDataObserver::Update(JsonObject newObj){
-    this->obj = newObj;
-}
+void GUIDataObserver::Update(JsonObject newObj) { this->obj = newObj; }

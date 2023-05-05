@@ -29,7 +29,7 @@ class PathStrategy : public IStrategy {
   virtual void Move(IEntity* entity, double dt);
 
   /**
-   * @brief Check if the trip is completed by seeing if index 
+   * @brief Check if the trip is completed by seeing if index
    *        has reached the end of the path
    *
    * @return True if complete, false if not complete

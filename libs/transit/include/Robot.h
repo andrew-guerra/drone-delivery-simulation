@@ -3,10 +3,10 @@
 
 #include <vector>
 
+#include "DataCollection.h"
 #include "IEntity.h"
 #include "math/vector3.h"
 #include "util/json.h"
-#include "DataCollection.h"
 
 /**
  * @class Robot
