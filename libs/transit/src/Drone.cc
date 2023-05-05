@@ -25,6 +25,7 @@ Drone::~Drone() {
 }
 
 void Drone::GetNearestEntity(std::vector<IEntity*> scheduler) {
+  nearestEntity = NULL;
   float minDis = std::numeric_limits<float>::max();
   for (auto entity : scheduler) {
     if (entity->GetAvailability()) {
