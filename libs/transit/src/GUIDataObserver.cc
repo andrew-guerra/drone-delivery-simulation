@@ -15,4 +15,4 @@ GUIDataObserver::~GUIDataObserver() {}
 
 JsonObject GUIDataObserver::GetJSON() { return this->obj; }
 
-void GUIDataObserver::Update(JsonObject newObj) { this->obj = newObj; }
+void GUIDataObserver::SetJSON(JsonObject newObj) { this->obj = newObj; }

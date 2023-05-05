@@ -13,25 +13,25 @@
 
 typedef struct DroneData {
   DroneData() {
-    num_deliveries = 0;
-    num_charging_station_stops = 0;
-    distance_traveled = 0.0;
+    numDeliveries = 0;
+    numChargingStationStops = 0;
+    distanceTraveled = 0.0;
     positions = std::vector<Vector3>();
-    delivery_times = std::vector<double>();
+    deliveryTimes = std::vector<double>();
   }
 
   std::vector<Vector3> positions;
-  std::vector<double> delivery_times;
-  int num_deliveries;
-  int num_charging_station_stops;
-  double distance_traveled;
+  std::vector<double> deliveryTimes;
+  int numDeliveries;
+  int numChargingStationStops;
+  double distanceTraveled;
   double battery;
 } DroneData;
 
 typedef struct RobotData {
-  RobotData() { distance_traveled = 0.0; }
+  RobotData() { distanceTraveled = 0.0; }
 
-  double distance_traveled;
+  double distanceTraveled;
   std::vector<Vector3> positions;
 } RobotData;
 
@@ -106,7 +106,7 @@ class DataCollection {
   /**
    * @brief add a new time for delivery (uses current simulation time)
    *
-   * @param drone
+   * @param drone pointer to a drone object
    */
   void addNewDeliveryTime(IEntity* drone);
 
@@ -141,13 +141,13 @@ class DataCollection {
   void updateSimTime(double dt);
 
   /**
-   * @brief
+   * @brief When the state of the class changes, update the Json object of the observer
    *
    */
   void Notify();
 
   /**
-   * @brief
+   * @brief Create a JsonObject with the latest statistics from the simulation for the observer
    *
    * @return JsonObject
    */
@@ -163,9 +163,9 @@ class DataCollection {
   DataCollection();
   static DataCollection* instancePtr;
   GUIDataObserver* observer;
-  double total_elapsed_time;
-  std::map<std::string, DroneData*> drone_data;
-  std::map<std::string, RobotData*> robot_data;
+  double totalElapsedTime;
+  std::map<std::string, DroneData*> droneData;
+  std::map<std::string, RobotData*> robotData;
 };
 
 #endif

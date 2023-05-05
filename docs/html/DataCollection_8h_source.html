@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: /home/brock450/csci3081w/csci-3081w-S23/Team-010-31-homework4/libs/transit/include/DataCollection.h Source File</title>
+<title>My Project: /home/moerb001/Desktop/csci3081/Team-010-31-homework4/libs/transit/include/DataCollection.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -84,25 +84,25 @@ $(function() {
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
 <div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="structDroneData.html">   14</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structDroneData.html">DroneData</a> {</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <a class="code" href="structDroneData.html">DroneData</a>() {</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    num_deliveries = 0;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    num_charging_station_stops = 0;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    distance_traveled = 0.0;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    numDeliveries = 0;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    numChargingStationStops = 0;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    distanceTraveled = 0.0;</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    positions = std::vector&lt;Vector3&gt;();</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    delivery_times = std::vector&lt;double&gt;();</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    deliveryTimes = std::vector&lt;double&gt;();</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  }</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  std::vector&lt;Vector3&gt; positions;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  std::vector&lt;double&gt; delivery_times;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keywordtype">int</span> num_deliveries;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keywordtype">int</span> num_charging_station_stops;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="keywordtype">double</span> distance_traveled;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  std::vector&lt;double&gt; deliveryTimes;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keywordtype">int</span> numDeliveries;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keywordtype">int</span> numChargingStationStops;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="keywordtype">double</span> distanceTraveled;</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keywordtype">double</span> battery;</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;} <a class="code" href="structDroneData.html">DroneData</a>;</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
 <div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="structRobotData.html">   31</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structRobotData.html">RobotData</a> {</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <a class="code" href="structRobotData.html">RobotData</a>() { distance_traveled = 0.0; }</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <a class="code" href="structRobotData.html">RobotData</a>() { distanceTraveled = 0.0; }</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keywordtype">double</span> distance_traveled;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keywordtype">double</span> distanceTraveled;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  std::vector&lt;Vector3&gt; positions;</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;} <a class="code" href="structRobotData.html">RobotData</a>;</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
@@ -136,7 +136,7 @@ $(function() {
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
 <div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classDataCollection.html#a2b02cbf63675198873190c451076171d">updateSimTime</a>(<span class="keywordtype">double</span> dt);</div>
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;  <span class="keywordtype">void</span> Notify();</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classDataCollection.html#abb5de7c3eabe7374043cb475bb9cdf99">Notify</a>();</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  JsonObject <a class="code" href="classDataCollection.html#ab9bdfca752fd810a55d73157f5a93400">generateWebJSON</a>();</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160; </div>
@@ -146,9 +146,9 @@ $(function() {
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;  <a class="code" href="classDataCollection.html">DataCollection</a>();</div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;  <span class="keyword">static</span> <a class="code" href="classDataCollection.html">DataCollection</a>* instancePtr;</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;  <a class="code" href="classGUIDataObserver.html">GUIDataObserver</a>* observer;</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  <span class="keywordtype">double</span> total_elapsed_time;</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;  std::map&lt;std::string, DroneData*&gt; drone_data;</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;  std::map&lt;std::string, RobotData*&gt; robot_data;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  <span class="keywordtype">double</span> totalElapsedTime;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;  std::map&lt;std::string, DroneData*&gt; droneData;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;  std::map&lt;std::string, RobotData*&gt; robotData;</div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;};</div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160; </div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;<span class="preprocessor">#endif</span></div>
@@ -157,23 +157,24 @@ $(function() {
 <div class="ttc" id="astructRobotData_html"><div class="ttname"><a href="structRobotData.html">RobotData</a></div><div class="ttdef"><b>Definition:</b> DataCollection.h:31</div></div>
 <div class="ttc" id="aclassDataCollection_html"><div class="ttname"><a href="classDataCollection.html">DataCollection</a></div><div class="ttdoc">A Singleton that collects data from drones and robots.</div><div class="ttdef"><b>Definition:</b> DataCollection.h:42</div></div>
 <div class="ttc" id="aclassDataCollection_html_a2d70e7d8f3d7551d74ca2887b94ada03"><div class="ttname"><a href="classDataCollection.html#a2d70e7d8f3d7551d74ca2887b94ada03">DataCollection::GetInstance</a></div><div class="ttdeci">static DataCollection * GetInstance()</div><div class="ttdoc">Get the Instance object (on first run it creates it. On subsequent runs it returns the existing stati...</div><div class="ttdef"><b>Definition:</b> DataCollection.cc:22</div></div>
-<div class="ttc" id="aclassDataCollection_html_a439361956304816bc123d21cdf733f4a"><div class="ttname"><a href="classDataCollection.html#a439361956304816bc123d21cdf733f4a">DataCollection::addNewDeliveryTime</a></div><div class="ttdeci">void addNewDeliveryTime(IEntity *drone)</div><div class="ttdoc">add a new time for delivery (uses current simulation time)</div><div class="ttdef"><b>Definition:</b> DataCollection.cc:71</div></div>
-<div class="ttc" id="aclassDataCollection_html_a8126c3c5ce123b3eaf94bd061500fe4a"><div class="ttname"><a href="classDataCollection.html#a8126c3c5ce123b3eaf94bd061500fe4a">DataCollection::addStationStop</a></div><div class="ttdeci">void addStationStop(IEntity *drone)</div><div class="ttdoc">update number of charge station stops</div><div class="ttdef"><b>Definition:</b> DataCollection.cc:55</div></div>
-<div class="ttc" id="aclassDataCollection_html_aeb2d1659b48fd8bedce614576e298204"><div class="ttname"><a href="classDataCollection.html#aeb2d1659b48fd8bedce614576e298204">DataCollection::addNewPositionRobot</a></div><div class="ttdeci">void addNewPositionRobot(IEntity *robot, Vector3 pos)</div><div class="ttdoc">add a new position to the vector of previous positions</div><div class="ttdef"><b>Definition:</b> DataCollection.cc:101</div></div>
-<div class="ttc" id="aclassDataCollection_html_ab9bdfca752fd810a55d73157f5a93400"><div class="ttname"><a href="classDataCollection.html#ab9bdfca752fd810a55d73157f5a93400">DataCollection::generateWebJSON</a></div><div class="ttdeci">JsonObject generateWebJSON()</div><div class="ttdef"><b>Definition:</b> DataCollection.cc:136</div></div>
+<div class="ttc" id="aclassDataCollection_html_a439361956304816bc123d21cdf733f4a"><div class="ttname"><a href="classDataCollection.html#a439361956304816bc123d21cdf733f4a">DataCollection::addNewDeliveryTime</a></div><div class="ttdeci">void addNewDeliveryTime(IEntity *drone)</div><div class="ttdoc">add a new time for delivery (uses current simulation time)</div><div class="ttdef"><b>Definition:</b> DataCollection.cc:66</div></div>
+<div class="ttc" id="aclassDataCollection_html_a8126c3c5ce123b3eaf94bd061500fe4a"><div class="ttname"><a href="classDataCollection.html#a8126c3c5ce123b3eaf94bd061500fe4a">DataCollection::addStationStop</a></div><div class="ttdeci">void addStationStop(IEntity *drone)</div><div class="ttdoc">update number of charge station stops</div><div class="ttdef"><b>Definition:</b> DataCollection.cc:52</div></div>
+<div class="ttc" id="aclassDataCollection_html_aeb2d1659b48fd8bedce614576e298204"><div class="ttname"><a href="classDataCollection.html#aeb2d1659b48fd8bedce614576e298204">DataCollection::addNewPositionRobot</a></div><div class="ttdeci">void addNewPositionRobot(IEntity *robot, Vector3 pos)</div><div class="ttdoc">add a new position to the vector of previous positions</div><div class="ttdef"><b>Definition:</b> DataCollection.cc:92</div></div>
+<div class="ttc" id="aclassDataCollection_html_ab9bdfca752fd810a55d73157f5a93400"><div class="ttname"><a href="classDataCollection.html#ab9bdfca752fd810a55d73157f5a93400">DataCollection::generateWebJSON</a></div><div class="ttdeci">JsonObject generateWebJSON()</div><div class="ttdoc">Create a JsonObject with the latest statistics from the simulation for the observer.</div><div class="ttdef"><b>Definition:</b> DataCollection.cc:122</div></div>
 <div class="ttc" id="aclassDataCollection_html_a9faf6df38ffd75763b7ac598fecda8fc"><div class="ttname"><a href="classDataCollection.html#a9faf6df38ffd75763b7ac598fecda8fc">DataCollection::updateDistanceRobot</a></div><div class="ttdeci">void updateDistanceRobot(IEntity *robot)</div><div class="ttdoc">update distance traveled for robot</div></div>
 <div class="ttc" id="aclassDataCollection_html_a2523da85e58bfbe71194c271fe25aaa3"><div class="ttname"><a href="classDataCollection.html#a2523da85e58bfbe71194c271fe25aaa3">DataCollection::updateDistanceDrone</a></div><div class="ttdeci">void updateDistanceDrone(IEntity *drone)</div><div class="ttdoc">update distance traveled for drone</div></div>
-<div class="ttc" id="aclassDataCollection_html_a8e29fc4d8b4851cf541b180ae7171c4d"><div class="ttname"><a href="classDataCollection.html#a8e29fc4d8b4851cf541b180ae7171c4d">DataCollection::updateBatteryDrone</a></div><div class="ttdeci">void updateBatteryDrone(IEntity *drone, double battery)</div><div class="ttdoc">updates drone battery data</div><div class="ttdef"><b>Definition:</b> DataCollection.cc:123</div></div>
+<div class="ttc" id="aclassDataCollection_html_a8e29fc4d8b4851cf541b180ae7171c4d"><div class="ttname"><a href="classDataCollection.html#a8e29fc4d8b4851cf541b180ae7171c4d">DataCollection::updateBatteryDrone</a></div><div class="ttdeci">void updateBatteryDrone(IEntity *drone, double battery)</div><div class="ttdoc">updates drone battery data</div><div class="ttdef"><b>Definition:</b> DataCollection.cc:109</div></div>
 <div class="ttc" id="aclassGUIDataObserver_html"><div class="ttname"><a href="classGUIDataObserver.html">GUIDataObserver</a></div><div class="ttdoc">A class to represent the observer with a GUI.</div><div class="ttdef"><b>Definition:</b> GUIDataObserver.h:11</div></div>
-<div class="ttc" id="aclassDataCollection_html_a3baabaccc2bf67cf76d7377f62336a8d"><div class="ttname"><a href="classDataCollection.html#a3baabaccc2bf67cf76d7377f62336a8d">DataCollection::addDelivery</a></div><div class="ttdeci">void addDelivery(IEntity *drone)</div><div class="ttdoc">update number of passengers dropped off</div><div class="ttdef"><b>Definition:</b> DataCollection.cc:63</div></div>
+<div class="ttc" id="aclassDataCollection_html_a3baabaccc2bf67cf76d7377f62336a8d"><div class="ttname"><a href="classDataCollection.html#a3baabaccc2bf67cf76d7377f62336a8d">DataCollection::addDelivery</a></div><div class="ttdeci">void addDelivery(IEntity *drone)</div><div class="ttdoc">update number of passengers dropped off</div><div class="ttdef"><b>Definition:</b> DataCollection.cc:59</div></div>
 <div class="ttc" id="aclassVector3_html"><div class="ttname"><a href="classVector3.html">Vector3</a></div><div class="ttdoc">A class built solely to handle 3D vector mathematics.</div><div class="ttdef"><b>Definition:</b> vector3.h:9</div></div>
-<div class="ttc" id="aclassDataCollection_html_a2b02cbf63675198873190c451076171d"><div class="ttname"><a href="classDataCollection.html#a2b02cbf63675198873190c451076171d">DataCollection::updateSimTime</a></div><div class="ttdeci">void updateSimTime(double dt)</div><div class="ttdoc">update the total simulation</div><div class="ttdef"><b>Definition:</b> DataCollection.cc:131</div></div>
-<div class="ttc" id="aclassDataCollection_html_a1ba5f7c018b58a2d438660bd7338679f"><div class="ttname"><a href="classDataCollection.html#a1ba5f7c018b58a2d438660bd7338679f">DataCollection::addNewPositionDrone</a></div><div class="ttdeci">void addNewPositionDrone(IEntity *drone, Vector3 pos)</div><div class="ttdoc">add a new position to the vector of previous positions</div><div class="ttdef"><b>Definition:</b> DataCollection.cc:80</div></div>
-<div class="ttc" id="aclassDataCollection_html_a2d4668975276baecbcd68fe4e4899d4e"><div class="ttname"><a href="classDataCollection.html#a2d4668975276baecbcd68fe4e4899d4e">DataCollection::addRobot</a></div><div class="ttdeci">void addRobot(IEntity *robot)</div><div class="ttdoc">track a new robot's data</div><div class="ttdef"><b>Definition:</b> DataCollection.cc:45</div></div>
-<div class="ttc" id="aclassDataCollection_html_a95f303c392794ec59ce1bd17410d6eb9"><div class="ttname"><a href="classDataCollection.html#a95f303c392794ec59ce1bd17410d6eb9">DataCollection::generateJSON</a></div><div class="ttdeci">void generateJSON()</div><div class="ttdoc">creates a csv file with all of the simulation's current data</div><div class="ttdef"><b>Definition:</b> DataCollection.cc:166</div></div>
+<div class="ttc" id="aclassDataCollection_html_a2b02cbf63675198873190c451076171d"><div class="ttname"><a href="classDataCollection.html#a2b02cbf63675198873190c451076171d">DataCollection::updateSimTime</a></div><div class="ttdeci">void updateSimTime(double dt)</div><div class="ttdoc">update the total simulation</div><div class="ttdef"><b>Definition:</b> DataCollection.cc:117</div></div>
+<div class="ttc" id="aclassDataCollection_html_a1ba5f7c018b58a2d438660bd7338679f"><div class="ttname"><a href="classDataCollection.html#a1ba5f7c018b58a2d438660bd7338679f">DataCollection::addNewPositionDrone</a></div><div class="ttdeci">void addNewPositionDrone(IEntity *drone, Vector3 pos)</div><div class="ttdoc">add a new position to the vector of previous positions</div><div class="ttdef"><b>Definition:</b> DataCollection.cc:74</div></div>
+<div class="ttc" id="aclassDataCollection_html_a2d4668975276baecbcd68fe4e4899d4e"><div class="ttname"><a href="classDataCollection.html#a2d4668975276baecbcd68fe4e4899d4e">DataCollection::addRobot</a></div><div class="ttdeci">void addRobot(IEntity *robot)</div><div class="ttdoc">track a new robot's data</div><div class="ttdef"><b>Definition:</b> DataCollection.cc:43</div></div>
+<div class="ttc" id="aclassDataCollection_html_a95f303c392794ec59ce1bd17410d6eb9"><div class="ttname"><a href="classDataCollection.html#a95f303c392794ec59ce1bd17410d6eb9">DataCollection::generateJSON</a></div><div class="ttdeci">void generateJSON()</div><div class="ttdoc">creates a csv file with all of the simulation's current data</div><div class="ttdef"><b>Definition:</b> DataCollection.cc:143</div></div>
 <div class="ttc" id="astructDroneData_html"><div class="ttname"><a href="structDroneData.html">DroneData</a></div><div class="ttdef"><b>Definition:</b> DataCollection.h:14</div></div>
 <div class="ttc" id="aclassIEntity_html"><div class="ttname"><a href="classIEntity.html">IEntity</a></div><div class="ttdoc">Represents an entity in a physical system.</div><div class="ttdef"><b>Definition:</b> IEntity.h:21</div></div>
 <div class="ttc" id="aclassDataCollection_html_aff579f0550681a8ad0c652f999cb3325"><div class="ttname"><a href="classDataCollection.html#aff579f0550681a8ad0c652f999cb3325">DataCollection::operator=</a></div><div class="ttdeci">void operator=(const DataCollection &amp;)=delete</div></div>
+<div class="ttc" id="aclassDataCollection_html_abb5de7c3eabe7374043cb475bb9cdf99"><div class="ttname"><a href="classDataCollection.html#abb5de7c3eabe7374043cb475bb9cdf99">DataCollection::Notify</a></div><div class="ttdeci">void Notify()</div><div class="ttdoc">When the state of the class changes, update the Json object of the observer.</div><div class="ttdef"><b>Definition:</b> DataCollection.cc:141</div></div>
 <div class="ttc" id="aclassDataCollection_html_ab51334bac2a9cadc5d0c02142fa752a9"><div class="ttname"><a href="classDataCollection.html#ab51334bac2a9cadc5d0c02142fa752a9">DataCollection::~DataCollection</a></div><div class="ttdeci">~DataCollection()</div><div class="ttdoc">Destroy the Data Collection object.</div><div class="ttdef"><b>Definition:</b> DataCollection.cc:8</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -2,6 +2,15 @@
 \label{classBatteryDecorator}\index{BatteryDecorator@{BatteryDecorator}}
 
 
+Wraps an \mbox{\hyperlink{classIEntity}{I\+Entity}} and adds battery functionality to it.  
+
+
+
+
+{\ttfamily \#include $<$Battery\+Decorator.\+h$>$}
+
+
+
 Inheritance diagram for Battery\+Decorator\+:
 \nopagebreak
 \begin{figure}[H]
@@ -23,44 +32,34 @@ Collaboration diagram for Battery\+Decorator\+:
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classBatteryDecorator_a413f097a59e280c888fdc2d053c09a4a}\label{classBatteryDecorator_a413f097a59e280c888fdc2d053c09a4a}} 
-{\bfseries Battery\+Decorator} (\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$entity)
-\item 
-\mbox{\Hypertarget{classBatteryDecorator_a7f41875e9c4cee69f630b290ad3fb48f}\label{classBatteryDecorator_a7f41875e9c4cee69f630b290ad3fb48f}} 
-void {\bfseries Add\+Sim\+Entities} (std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$ entities)
-\item 
+\mbox{\hyperlink{classBatteryDecorator_a413f097a59e280c888fdc2d053c09a4a}{Battery\+Decorator}} (\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$entity)
+\begin{DoxyCompactList}\small\item\em Construct a new Battery Decorator object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classBatteryDecorator_a0036d03d5fc869eb39e55734d1e5bb87}{$\sim$\+Battery\+Decorator}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the Battery Decorator object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBatteryDecorator_a7f41875e9c4cee69f630b290ad3fb48f}{Add\+Sim\+Entities}} (std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$ entities)
+\begin{DoxyCompactList}\small\item\em Add each entity in the vector to the simulation. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classBatteryDecorator_a9169f6180a73457ef5a593be987c09b4}{Update}} (double dt, std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$ scheduler)
-\begin{DoxyCompactList}\small\item\em Updates the entity\textquotesingle{}s position in the physical system. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classBatteryDecorator_adfd0f47f9f3e5b634104ec9e8daeb4c7}\label{classBatteryDecorator_adfd0f47f9f3e5b634104ec9e8daeb4c7}} 
-bool {\bfseries Can\+Reach\+Destination} ()
-\item 
-\mbox{\Hypertarget{classBatteryDecorator_a2d47f6c84d2648ccb4957006343b5140}\label{classBatteryDecorator_a2d47f6c84d2648ccb4957006343b5140}} 
-bool {\bfseries Can\+Make\+Trip} ()
-\item 
-\mbox{\Hypertarget{classBatteryDecorator_a688dc4cb97df64885fac44178a7dc190}\label{classBatteryDecorator_a688dc4cb97df64885fac44178a7dc190}} 
-bool {\bfseries Can\+Reach\+Location} (\mbox{\hyperlink{classVector3}{Vector3}} location)
-\item 
-\mbox{\Hypertarget{classBatteryDecorator_a14bc05b20d00c5e76335c2f3e83c77c7}\label{classBatteryDecorator_a14bc05b20d00c5e76335c2f3e83c77c7}} 
-bool {\bfseries Can\+Reach\+Location} (\mbox{\hyperlink{classVector3}{Vector3}} location, double battery)
-\item 
-\mbox{\Hypertarget{classBatteryDecorator_aa5a0c6d27af58c6f99395d7b8e0216e9}\label{classBatteryDecorator_aa5a0c6d27af58c6f99395d7b8e0216e9}} 
-bool {\bfseries Can\+Reach\+Charger} (\mbox{\hyperlink{classVector3}{Vector3}} location)
-\item 
-\mbox{\Hypertarget{classBatteryDecorator_ab257bd7edd56726ae084f8fc48359878}\label{classBatteryDecorator_ab257bd7edd56726ae084f8fc48359878}} 
-bool {\bfseries Can\+Reach\+Charger} (\mbox{\hyperlink{classVector3}{Vector3}} location, double battery)
-\item 
-\mbox{\Hypertarget{classBatteryDecorator_ae2e60da9af161ce1c7ad0391c85e0cff}\label{classBatteryDecorator_ae2e60da9af161ce1c7ad0391c85e0cff}} 
-\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ {\bfseries Get\+Closest\+Charging\+Station} (\mbox{\hyperlink{classVector3}{Vector3}} location)
-\item 
-\mbox{\Hypertarget{classBatteryDecorator_a8b9e4f229be851b7f36198343f82434d}\label{classBatteryDecorator_a8b9e4f229be851b7f36198343f82434d}} 
-\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ {\bfseries Get\+Closest\+Reachable\+Charging\+Station} (\mbox{\hyperlink{classVector3}{Vector3}} location)
-\item 
-\mbox{\Hypertarget{classBatteryDecorator_ac2775a4f70db6d458a86a7f12b6ea722}\label{classBatteryDecorator_ac2775a4f70db6d458a86a7f12b6ea722}} 
-double {\bfseries Get\+Distance\+To\+Destination} (\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$entity)
-\item 
-\mbox{\Hypertarget{classBatteryDecorator_abe02f6f59cd3ebc5f364a621cfc0de5c}\label{classBatteryDecorator_abe02f6f59cd3ebc5f364a621cfc0de5c}} 
-double {\bfseries Get\+Distance\+To\+Location} (\mbox{\hyperlink{classVector3}{Vector3}} start, \mbox{\hyperlink{classVector3}{Vector3}} des)
-\item 
+\begin{DoxyCompactList}\small\item\em Updates the batteries state and calls entity\textquotesingle{}s update. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classBatteryDecorator_adfd0f47f9f3e5b634104ec9e8daeb4c7}{Can\+Reach\+Destination}} ()
+\begin{DoxyCompactList}\small\item\em Returns true if the drone can make it to the robot, to the robot\textquotesingle{}s destination then to a battery station on it\textquotesingle{}s current charge. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classBatteryDecorator_a2d47f6c84d2648ccb4957006343b5140}{Can\+Make\+Trip}} ()
+\begin{DoxyCompactList}\small\item\em Returns true if the drone can make it to the robot, to the robot\textquotesingle{}s destination then to a battery station on it\textquotesingle{}s current charge. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classBatteryDecorator_a688dc4cb97df64885fac44178a7dc190}{Can\+Reach\+Location}} (\mbox{\hyperlink{classVector3}{Vector3}} location)
+\begin{DoxyCompactList}\small\item\em Returns true if the drone can make it location using a beeline strategy. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classBatteryDecorator_a14bc05b20d00c5e76335c2f3e83c77c7}{Can\+Reach\+Location}} (\mbox{\hyperlink{classVector3}{Vector3}} location, double battery)
+\begin{DoxyCompactList}\small\item\em Returns true if the drone can make it location using a beeline strategy. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classBatteryDecorator_aa5a0c6d27af58c6f99395d7b8e0216e9}{Can\+Reach\+Charger}} (\mbox{\hyperlink{classVector3}{Vector3}} location)
+\begin{DoxyCompactList}\small\item\em Returns true if the entity can reach the charger on current battery life. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classBatteryDecorator_ab257bd7edd56726ae084f8fc48359878}{Can\+Reach\+Charger}} (\mbox{\hyperlink{classVector3}{Vector3}} location, double battery)
+\begin{DoxyCompactList}\small\item\em Returns true if the entity can reach the charger on current battery life. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ \mbox{\hyperlink{classBatteryDecorator_ae2e60da9af161ce1c7ad0391c85e0cff}{Get\+Closest\+Charging\+Station}} (\mbox{\hyperlink{classVector3}{Vector3}} location)
+\begin{DoxyCompactList}\small\item\em Get the Closest Charging Station object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ \mbox{\hyperlink{classBatteryDecorator_a8b9e4f229be851b7f36198343f82434d}{Get\+Closest\+Reachable\+Charging\+Station}} (\mbox{\hyperlink{classVector3}{Vector3}} location)
+\begin{DoxyCompactList}\small\item\em Get the Closest Reachable Charging Station object that the drone can make it to with current battery life. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classBatteryDecorator_ac2775a4f70db6d458a86a7f12b6ea722}{Get\+Distance\+To\+Destination}} (\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$entity)
+\begin{DoxyCompactList}\small\item\em Get the Distance To Destination object using a path strategy. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classBatteryDecorator_abe02f6f59cd3ebc5f364a621cfc0de5c}{Get\+Distance\+To\+Location}} (\mbox{\hyperlink{classVector3}{Vector3}} start, \mbox{\hyperlink{classVector3}{Vector3}} des)
+\begin{DoxyCompactList}\small\item\em Returns the euclidian distance between two \mbox{\hyperlink{classVector3}{Vector3}}\textquotesingle{}s. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classVector3}{Vector3}} \mbox{\hyperlink{classBatteryDecorator_aaf2487adf2d58e855268877427cf5ba9}{Get\+Position}} () const
 \begin{DoxyCompactList}\small\item\em Gets the position of the entity. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classVector3}{Vector3}} \mbox{\hyperlink{classBatteryDecorator_a8487174df54456fe29406927f0542720}{Get\+Direction}} () const
@@ -71,9 +70,8 @@ Json\+Object \mbox{\hyperlink{classBatteryDecorator_a1334400df4041ca471b35ede6e9
 \begin{DoxyCompactList}\small\item\em Gets the details of the entity. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{classBatteryDecorator_a4ba88b753b061fcafe7b4891e375b199}{Get\+Speed}} () const
 \begin{DoxyCompactList}\small\item\em Gets the speed of the entity. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classBatteryDecorator_a3472d3d987d441cf81fffa5df9a51a0c}\label{classBatteryDecorator_a3472d3d987d441cf81fffa5df9a51a0c}} 
-double {\bfseries Get\+Battery} () const
-\end{DoxyCompactItemize}
+double \mbox{\hyperlink{classBatteryDecorator_a3472d3d987d441cf81fffa5df9a51a0c}{Get\+Battery}} () const
+\begin{DoxyCompactList}\small\item\em Returns the current battery\+Life. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Types}
 \begin{DoxyCompactItemize}
 \item 
@@ -89,14 +87,17 @@ enum {\bfseries options} \{ {\bfseries to\+Charger},
 \mbox{\Hypertarget{classBatteryDecorator_a17b3b9e8e5e3e014e4f729454da6952b}\label{classBatteryDecorator_a17b3b9e8e5e3e014e4f729454da6952b}} 
 \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ {\bfseries entity}
 \item 
-\mbox{\Hypertarget{classBatteryDecorator_a3152da8d9a961431af4e92ace50e3331}\label{classBatteryDecorator_a3152da8d9a961431af4e92ace50e3331}} 
-double {\bfseries battery\+\_\+life}
+\mbox{\Hypertarget{classBatteryDecorator_a8453944b1953524cbb46104989333d89}\label{classBatteryDecorator_a8453944b1953524cbb46104989333d89}} 
+double {\bfseries battery\+Life}
+\item 
+\mbox{\Hypertarget{classBatteryDecorator_ad0a17a45f9c79c139010c80498655852}\label{classBatteryDecorator_ad0a17a45f9c79c139010c80498655852}} 
+double {\bfseries battery\+Discharge\+Rate\+Bias}
 \item 
 \mbox{\Hypertarget{classBatteryDecorator_aeb70f8636c69c80ab1c8364685f2d34b}\label{classBatteryDecorator_aeb70f8636c69c80ab1c8364685f2d34b}} 
 bool {\bfseries charging}
 \item 
-\mbox{\Hypertarget{classBatteryDecorator_a15bbff8ed9899fda3c94146516b0a112}\label{classBatteryDecorator_a15bbff8ed9899fda3c94146516b0a112}} 
-bool {\bfseries traveling\+To\+Charge}
+\mbox{\Hypertarget{classBatteryDecorator_acda779b9c31a8faa86628ad81cbbefa3}\label{classBatteryDecorator_acda779b9c31a8faa86628ad81cbbefa3}} 
+bool {\bfseries traveling\+To\+Charger}
 \item 
 \mbox{\Hypertarget{classBatteryDecorator_a56c3f093c430b9f7f9c67dede4957c4a}\label{classBatteryDecorator_a56c3f093c430b9f7f9c67dede4957c4a}} 
 bool {\bfseries delivering\+Robot}
@@ -104,8 +105,8 @@ bool {\bfseries delivering\+Robot}
 \mbox{\Hypertarget{classBatteryDecorator_aa28b5eeeb4d35ef7048f1c3f31961cb8}\label{classBatteryDecorator_aa28b5eeeb4d35ef7048f1c3f31961cb8}} 
 \mbox{\hyperlink{classVector3}{Vector3}} {\bfseries closest\+Charger\+Position}
 \item 
-\mbox{\Hypertarget{classBatteryDecorator_af1e4dc8f10558a8b7162cd743b85aa30}\label{classBatteryDecorator_af1e4dc8f10558a8b7162cd743b85aa30}} 
-std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$ {\bfseries sim\+\_\+entities}
+\mbox{\Hypertarget{classBatteryDecorator_ab688480ee93ef45d36b72f82a1db480f}\label{classBatteryDecorator_ab688480ee93ef45d36b72f82a1db480f}} 
+std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$ {\bfseries sim\+Entities}
 \item 
 \mbox{\Hypertarget{classBatteryDecorator_a3bb6a6ebb5a1018d72f345fc4da6dfe6}\label{classBatteryDecorator_a3bb6a6ebb5a1018d72f345fc4da6dfe6}} 
 bool {\bfseries need\+To\+Calc\+Dist}
@@ -118,7 +119,218 @@ bool {\bfseries can\+Reach}
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Detailed Description}
+Wraps an \mbox{\hyperlink{classIEntity}{I\+Entity}} and adds battery functionality to it. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classBatteryDecorator_a413f097a59e280c888fdc2d053c09a4a}\label{classBatteryDecorator_a413f097a59e280c888fdc2d053c09a4a}} 
+\index{BatteryDecorator@{BatteryDecorator}!BatteryDecorator@{BatteryDecorator}}
+\index{BatteryDecorator@{BatteryDecorator}!BatteryDecorator@{BatteryDecorator}}
+\doxysubsubsection{\texorpdfstring{BatteryDecorator()}{BatteryDecorator()}}
+{\footnotesize\ttfamily Battery\+Decorator\+::\+Battery\+Decorator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$}]{entity }\end{DoxyParamCaption})}
+
+
+
+Construct a new Battery Decorator object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em entity} & Until future updates this will be a drone \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classBatteryDecorator_a0036d03d5fc869eb39e55734d1e5bb87}\label{classBatteryDecorator_a0036d03d5fc869eb39e55734d1e5bb87}} 
+\index{BatteryDecorator@{BatteryDecorator}!````~BatteryDecorator@{$\sim$BatteryDecorator}}
+\index{````~BatteryDecorator@{$\sim$BatteryDecorator}!BatteryDecorator@{BatteryDecorator}}
+\doxysubsubsection{\texorpdfstring{$\sim$BatteryDecorator()}{~BatteryDecorator()}}
+{\footnotesize\ttfamily Battery\+Decorator\+::$\sim$\+Battery\+Decorator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destroy the Battery Decorator object. 
+
+
+
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classBatteryDecorator_a7f41875e9c4cee69f630b290ad3fb48f}\label{classBatteryDecorator_a7f41875e9c4cee69f630b290ad3fb48f}} 
+\index{BatteryDecorator@{BatteryDecorator}!AddSimEntities@{AddSimEntities}}
+\index{AddSimEntities@{AddSimEntities}!BatteryDecorator@{BatteryDecorator}}
+\doxysubsubsection{\texorpdfstring{AddSimEntities()}{AddSimEntities()}}
+{\footnotesize\ttfamily void Battery\+Decorator\+::\+Add\+Sim\+Entities (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$}]{entities }\end{DoxyParamCaption})}
+
+
+
+Add each entity in the vector to the simulation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em entities} & A vector of entity objects to be added \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classBatteryDecorator_a2d47f6c84d2648ccb4957006343b5140}\label{classBatteryDecorator_a2d47f6c84d2648ccb4957006343b5140}} 
+\index{BatteryDecorator@{BatteryDecorator}!CanMakeTrip@{CanMakeTrip}}
+\index{CanMakeTrip@{CanMakeTrip}!BatteryDecorator@{BatteryDecorator}}
+\doxysubsubsection{\texorpdfstring{CanMakeTrip()}{CanMakeTrip()}}
+{\footnotesize\ttfamily bool Battery\+Decorator\+::\+Can\+Make\+Trip (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns true if the drone can make it to the robot, to the robot\textquotesingle{}s destination then to a battery station on it\textquotesingle{}s current charge. 
+
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBatteryDecorator_aa5a0c6d27af58c6f99395d7b8e0216e9}\label{classBatteryDecorator_aa5a0c6d27af58c6f99395d7b8e0216e9}} 
+\index{BatteryDecorator@{BatteryDecorator}!CanReachCharger@{CanReachCharger}}
+\index{CanReachCharger@{CanReachCharger}!BatteryDecorator@{BatteryDecorator}}
+\doxysubsubsection{\texorpdfstring{CanReachCharger()}{CanReachCharger()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Battery\+Decorator\+::\+Can\+Reach\+Charger (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVector3}{Vector3}}}]{location }\end{DoxyParamCaption})}
+
+
+
+Returns true if the entity can reach the charger on current battery life. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em location} & Used to time the closest charger to this location \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBatteryDecorator_ab257bd7edd56726ae084f8fc48359878}\label{classBatteryDecorator_ab257bd7edd56726ae084f8fc48359878}} 
+\index{BatteryDecorator@{BatteryDecorator}!CanReachCharger@{CanReachCharger}}
+\index{CanReachCharger@{CanReachCharger}!BatteryDecorator@{BatteryDecorator}}
+\doxysubsubsection{\texorpdfstring{CanReachCharger()}{CanReachCharger()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Battery\+Decorator\+::\+Can\+Reach\+Charger (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVector3}{Vector3}}}]{location,  }\item[{double}]{battery }\end{DoxyParamCaption})}
+
+
+
+Returns true if the entity can reach the charger on current battery life. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em location} & Used to time the closest charger to this location \\
+\hline
+{\em battery} & Specified battery life \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBatteryDecorator_adfd0f47f9f3e5b634104ec9e8daeb4c7}\label{classBatteryDecorator_adfd0f47f9f3e5b634104ec9e8daeb4c7}} 
+\index{BatteryDecorator@{BatteryDecorator}!CanReachDestination@{CanReachDestination}}
+\index{CanReachDestination@{CanReachDestination}!BatteryDecorator@{BatteryDecorator}}
+\doxysubsubsection{\texorpdfstring{CanReachDestination()}{CanReachDestination()}}
+{\footnotesize\ttfamily bool Battery\+Decorator\+::\+Can\+Reach\+Destination (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns true if the drone can make it to the robot, to the robot\textquotesingle{}s destination then to a battery station on it\textquotesingle{}s current charge. 
+
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBatteryDecorator_a688dc4cb97df64885fac44178a7dc190}\label{classBatteryDecorator_a688dc4cb97df64885fac44178a7dc190}} 
+\index{BatteryDecorator@{BatteryDecorator}!CanReachLocation@{CanReachLocation}}
+\index{CanReachLocation@{CanReachLocation}!BatteryDecorator@{BatteryDecorator}}
+\doxysubsubsection{\texorpdfstring{CanReachLocation()}{CanReachLocation()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Battery\+Decorator\+::\+Can\+Reach\+Location (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVector3}{Vector3}}}]{location }\end{DoxyParamCaption})}
+
+
+
+Returns true if the drone can make it location using a beeline strategy. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em location} & Destination \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBatteryDecorator_a14bc05b20d00c5e76335c2f3e83c77c7}\label{classBatteryDecorator_a14bc05b20d00c5e76335c2f3e83c77c7}} 
+\index{BatteryDecorator@{BatteryDecorator}!CanReachLocation@{CanReachLocation}}
+\index{CanReachLocation@{CanReachLocation}!BatteryDecorator@{BatteryDecorator}}
+\doxysubsubsection{\texorpdfstring{CanReachLocation()}{CanReachLocation()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Battery\+Decorator\+::\+Can\+Reach\+Location (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVector3}{Vector3}}}]{location,  }\item[{double}]{battery }\end{DoxyParamCaption})}
+
+
+
+Returns true if the drone can make it location using a beeline strategy. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em location} & Destination \\
+\hline
+{\em battery} & Specified battery life \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBatteryDecorator_a3472d3d987d441cf81fffa5df9a51a0c}\label{classBatteryDecorator_a3472d3d987d441cf81fffa5df9a51a0c}} 
+\index{BatteryDecorator@{BatteryDecorator}!GetBattery@{GetBattery}}
+\index{GetBattery@{GetBattery}!BatteryDecorator@{BatteryDecorator}}
+\doxysubsubsection{\texorpdfstring{GetBattery()}{GetBattery()}}
+{\footnotesize\ttfamily double Battery\+Decorator\+::\+Get\+Battery (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the current battery\+Life. 
+
+\begin{DoxyReturn}{Returns}
+double 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBatteryDecorator_ae2e60da9af161ce1c7ad0391c85e0cff}\label{classBatteryDecorator_ae2e60da9af161ce1c7ad0391c85e0cff}} 
+\index{BatteryDecorator@{BatteryDecorator}!GetClosestChargingStation@{GetClosestChargingStation}}
+\index{GetClosestChargingStation@{GetClosestChargingStation}!BatteryDecorator@{BatteryDecorator}}
+\doxysubsubsection{\texorpdfstring{GetClosestChargingStation()}{GetClosestChargingStation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ Battery\+Decorator\+::\+Get\+Closest\+Charging\+Station (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVector3}{Vector3}}}]{location }\end{DoxyParamCaption})}
+
+
+
+Get the Closest Charging Station object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em location} & Start location \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+I\+Entity$\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBatteryDecorator_a8b9e4f229be851b7f36198343f82434d}\label{classBatteryDecorator_a8b9e4f229be851b7f36198343f82434d}} 
+\index{BatteryDecorator@{BatteryDecorator}!GetClosestReachableChargingStation@{GetClosestReachableChargingStation}}
+\index{GetClosestReachableChargingStation@{GetClosestReachableChargingStation}!BatteryDecorator@{BatteryDecorator}}
+\doxysubsubsection{\texorpdfstring{GetClosestReachableChargingStation()}{GetClosestReachableChargingStation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ Battery\+Decorator\+::\+Get\+Closest\+Reachable\+Charging\+Station (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVector3}{Vector3}}}]{location }\end{DoxyParamCaption})}
+
+
+
+Get the Closest Reachable Charging Station object that the drone can make it to with current battery life. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em location} & Start location \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+I\+Entity$\ast$ 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classBatteryDecorator_a30d49a5e5efb93fad2ab4e5d77d26870}\label{classBatteryDecorator_a30d49a5e5efb93fad2ab4e5d77d26870}} 
 \index{BatteryDecorator@{BatteryDecorator}!GetDestination@{GetDestination}}
 \index{GetDestination@{GetDestination}!BatteryDecorator@{BatteryDecorator}}
@@ -170,6 +382,44 @@ The direction of the entity.
 
 Implements \mbox{\hyperlink{classIEntity_aa99a8fef8b22195a5113c38ef51f086d}{I\+Entity}}.
 
+\mbox{\Hypertarget{classBatteryDecorator_ac2775a4f70db6d458a86a7f12b6ea722}\label{classBatteryDecorator_ac2775a4f70db6d458a86a7f12b6ea722}} 
+\index{BatteryDecorator@{BatteryDecorator}!GetDistanceToDestination@{GetDistanceToDestination}}
+\index{GetDistanceToDestination@{GetDistanceToDestination}!BatteryDecorator@{BatteryDecorator}}
+\doxysubsubsection{\texorpdfstring{GetDistanceToDestination()}{GetDistanceToDestination()}}
+{\footnotesize\ttfamily double Battery\+Decorator\+::\+Get\+Distance\+To\+Destination (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$}]{entity }\end{DoxyParamCaption})}
+
+
+
+Get the Distance To Destination object using a path strategy. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em entity} & An \mbox{\hyperlink{classIEntity}{I\+Entity}} object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBatteryDecorator_abe02f6f59cd3ebc5f364a621cfc0de5c}\label{classBatteryDecorator_abe02f6f59cd3ebc5f364a621cfc0de5c}} 
+\index{BatteryDecorator@{BatteryDecorator}!GetDistanceToLocation@{GetDistanceToLocation}}
+\index{GetDistanceToLocation@{GetDistanceToLocation}!BatteryDecorator@{BatteryDecorator}}
+\doxysubsubsection{\texorpdfstring{GetDistanceToLocation()}{GetDistanceToLocation()}}
+{\footnotesize\ttfamily double Battery\+Decorator\+::\+Get\+Distance\+To\+Location (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVector3}{Vector3}}}]{start,  }\item[{\mbox{\hyperlink{classVector3}{Vector3}}}]{des }\end{DoxyParamCaption})}
+
+
+
+Returns the euclidian distance between two \mbox{\hyperlink{classVector3}{Vector3}}\textquotesingle{}s. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start} & Start location \\
+\hline
+{\em des} & End location \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classBatteryDecorator_aaf2487adf2d58e855268877427cf5ba9}\label{classBatteryDecorator_aaf2487adf2d58e855268877427cf5ba9}} 
 \index{BatteryDecorator@{BatteryDecorator}!GetPosition@{GetPosition}}
 \index{GetPosition@{GetPosition}!BatteryDecorator@{BatteryDecorator}}
@@ -212,13 +462,13 @@ Implements \mbox{\hyperlink{classIEntity_a6520d2b1dc71d092bab38ef9f5cc9ff4}{I\+E
 
 
 
-Updates the entity\textquotesingle{}s position in the physical system. 
+Updates the batteries state and calls entity\textquotesingle{}s update. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em dt} & The time step of the update. \\
+{\em dt} & Time in seconds since the last update \\
 \hline
-{\em scheduler} & The list of all entities in the system. \\
+{\em scheduler} & All entities scheduled for delivery \\
 \hline
 \end{DoxyParams}
 
@@ -229,5 +479,5 @@ Reimplemented from \mbox{\hyperlink{classIEntity_a9a8e8588fd85c7b0d813d60686d4dc
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/home/brock450/csci3081w/csci-\/3081w-\/\+S23/\+Team-\/010-\/31-\/homework4/libs/transit/include/Battery\+Decorator.\+h\item 
-/home/brock450/csci3081w/csci-\/3081w-\/\+S23/\+Team-\/010-\/31-\/homework4/libs/transit/src/Battery\+Decorator.\+cc\end{DoxyCompactItemize}
+/home/moerb001/\+Desktop/csci3081/\+Team-\/010-\/31-\/homework4/libs/transit/include/Battery\+Decorator.\+h\item 
+/home/moerb001/\+Desktop/csci3081/\+Team-\/010-\/31-\/homework4/libs/transit/src/Battery\+Decorator.\+cc\end{DoxyCompactItemize}

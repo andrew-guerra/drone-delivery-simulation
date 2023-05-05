@@ -16,7 +16,7 @@ class GUIDataObserver {
    */
   ~GUIDataObserver();
   /**
-   * @brief
+   * @brief Returns the current JsonObject object
    *
    * @return JsonObject
    */
@@ -28,10 +28,10 @@ class GUIDataObserver {
    */
   static GUIDataObserver* GetInstance();
   /**
-   * @brief
+   * @brief Set the current JsonObject
    *
    */
-  void Update(JsonObject);
+  void SetJSON(JsonObject);
 
  private:
   /**

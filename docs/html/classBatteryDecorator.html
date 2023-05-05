@@ -70,12 +70,17 @@ $(function() {
 <div class="title">BatteryDecorator Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Wraps an <a class="el" href="classIEntity.html" title="Represents an entity in a physical system.">IEntity</a> and adds battery functionality to it.  
+ <a href="classBatteryDecorator.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="BatteryDecorator_8h_source.html">BatteryDecorator.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for BatteryDecorator:</div>
 <div class="dyncontent">
 <div class="center"><img src="classBatteryDecorator__inherit__graph.png" border="0" usemap="#BatteryDecorator_inherit__map" alt="Inheritance graph"/></div>
 <map name="BatteryDecorator_inherit__map" id="BatteryDecorator_inherit__map">
-<area shape="rect" title=" " alt="" coords="5,80,140,107"/>
+<area shape="rect" title="Wraps an IEntity and adds battery functionality to it." alt="" coords="5,80,140,107"/>
 <area shape="rect" href="classIEntity.html" title="Represents an entity in a physical system." alt="" coords="41,5,105,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
@@ -84,7 +89,7 @@ Collaboration diagram for BatteryDecorator:</div>
 <div class="dyncontent">
 <div class="center"><img src="classBatteryDecorator__coll__graph.png" border="0" usemap="#BatteryDecorator_coll__map" alt="Collaboration graph"/></div>
 <map name="BatteryDecorator_coll__map" id="BatteryDecorator_coll__map">
-<area shape="rect" title=" " alt="" coords="49,95,183,121"/>
+<area shape="rect" title="Wraps an IEntity and adds battery functionality to it." alt="" coords="49,95,183,121"/>
 <area shape="rect" href="classIEntity.html" title="Represents an entity in a physical system." alt="" coords="5,5,69,32"/>
 <area shape="rect" href="classDataCollection.html" title="A Singleton that collects data from drones and robots." alt="" coords="94,5,213,32"/>
 <area shape="rect" href="classVector3.html" title="A class built solely to handle 3D vector mathematics." alt="" coords="247,5,319,32"/>
@@ -93,44 +98,47 @@ Collaboration diagram for BatteryDecorator:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a413f097a59e280c888fdc2d053c09a4a"><td class="memItemLeft" align="right" valign="top"><a id="a413f097a59e280c888fdc2d053c09a4a"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>BatteryDecorator</b> (<a class="el" href="classIEntity.html">IEntity</a> *entity)</td></tr>
+<tr class="memitem:a413f097a59e280c888fdc2d053c09a4a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBatteryDecorator.html#a413f097a59e280c888fdc2d053c09a4a">BatteryDecorator</a> (<a class="el" href="classIEntity.html">IEntity</a> *entity)</td></tr>
+<tr class="memdesc:a413f097a59e280c888fdc2d053c09a4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new Battery Decorator object.  <a href="classBatteryDecorator.html#a413f097a59e280c888fdc2d053c09a4a">More...</a><br /></td></tr>
 <tr class="separator:a413f097a59e280c888fdc2d053c09a4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7f41875e9c4cee69f630b290ad3fb48f"><td class="memItemLeft" align="right" valign="top"><a id="a7f41875e9c4cee69f630b290ad3fb48f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>AddSimEntities</b> (std::vector&lt; <a class="el" href="classIEntity.html">IEntity</a> * &gt; entities)</td></tr>
+<tr class="memitem:a0036d03d5fc869eb39e55734d1e5bb87"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBatteryDecorator.html#a0036d03d5fc869eb39e55734d1e5bb87">~BatteryDecorator</a> ()</td></tr>
+<tr class="memdesc:a0036d03d5fc869eb39e55734d1e5bb87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the Battery Decorator object.  <a href="classBatteryDecorator.html#a0036d03d5fc869eb39e55734d1e5bb87">More...</a><br /></td></tr>
+<tr class="separator:a0036d03d5fc869eb39e55734d1e5bb87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f41875e9c4cee69f630b290ad3fb48f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBatteryDecorator.html#a7f41875e9c4cee69f630b290ad3fb48f">AddSimEntities</a> (std::vector&lt; <a class="el" href="classIEntity.html">IEntity</a> * &gt; entities)</td></tr>
+<tr class="memdesc:a7f41875e9c4cee69f630b290ad3fb48f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add each entity in the vector to the simulation.  <a href="classBatteryDecorator.html#a7f41875e9c4cee69f630b290ad3fb48f">More...</a><br /></td></tr>
 <tr class="separator:a7f41875e9c4cee69f630b290ad3fb48f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9169f6180a73457ef5a593be987c09b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBatteryDecorator.html#a9169f6180a73457ef5a593be987c09b4">Update</a> (double dt, std::vector&lt; <a class="el" href="classIEntity.html">IEntity</a> * &gt; scheduler)</td></tr>
-<tr class="memdesc:a9169f6180a73457ef5a593be987c09b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the entity's position in the physical system.  <a href="classBatteryDecorator.html#a9169f6180a73457ef5a593be987c09b4">More...</a><br /></td></tr>
+<tr class="memdesc:a9169f6180a73457ef5a593be987c09b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the batteries state and calls entity's update.  <a href="classBatteryDecorator.html#a9169f6180a73457ef5a593be987c09b4">More...</a><br /></td></tr>
 <tr class="separator:a9169f6180a73457ef5a593be987c09b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adfd0f47f9f3e5b634104ec9e8daeb4c7"><td class="memItemLeft" align="right" valign="top"><a id="adfd0f47f9f3e5b634104ec9e8daeb4c7"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>CanReachDestination</b> ()</td></tr>
+<tr class="memitem:adfd0f47f9f3e5b634104ec9e8daeb4c7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBatteryDecorator.html#adfd0f47f9f3e5b634104ec9e8daeb4c7">CanReachDestination</a> ()</td></tr>
+<tr class="memdesc:adfd0f47f9f3e5b634104ec9e8daeb4c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the drone can make it to the robot, to the robot's destination then to a battery station on it's current charge.  <a href="classBatteryDecorator.html#adfd0f47f9f3e5b634104ec9e8daeb4c7">More...</a><br /></td></tr>
 <tr class="separator:adfd0f47f9f3e5b634104ec9e8daeb4c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d47f6c84d2648ccb4957006343b5140"><td class="memItemLeft" align="right" valign="top"><a id="a2d47f6c84d2648ccb4957006343b5140"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>CanMakeTrip</b> ()</td></tr>
+<tr class="memitem:a2d47f6c84d2648ccb4957006343b5140"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBatteryDecorator.html#a2d47f6c84d2648ccb4957006343b5140">CanMakeTrip</a> ()</td></tr>
+<tr class="memdesc:a2d47f6c84d2648ccb4957006343b5140"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the drone can make it to the robot, to the robot's destination then to a battery station on it's current charge.  <a href="classBatteryDecorator.html#a2d47f6c84d2648ccb4957006343b5140">More...</a><br /></td></tr>
 <tr class="separator:a2d47f6c84d2648ccb4957006343b5140"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a688dc4cb97df64885fac44178a7dc190"><td class="memItemLeft" align="right" valign="top"><a id="a688dc4cb97df64885fac44178a7dc190"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>CanReachLocation</b> (<a class="el" href="classVector3.html">Vector3</a> location)</td></tr>
+<tr class="memitem:a688dc4cb97df64885fac44178a7dc190"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBatteryDecorator.html#a688dc4cb97df64885fac44178a7dc190">CanReachLocation</a> (<a class="el" href="classVector3.html">Vector3</a> location)</td></tr>
+<tr class="memdesc:a688dc4cb97df64885fac44178a7dc190"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the drone can make it location using a beeline strategy.  <a href="classBatteryDecorator.html#a688dc4cb97df64885fac44178a7dc190">More...</a><br /></td></tr>
 <tr class="separator:a688dc4cb97df64885fac44178a7dc190"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a14bc05b20d00c5e76335c2f3e83c77c7"><td class="memItemLeft" align="right" valign="top"><a id="a14bc05b20d00c5e76335c2f3e83c77c7"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>CanReachLocation</b> (<a class="el" href="classVector3.html">Vector3</a> location, double battery)</td></tr>
+<tr class="memitem:a14bc05b20d00c5e76335c2f3e83c77c7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBatteryDecorator.html#a14bc05b20d00c5e76335c2f3e83c77c7">CanReachLocation</a> (<a class="el" href="classVector3.html">Vector3</a> location, double battery)</td></tr>
+<tr class="memdesc:a14bc05b20d00c5e76335c2f3e83c77c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the drone can make it location using a beeline strategy.  <a href="classBatteryDecorator.html#a14bc05b20d00c5e76335c2f3e83c77c7">More...</a><br /></td></tr>
 <tr class="separator:a14bc05b20d00c5e76335c2f3e83c77c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa5a0c6d27af58c6f99395d7b8e0216e9"><td class="memItemLeft" align="right" valign="top"><a id="aa5a0c6d27af58c6f99395d7b8e0216e9"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>CanReachCharger</b> (<a class="el" href="classVector3.html">Vector3</a> location)</td></tr>
+<tr class="memitem:aa5a0c6d27af58c6f99395d7b8e0216e9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBatteryDecorator.html#aa5a0c6d27af58c6f99395d7b8e0216e9">CanReachCharger</a> (<a class="el" href="classVector3.html">Vector3</a> location)</td></tr>
+<tr class="memdesc:aa5a0c6d27af58c6f99395d7b8e0216e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the entity can reach the charger on current battery life.  <a href="classBatteryDecorator.html#aa5a0c6d27af58c6f99395d7b8e0216e9">More...</a><br /></td></tr>
 <tr class="separator:aa5a0c6d27af58c6f99395d7b8e0216e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab257bd7edd56726ae084f8fc48359878"><td class="memItemLeft" align="right" valign="top"><a id="ab257bd7edd56726ae084f8fc48359878"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>CanReachCharger</b> (<a class="el" href="classVector3.html">Vector3</a> location, double battery)</td></tr>
+<tr class="memitem:ab257bd7edd56726ae084f8fc48359878"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBatteryDecorator.html#ab257bd7edd56726ae084f8fc48359878">CanReachCharger</a> (<a class="el" href="classVector3.html">Vector3</a> location, double battery)</td></tr>
+<tr class="memdesc:ab257bd7edd56726ae084f8fc48359878"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the entity can reach the charger on current battery life.  <a href="classBatteryDecorator.html#ab257bd7edd56726ae084f8fc48359878">More...</a><br /></td></tr>
 <tr class="separator:ab257bd7edd56726ae084f8fc48359878"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae2e60da9af161ce1c7ad0391c85e0cff"><td class="memItemLeft" align="right" valign="top"><a id="ae2e60da9af161ce1c7ad0391c85e0cff"></a>
-<a class="el" href="classIEntity.html">IEntity</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetClosestChargingStation</b> (<a class="el" href="classVector3.html">Vector3</a> location)</td></tr>
+<tr class="memitem:ae2e60da9af161ce1c7ad0391c85e0cff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classIEntity.html">IEntity</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBatteryDecorator.html#ae2e60da9af161ce1c7ad0391c85e0cff">GetClosestChargingStation</a> (<a class="el" href="classVector3.html">Vector3</a> location)</td></tr>
+<tr class="memdesc:ae2e60da9af161ce1c7ad0391c85e0cff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Closest Charging Station object.  <a href="classBatteryDecorator.html#ae2e60da9af161ce1c7ad0391c85e0cff">More...</a><br /></td></tr>
 <tr class="separator:ae2e60da9af161ce1c7ad0391c85e0cff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b9e4f229be851b7f36198343f82434d"><td class="memItemLeft" align="right" valign="top"><a id="a8b9e4f229be851b7f36198343f82434d"></a>
-<a class="el" href="classIEntity.html">IEntity</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetClosestReachableChargingStation</b> (<a class="el" href="classVector3.html">Vector3</a> location)</td></tr>
+<tr class="memitem:a8b9e4f229be851b7f36198343f82434d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classIEntity.html">IEntity</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBatteryDecorator.html#a8b9e4f229be851b7f36198343f82434d">GetClosestReachableChargingStation</a> (<a class="el" href="classVector3.html">Vector3</a> location)</td></tr>
+<tr class="memdesc:a8b9e4f229be851b7f36198343f82434d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Closest Reachable Charging Station object that the drone can make it to with current battery life.  <a href="classBatteryDecorator.html#a8b9e4f229be851b7f36198343f82434d">More...</a><br /></td></tr>
 <tr class="separator:a8b9e4f229be851b7f36198343f82434d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac2775a4f70db6d458a86a7f12b6ea722"><td class="memItemLeft" align="right" valign="top"><a id="ac2775a4f70db6d458a86a7f12b6ea722"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>GetDistanceToDestination</b> (<a class="el" href="classIEntity.html">IEntity</a> *entity)</td></tr>
+<tr class="memitem:ac2775a4f70db6d458a86a7f12b6ea722"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBatteryDecorator.html#ac2775a4f70db6d458a86a7f12b6ea722">GetDistanceToDestination</a> (<a class="el" href="classIEntity.html">IEntity</a> *entity)</td></tr>
+<tr class="memdesc:ac2775a4f70db6d458a86a7f12b6ea722"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Distance To Destination object using a path strategy.  <a href="classBatteryDecorator.html#ac2775a4f70db6d458a86a7f12b6ea722">More...</a><br /></td></tr>
 <tr class="separator:ac2775a4f70db6d458a86a7f12b6ea722"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe02f6f59cd3ebc5f364a621cfc0de5c"><td class="memItemLeft" align="right" valign="top"><a id="abe02f6f59cd3ebc5f364a621cfc0de5c"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>GetDistanceToLocation</b> (<a class="el" href="classVector3.html">Vector3</a> start, <a class="el" href="classVector3.html">Vector3</a> des)</td></tr>
+<tr class="memitem:abe02f6f59cd3ebc5f364a621cfc0de5c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBatteryDecorator.html#abe02f6f59cd3ebc5f364a621cfc0de5c">GetDistanceToLocation</a> (<a class="el" href="classVector3.html">Vector3</a> start, <a class="el" href="classVector3.html">Vector3</a> des)</td></tr>
+<tr class="memdesc:abe02f6f59cd3ebc5f364a621cfc0de5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the euclidian distance between two <a class="el" href="classVector3.html" title="A class built solely to handle 3D vector mathematics.">Vector3</a>'s.  <a href="classBatteryDecorator.html#abe02f6f59cd3ebc5f364a621cfc0de5c">More...</a><br /></td></tr>
 <tr class="separator:abe02f6f59cd3ebc5f364a621cfc0de5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf2487adf2d58e855268877427cf5ba9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBatteryDecorator.html#aaf2487adf2d58e855268877427cf5ba9">GetPosition</a> () const</td></tr>
 <tr class="memdesc:aaf2487adf2d58e855268877427cf5ba9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the position of the entity.  <a href="classBatteryDecorator.html#aaf2487adf2d58e855268877427cf5ba9">More...</a><br /></td></tr>
@@ -147,8 +155,8 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>GetDistanceToLocati
 <tr class="memitem:a4ba88b753b061fcafe7b4891e375b199"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBatteryDecorator.html#a4ba88b753b061fcafe7b4891e375b199">GetSpeed</a> () const</td></tr>
 <tr class="memdesc:a4ba88b753b061fcafe7b4891e375b199"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the speed of the entity.  <a href="classBatteryDecorator.html#a4ba88b753b061fcafe7b4891e375b199">More...</a><br /></td></tr>
 <tr class="separator:a4ba88b753b061fcafe7b4891e375b199"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3472d3d987d441cf81fffa5df9a51a0c"><td class="memItemLeft" align="right" valign="top"><a id="a3472d3d987d441cf81fffa5df9a51a0c"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>GetBattery</b> () const</td></tr>
+<tr class="memitem:a3472d3d987d441cf81fffa5df9a51a0c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBatteryDecorator.html#a3472d3d987d441cf81fffa5df9a51a0c">GetBattery</a> () const</td></tr>
+<tr class="memdesc:a3472d3d987d441cf81fffa5df9a51a0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current batteryLife.  <a href="classBatteryDecorator.html#a3472d3d987d441cf81fffa5df9a51a0c">More...</a><br /></td></tr>
 <tr class="separator:a3472d3d987d441cf81fffa5df9a51a0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classIEntity"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classIEntity')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classIEntity.html">IEntity</a></td></tr>
 <tr class="memitem:ad59bd0827b3f6e19b82a4e28e5400fe3 inherit pub_methods_classIEntity"><td class="memItemLeft" align="right" valign="top"><a id="ad59bd0827b3f6e19b82a4e28e5400fe3"></a>
@@ -218,24 +226,27 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a17b3b9e8e5e3e014e4f729454da6952b"><td class="memItemLeft" align="right" valign="top"><a id="a17b3b9e8e5e3e014e4f729454da6952b"></a>
 <a class="el" href="classIEntity.html">IEntity</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>entity</b></td></tr>
 <tr class="separator:a17b3b9e8e5e3e014e4f729454da6952b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3152da8d9a961431af4e92ace50e3331"><td class="memItemLeft" align="right" valign="top"><a id="a3152da8d9a961431af4e92ace50e3331"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>battery_life</b></td></tr>
-<tr class="separator:a3152da8d9a961431af4e92ace50e3331"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8453944b1953524cbb46104989333d89"><td class="memItemLeft" align="right" valign="top"><a id="a8453944b1953524cbb46104989333d89"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>batteryLife</b></td></tr>
+<tr class="separator:a8453944b1953524cbb46104989333d89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0a17a45f9c79c139010c80498655852"><td class="memItemLeft" align="right" valign="top"><a id="ad0a17a45f9c79c139010c80498655852"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>batteryDischargeRateBias</b></td></tr>
+<tr class="separator:ad0a17a45f9c79c139010c80498655852"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb70f8636c69c80ab1c8364685f2d34b"><td class="memItemLeft" align="right" valign="top"><a id="aeb70f8636c69c80ab1c8364685f2d34b"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>charging</b></td></tr>
 <tr class="separator:aeb70f8636c69c80ab1c8364685f2d34b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a15bbff8ed9899fda3c94146516b0a112"><td class="memItemLeft" align="right" valign="top"><a id="a15bbff8ed9899fda3c94146516b0a112"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>travelingToCharge</b></td></tr>
-<tr class="separator:a15bbff8ed9899fda3c94146516b0a112"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acda779b9c31a8faa86628ad81cbbefa3"><td class="memItemLeft" align="right" valign="top"><a id="acda779b9c31a8faa86628ad81cbbefa3"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>travelingToCharger</b></td></tr>
+<tr class="separator:acda779b9c31a8faa86628ad81cbbefa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a56c3f093c430b9f7f9c67dede4957c4a"><td class="memItemLeft" align="right" valign="top"><a id="a56c3f093c430b9f7f9c67dede4957c4a"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>deliveringRobot</b></td></tr>
 <tr class="separator:a56c3f093c430b9f7f9c67dede4957c4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa28b5eeeb4d35ef7048f1c3f31961cb8"><td class="memItemLeft" align="right" valign="top"><a id="aa28b5eeeb4d35ef7048f1c3f31961cb8"></a>
 <a class="el" href="classVector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>closestChargerPosition</b></td></tr>
 <tr class="separator:aa28b5eeeb4d35ef7048f1c3f31961cb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af1e4dc8f10558a8b7162cd743b85aa30"><td class="memItemLeft" align="right" valign="top"><a id="af1e4dc8f10558a8b7162cd743b85aa30"></a>
-std::vector&lt; <a class="el" href="classIEntity.html">IEntity</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>sim_entities</b></td></tr>
-<tr class="separator:af1e4dc8f10558a8b7162cd743b85aa30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab688480ee93ef45d36b72f82a1db480f"><td class="memItemLeft" align="right" valign="top"><a id="ab688480ee93ef45d36b72f82a1db480f"></a>
+std::vector&lt; <a class="el" href="classIEntity.html">IEntity</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>simEntities</b></td></tr>
+<tr class="separator:ab688480ee93ef45d36b72f82a1db480f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3bb6a6ebb5a1018d72f345fc4da6dfe6"><td class="memItemLeft" align="right" valign="top"><a id="a3bb6a6ebb5a1018d72f345fc4da6dfe6"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>needToCalcDist</b></td></tr>
 <tr class="separator:a3bb6a6ebb5a1018d72f345fc4da6dfe6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -253,7 +264,345 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>id</b></td></tr>
 const IGraph *&#160;</td><td class="memItemRight" valign="bottom"><b>graph</b></td></tr>
 <tr class="separator:a5d4d1c3d5da8a816fe03522cd0b4fcb3 inherit pro_attribs_classIEntity"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Wraps an <a class="el" href="classIEntity.html" title="Represents an entity in a physical system.">IEntity</a> and adds battery functionality to it. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a413f097a59e280c888fdc2d053c09a4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a413f097a59e280c888fdc2d053c09a4a">&#9670;&nbsp;</a></span>BatteryDecorator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BatteryDecorator::BatteryDecorator </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classIEntity.html">IEntity</a> *&#160;</td>
+          <td class="paramname"><em>entity</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construct a new Battery Decorator object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">entity</td><td>Until future updates this will be a drone </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0036d03d5fc869eb39e55734d1e5bb87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0036d03d5fc869eb39e55734d1e5bb87">&#9670;&nbsp;</a></span>~BatteryDecorator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BatteryDecorator::~BatteryDecorator </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destroy the Battery Decorator object. </p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a7f41875e9c4cee69f630b290ad3fb48f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f41875e9c4cee69f630b290ad3fb48f">&#9670;&nbsp;</a></span>AddSimEntities()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BatteryDecorator::AddSimEntities </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="classIEntity.html">IEntity</a> * &gt;&#160;</td>
+          <td class="paramname"><em>entities</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add each entity in the vector to the simulation. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">entities</td><td>A vector of entity objects to be added </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2d47f6c84d2648ccb4957006343b5140"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d47f6c84d2648ccb4957006343b5140">&#9670;&nbsp;</a></span>CanMakeTrip()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool BatteryDecorator::CanMakeTrip </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns true if the drone can make it to the robot, to the robot's destination then to a battery station on it's current charge. </p>
+<dl class="section return"><dt>Returns</dt><dd>true </dd>
+<dd>
+false </dd></dl>
+
+</div>
+</div>
+<a id="aa5a0c6d27af58c6f99395d7b8e0216e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5a0c6d27af58c6f99395d7b8e0216e9">&#9670;&nbsp;</a></span>CanReachCharger() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool BatteryDecorator::CanReachCharger </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classVector3.html">Vector3</a>&#160;</td>
+          <td class="paramname"><em>location</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns true if the entity can reach the charger on current battery life. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">location</td><td>Used to time the closest charger to this location </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true </dd>
+<dd>
+false </dd></dl>
+
+</div>
+</div>
+<a id="ab257bd7edd56726ae084f8fc48359878"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab257bd7edd56726ae084f8fc48359878">&#9670;&nbsp;</a></span>CanReachCharger() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool BatteryDecorator::CanReachCharger </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classVector3.html">Vector3</a>&#160;</td>
+          <td class="paramname"><em>location</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>battery</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns true if the entity can reach the charger on current battery life. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">location</td><td>Used to time the closest charger to this location </td></tr>
+    <tr><td class="paramname">battery</td><td>Specified battery life </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true </dd>
+<dd>
+false </dd></dl>
+
+</div>
+</div>
+<a id="adfd0f47f9f3e5b634104ec9e8daeb4c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfd0f47f9f3e5b634104ec9e8daeb4c7">&#9670;&nbsp;</a></span>CanReachDestination()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool BatteryDecorator::CanReachDestination </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns true if the drone can make it to the robot, to the robot's destination then to a battery station on it's current charge. </p>
+<dl class="section return"><dt>Returns</dt><dd>true </dd>
+<dd>
+false </dd></dl>
+
+</div>
+</div>
+<a id="a688dc4cb97df64885fac44178a7dc190"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a688dc4cb97df64885fac44178a7dc190">&#9670;&nbsp;</a></span>CanReachLocation() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool BatteryDecorator::CanReachLocation </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classVector3.html">Vector3</a>&#160;</td>
+          <td class="paramname"><em>location</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns true if the drone can make it location using a beeline strategy. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">location</td><td>Destination </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true </dd>
+<dd>
+false </dd></dl>
+
+</div>
+</div>
+<a id="a14bc05b20d00c5e76335c2f3e83c77c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14bc05b20d00c5e76335c2f3e83c77c7">&#9670;&nbsp;</a></span>CanReachLocation() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool BatteryDecorator::CanReachLocation </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classVector3.html">Vector3</a>&#160;</td>
+          <td class="paramname"><em>location</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>battery</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns true if the drone can make it location using a beeline strategy. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">location</td><td>Destination </td></tr>
+    <tr><td class="paramname">battery</td><td>Specified battery life </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true </dd>
+<dd>
+false </dd></dl>
+
+</div>
+</div>
+<a id="a3472d3d987d441cf81fffa5df9a51a0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3472d3d987d441cf81fffa5df9a51a0c">&#9670;&nbsp;</a></span>GetBattery()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double BatteryDecorator::GetBattery </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the current batteryLife. </p>
+<dl class="section return"><dt>Returns</dt><dd>double </dd></dl>
+
+</div>
+</div>
+<a id="ae2e60da9af161ce1c7ad0391c85e0cff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2e60da9af161ce1c7ad0391c85e0cff">&#9670;&nbsp;</a></span>GetClosestChargingStation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classIEntity.html">IEntity</a> * BatteryDecorator::GetClosestChargingStation </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classVector3.html">Vector3</a>&#160;</td>
+          <td class="paramname"><em>location</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the Closest Charging Station object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">location</td><td>Start location </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>IEntity* </dd></dl>
+
+</div>
+</div>
+<a id="a8b9e4f229be851b7f36198343f82434d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b9e4f229be851b7f36198343f82434d">&#9670;&nbsp;</a></span>GetClosestReachableChargingStation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classIEntity.html">IEntity</a> * BatteryDecorator::GetClosestReachableChargingStation </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classVector3.html">Vector3</a>&#160;</td>
+          <td class="paramname"><em>location</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the Closest Reachable Charging Station object that the drone can make it to with current battery life. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">location</td><td>Start location </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>IEntity* </dd></dl>
+
+</div>
+</div>
 <a id="a30d49a5e5efb93fad2ab4e5d77d26870"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a30d49a5e5efb93fad2ab4e5d77d26870">&#9670;&nbsp;</a></span>GetDestination()</h2>
 
@@ -341,6 +690,71 @@ const IGraph *&#160;</td><td class="memItemRight" valign="bottom"><b>graph</b></
 <dl class="section return"><dt>Returns</dt><dd>The direction of the entity. </dd></dl>
 
 <p>Implements <a class="el" href="classIEntity.html#aa99a8fef8b22195a5113c38ef51f086d">IEntity</a>.</p>
+
+</div>
+</div>
+<a id="ac2775a4f70db6d458a86a7f12b6ea722"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2775a4f70db6d458a86a7f12b6ea722">&#9670;&nbsp;</a></span>GetDistanceToDestination()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double BatteryDecorator::GetDistanceToDestination </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classIEntity.html">IEntity</a> *&#160;</td>
+          <td class="paramname"><em>entity</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the Distance To Destination object using a path strategy. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">entity</td><td>An <a class="el" href="classIEntity.html" title="Represents an entity in a physical system.">IEntity</a> object </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>double </dd></dl>
+
+</div>
+</div>
+<a id="abe02f6f59cd3ebc5f364a621cfc0de5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe02f6f59cd3ebc5f364a621cfc0de5c">&#9670;&nbsp;</a></span>GetDistanceToLocation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double BatteryDecorator::GetDistanceToLocation </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classVector3.html">Vector3</a>&#160;</td>
+          <td class="paramname"><em>start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classVector3.html">Vector3</a>&#160;</td>
+          <td class="paramname"><em>des</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the euclidian distance between two <a class="el" href="classVector3.html" title="A class built solely to handle 3D vector mathematics.">Vector3</a>'s. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">start</td><td>Start location </td></tr>
+    <tr><td class="paramname">des</td><td>End location </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>double </dd></dl>
 
 </div>
 </div>
@@ -438,11 +852,11 @@ const IGraph *&#160;</td><td class="memItemRight" valign="bottom"><b>graph</b></
 </table>
 </div><div class="memdoc">
 
-<p>Updates the entity's position in the physical system. </p>
+<p>Updates the batteries state and calls entity's update. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">dt</td><td>The time step of the update. </td></tr>
-    <tr><td class="paramname">scheduler</td><td>The list of all entities in the system. </td></tr>
+    <tr><td class="paramname">dt</td><td>Time in seconds since the last update </td></tr>
+    <tr><td class="paramname">scheduler</td><td>All entities scheduled for delivery </td></tr>
   </table>
   </dd>
 </dl>
@@ -452,8 +866,8 @@ const IGraph *&#160;</td><td class="memItemRight" valign="bottom"><b>graph</b></
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/brock450/csci3081w/csci-3081w-S23/Team-010-31-homework4/libs/transit/include/<a class="el" href="BatteryDecorator_8h_source.html">BatteryDecorator.h</a></li>
-<li>/home/brock450/csci3081w/csci-3081w-S23/Team-010-31-homework4/libs/transit/src/BatteryDecorator.cc</li>
+<li>/home/moerb001/Desktop/csci3081/Team-010-31-homework4/libs/transit/include/<a class="el" href="BatteryDecorator_8h_source.html">BatteryDecorator.h</a></li>
+<li>/home/moerb001/Desktop/csci3081/Team-010-31-homework4/libs/transit/src/BatteryDecorator.cc</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

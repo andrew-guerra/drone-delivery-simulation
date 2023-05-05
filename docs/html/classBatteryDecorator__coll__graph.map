@@ -1,5 +1,5 @@
 <map id="BatteryDecorator" name="BatteryDecorator">
-<area shape="rect" id="node1" title=" " alt="" coords="49,95,183,121"/>
+<area shape="rect" id="node1" title="Wraps an IEntity and adds battery functionality to it." alt="" coords="49,95,183,121"/>
 <area shape="rect" id="node2" href="$classIEntity.html" title="Represents an entity in a physical system." alt="" coords="5,5,69,32"/>
 <area shape="rect" id="node3" href="$classDataCollection.html" title="A Singleton that collects data from drones and robots." alt="" coords="94,5,213,32"/>
 <area shape="rect" id="node4" href="$classVector3.html" title="A class built solely to handle 3D vector mathematics." alt="" coords="247,5,319,32"/>

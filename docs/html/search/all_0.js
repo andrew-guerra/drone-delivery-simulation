@@ -9,6 +9,7 @@ var searchData=
   ['addnewpositionrobot_6',['addNewPositionRobot',['../classDataCollection.html#aeb2d1659b48fd8bedce614576e298204',1,'DataCollection']]],
   ['addpath_7',['AddPath',['../classIController.html#aa50f4cf3a9cc11decfc8e201dc00ab39',1,'IController']]],
   ['addrobot_8',['addRobot',['../classDataCollection.html#a2d4668975276baecbcd68fe4e4899d4e',1,'DataCollection']]],
-  ['addstationstop_9',['addStationStop',['../classDataCollection.html#a8126c3c5ce123b3eaf94bd061500fe4a',1,'DataCollection']]],
-  ['astarstrategy_10',['AstarStrategy',['../classAstarStrategy.html',1,'AstarStrategy'],['../classAstarStrategy.html#aed2438fdb571dbe3974ee5ee29c8a7be',1,'AstarStrategy::AstarStrategy()']]]
+  ['addsimentities_9',['AddSimEntities',['../classBatteryDecorator.html#a7f41875e9c4cee69f630b290ad3fb48f',1,'BatteryDecorator']]],
+  ['addstationstop_10',['addStationStop',['../classDataCollection.html#a8126c3c5ce123b3eaf94bd061500fe4a',1,'DataCollection']]],
+  ['astarstrategy_11',['AstarStrategy',['../classAstarStrategy.html',1,'AstarStrategy'],['../classAstarStrategy.html#aed2438fdb571dbe3974ee5ee29c8a7be',1,'AstarStrategy::AstarStrategy()']]]
 ];

@@ -115,10 +115,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2b02cbf63675198873190c451076171d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDataCollection.html#a2b02cbf63675198873190c451076171d">updateSimTime</a> (double dt)</td></tr>
 <tr class="memdesc:a2b02cbf63675198873190c451076171d"><td class="mdescLeft">&#160;</td><td class="mdescRight">update the total simulation  <a href="classDataCollection.html#a2b02cbf63675198873190c451076171d">More...</a><br /></td></tr>
 <tr class="separator:a2b02cbf63675198873190c451076171d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb5de7c3eabe7374043cb475bb9cdf99"><td class="memItemLeft" align="right" valign="top"><a id="abb5de7c3eabe7374043cb475bb9cdf99"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Notify</b> ()</td></tr>
+<tr class="memitem:abb5de7c3eabe7374043cb475bb9cdf99"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDataCollection.html#abb5de7c3eabe7374043cb475bb9cdf99">Notify</a> ()</td></tr>
+<tr class="memdesc:abb5de7c3eabe7374043cb475bb9cdf99"><td class="mdescLeft">&#160;</td><td class="mdescRight">When the state of the class changes, update the Json object of the observer.  <a href="classDataCollection.html#abb5de7c3eabe7374043cb475bb9cdf99">More...</a><br /></td></tr>
 <tr class="separator:abb5de7c3eabe7374043cb475bb9cdf99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab9bdfca752fd810a55d73157f5a93400"><td class="memItemLeft" align="right" valign="top">JsonObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDataCollection.html#ab9bdfca752fd810a55d73157f5a93400">generateWebJSON</a> ()</td></tr>
+<tr class="memdesc:ab9bdfca752fd810a55d73157f5a93400"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a JsonObject with the latest statistics from the simulation for the observer.  <a href="classDataCollection.html#ab9bdfca752fd810a55d73157f5a93400">More...</a><br /></td></tr>
 <tr class="separator:ab9bdfca752fd810a55d73157f5a93400"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95f303c392794ec59ce1bd17410d6eb9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDataCollection.html#a95f303c392794ec59ce1bd17410d6eb9">generateJSON</a> ()</td></tr>
 <tr class="memdesc:a95f303c392794ec59ce1bd17410d6eb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">creates a csv file with all of the simulation's current data  <a href="classDataCollection.html#a95f303c392794ec59ce1bd17410d6eb9">More...</a><br /></td></tr>
@@ -224,7 +225,7 @@ Static Public Member Functions</h2></td></tr>
 <p>add a new time for delivery (uses current simulation time) </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">drone</td><td></td></tr>
+    <tr><td class="paramname">drone</td><td>pointer to a drone object </td></tr>
   </table>
   </dd>
 </dl>
@@ -390,6 +391,8 @@ Static Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Create a JsonObject with the latest statistics from the simulation for the observer. </p>
 <dl class="section return"><dt>Returns</dt><dd>JsonObject </dd></dl>
 
 </div>
@@ -419,6 +422,25 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Get the Instance object (on first run it creates it. On subsequent runs it returns the existing static object) </p>
 <dl class="section return"><dt>Returns</dt><dd>DataCollection* </dd></dl>
+
+</div>
+</div>
+<a id="abb5de7c3eabe7374043cb475bb9cdf99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb5de7c3eabe7374043cb475bb9cdf99">&#9670;&nbsp;</a></span>Notify()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DataCollection::Notify </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>When the state of the class changes, update the Json object of the observer. </p>
 
 </div>
 </div>
@@ -565,8 +587,8 @@ Static Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/brock450/csci3081w/csci-3081w-S23/Team-010-31-homework4/libs/transit/include/<a class="el" href="DataCollection_8h_source.html">DataCollection.h</a></li>
-<li>/home/brock450/csci3081w/csci-3081w-S23/Team-010-31-homework4/libs/transit/src/DataCollection.cc</li>
+<li>/home/moerb001/Desktop/csci3081/Team-010-31-homework4/libs/transit/include/<a class="el" href="DataCollection_8h_source.html">DataCollection.h</a></li>
+<li>/home/moerb001/Desktop/csci3081/Team-010-31-homework4/libs/transit/src/DataCollection.cc</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
