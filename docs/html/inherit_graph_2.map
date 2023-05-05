@@ -1,9 +1,3 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classIEntityFactory.html" title="Composite Factory Interface." alt="" coords="5,132,117,159"/>
-<area shape="rect" id="node2" href="$classCompositeFactory.html" title="Factory method for composite class. Inherits from IEntityFactory." alt="" coords="165,5,305,32"/>
-<area shape="rect" id="node3" href="$classDroneFactory.html" title="Drone Factory to produce Drones class." alt="" coords="181,56,290,83"/>
-<area shape="rect" id="node4" href="$classHelicopterFactory.html" title="Helicopter factory to create helicopters." alt="" coords="167,107,304,133"/>
-<area shape="rect" id="node5" href="$classHorseFactory.html" title="Horse factory to create Horses." alt="" coords="181,157,289,184"/>
-<area shape="rect" id="node6" href="$classHumanFactory.html" title="Factory to make humans." alt="" coords="177,208,294,235"/>
-<area shape="rect" id="node7" href="$classRobotFactory.html" title="Drone Factory to produce Drones class." alt="" coords="181,259,289,285"/>
+<area shape="rect" id="node1" href="$classGUIDataObserver.html" title="A class to represent the observer with a GUI." alt="" coords="5,5,141,32"/>
 </map>

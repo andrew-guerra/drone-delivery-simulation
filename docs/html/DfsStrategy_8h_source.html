@@ -72,19 +72,20 @@ $(function() {
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef DFS_STRATEGY_H_</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define DFS_STRATEGY_H_</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;PathStrategy.h&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;../../routing/include/routing/depth_first_search.h&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;../../routing/include/routing/depth_first_search.h&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;PathStrategy.h&quot;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classDfsStrategy.html">   11</a></span>&#160;<span class="keyword">class </span><a class="code" href="classDfsStrategy.html">DfsStrategy</a>: <span class="keyword">public</span> <a class="code" href="classPathStrategy.html">PathStrategy</a> {</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classDfsStrategy.html">   11</a></span>&#160;<span class="keyword">class </span><a class="code" href="classDfsStrategy.html">DfsStrategy</a> : <span class="keyword">public</span> <a class="code" href="classPathStrategy.html">PathStrategy</a> {</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="classDfsStrategy.html#ac62cd4f89c6d75a4a719397cfb187afa">DfsStrategy</a>(<a class="code" href="classVector3.html">Vector3</a> position, <a class="code" href="classVector3.html">Vector3</a> destination, <span class="keyword">const</span> IGraph* graph);</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">const</span> IGraph* graph;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="classVector3.html">Vector3</a> position;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="classVector3.html">Vector3</a> destination;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;};</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <a class="code" href="classDfsStrategy.html#ac62cd4f89c6d75a4a719397cfb187afa">DfsStrategy</a>(<a class="code" href="classVector3.html">Vector3</a> position, <a class="code" href="classVector3.html">Vector3</a> destination, <span class="keyword">const</span> IGraph* graph);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="keyword">const</span> IGraph* graph;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <a class="code" href="classVector3.html">Vector3</a> position;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <a class="code" href="classVector3.html">Vector3</a> destination;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;};</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclassDfsStrategy_html"><div class="ttname"><a href="classDfsStrategy.html">DfsStrategy</a></div><div class="ttdoc">Will use DFS path finding algorithm to move.</div><div class="ttdef"><b>Definition:</b> DfsStrategy.h:11</div></div>
 <div class="ttc" id="aclassDfsStrategy_html_ac62cd4f89c6d75a4a719397cfb187afa"><div class="ttname"><a href="classDfsStrategy.html#ac62cd4f89c6d75a4a719397cfb187afa">DfsStrategy::DfsStrategy</a></div><div class="ttdeci">DfsStrategy(Vector3 position, Vector3 destination, const IGraph *graph)</div><div class="ttdoc">Construct a new Dfs Strategy object.</div><div class="ttdef"><b>Definition:</b> DfsStrategy.cc:4</div></div>

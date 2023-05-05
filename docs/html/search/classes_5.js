@@ -1,7 +1,9 @@
 var searchData=
 [
-  ['icontroller_99',['IController',['../classIController.html',1,'']]],
-  ['ientity_100',['IEntity',['../classIEntity.html',1,'']]],
-  ['ientityfactory_101',['IEntityFactory',['../classIEntityFactory.html',1,'']]],
-  ['istrategy_102',['IStrategy',['../classIStrategy.html',1,'']]]
+  ['helicopter_127',['Helicopter',['../classHelicopter.html',1,'']]],
+  ['helicopterfactory_128',['HelicopterFactory',['../classHelicopterFactory.html',1,'']]],
+  ['horse_129',['Horse',['../classHorse.html',1,'']]],
+  ['horsefactory_130',['HorseFactory',['../classHorseFactory.html',1,'']]],
+  ['human_131',['Human',['../classHuman.html',1,'']]],
+  ['humanfactory_132',['HumanFactory',['../classHumanFactory.html',1,'']]]
 ];

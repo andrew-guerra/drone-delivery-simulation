@@ -1,6 +1,7 @@
 <map id="SimulationModel" name="SimulationModel">
-<area shape="rect" id="node1" title="Class SimulationModel handling the transit simulation. it can communicate with the controller." alt="" coords="80,171,212,197"/>
-<area shape="rect" id="node2" href="$classCompositeFactory.html" title="Factory method for composite class. Inherits from IEntityFactory." alt="" coords="5,81,145,108"/>
-<area shape="rect" id="node3" href="$classIEntityFactory.html" title="Composite Factory Interface." alt="" coords="19,5,131,32"/>
-<area shape="rect" id="node4" href="$classIController.html" title="class for IController used for transit service. Uses the Model View" alt="" coords="170,81,261,108"/>
+<area shape="rect" id="node1" title="Class SimulationModel handling the transit simulation. it can communicate with the controller." alt="" coords="152,171,284,197"/>
+<area shape="rect" id="node2" href="$classDataCollection.html" title="A Singleton that collects data from drones and robots." alt="" coords="5,81,124,108"/>
+<area shape="rect" id="node3" href="$classCompositeFactory.html" title="Factory method for composite class. Inherits from IEntityFactory." alt="" coords="148,81,288,108"/>
+<area shape="rect" id="node4" href="$classIEntityFactory.html" title="Composite Factory Interface." alt="" coords="162,5,274,32"/>
+<area shape="rect" id="node5" href="$classIController.html" title="class for IController used for transit service. Uses the Model View" alt="" coords="313,81,403,108"/>
 </map>

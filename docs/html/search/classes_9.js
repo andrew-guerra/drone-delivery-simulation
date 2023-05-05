@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['simulationmodel_107',['SimulationModel',['../classSimulationModel.html',1,'']]],
-  ['spindecorator_108',['SpinDecorator',['../classSpinDecorator.html',1,'']]]
+  ['robot_139',['Robot',['../classRobot.html',1,'']]],
+  ['robotdata_140',['RobotData',['../structRobotData.html',1,'']]],
+  ['robotfactory_141',['RobotFactory',['../classRobotFactory.html',1,'']]]
 ];
