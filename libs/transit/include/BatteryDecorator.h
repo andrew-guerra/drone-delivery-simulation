@@ -11,6 +11,9 @@
 // idle it's all the same)
 const double MAX_BATTERY = 70.00;
 
+// Represents how close a battery can be from its minimum charge state
+const double BATTERY_DELTA_THREASHOLD = 1.00;
+
 class BatteryDecorator : public IEntity {
  protected:
   IEntity* entity;
