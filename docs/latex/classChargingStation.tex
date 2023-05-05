@@ -1,0 +1,299 @@
+\hypertarget{classChargingStation}{}\doxysection{Charging\+Station Class Reference}
+\label{classChargingStation}\index{ChargingStation@{ChargingStation}}
+
+
+The \mbox{\hyperlink{classChargingStation}{Charging\+Station}} object itself.  
+
+
+
+
+{\ttfamily \#include $<$Charging\+Station.\+h$>$}
+
+
+
+Inheritance diagram for Charging\+Station\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=175pt]{classChargingStation__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Charging\+Station\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=175pt]{classChargingStation__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classChargingStation_a556d2850526246b8d8fe122921d2f63f}{Charging\+Station}} (Json\+Object \&obj)
+\begin{DoxyCompactList}\small\item\em Construct a new Charging Station object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classChargingStation_ab4c22d4de6332084aa4ff511582f3ac4}{$\sim$\+Charging\+Station}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the Charging Station object. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classChargingStation_ac5677b6df7c78d98f7e73e5b6c791004}{Get\+Speed}} () const
+\begin{DoxyCompactList}\small\item\em Gets the speed of the entity. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVector3}{Vector3}} \mbox{\hyperlink{classChargingStation_a594328be203162c9d9b2047ccd4ba43f}{Get\+Position}} () const
+\begin{DoxyCompactList}\small\item\em Get the Position vector. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVector3}{Vector3}} \mbox{\hyperlink{classChargingStation_a08a5ad4bd5446d5bb471839a70f0cdda}{Get\+Direction}} () const
+\begin{DoxyCompactList}\small\item\em Get the Direction vector. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVector3}{Vector3}} \mbox{\hyperlink{classChargingStation_a872577a6a92a262122ca753da22d65a3}{Get\+Destination}} () const
+\begin{DoxyCompactList}\small\item\em Get the Destination vector. \end{DoxyCompactList}\item 
+Json\+Object \mbox{\hyperlink{classChargingStation_a35b9862baf8bf8637a6d289e5078743d}{Get\+Details}} () const
+\begin{DoxyCompactList}\small\item\em Get the Details of the object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classChargingStation_a71a783288485906333a1d43622864069}{Update}} (double dt, std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$ scheduler)
+\begin{DoxyCompactList}\small\item\em Move the \mbox{\hyperlink{classChargingStation}{Charging\+Station}} with the sim. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classChargingStation_a24ca1ecdab7fc0de92066335a4d01280}{Set\+Position}} (\mbox{\hyperlink{classVector3}{Vector3}} pos\+\_\+)
+\begin{DoxyCompactList}\small\item\em Set the Position vector. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classChargingStation_a1cb1a8030f9eeff98212c582284298ab}{Set\+Direction}} (\mbox{\hyperlink{classVector3}{Vector3}} dir\+\_\+)
+\begin{DoxyCompactList}\small\item\em Set the Direction vector. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classChargingStation_a0b5be2ccf3c15ec0aa40f3397b337669}{Set\+Destination}} (\mbox{\hyperlink{classVector3}{Vector3}} des\+\_\+)
+\begin{DoxyCompactList}\small\item\em Set the Destination vector. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classChargingStation_ab461ac21a9cebac475b1aa77924e9fd9}{Charging\+Station}} (const \mbox{\hyperlink{classChargingStation}{Charging\+Station}} \&charging\+Station)=delete
+\begin{DoxyCompactList}\small\item\em Delete copy constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classChargingStation}{Charging\+Station}} \& \mbox{\hyperlink{classChargingStation_a7f0b22a06ec7629ba90a029ab59f9dbd}{operator=}} (const \mbox{\hyperlink{classChargingStation}{Charging\+Station}} \&charging\+Station)=delete
+\begin{DoxyCompactList}\small\item\em Delete equals op. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classChargingStation}{Charging\+Station}} object itself. 
+
+Holds the required \mbox{\hyperlink{classIEntity}{I\+Entity}} virtual functionality, but the \mbox{\hyperlink{classChargingStation}{Charging\+Station}} does not actually do much work 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classChargingStation_a556d2850526246b8d8fe122921d2f63f}\label{classChargingStation_a556d2850526246b8d8fe122921d2f63f}} 
+\index{ChargingStation@{ChargingStation}!ChargingStation@{ChargingStation}}
+\index{ChargingStation@{ChargingStation}!ChargingStation@{ChargingStation}}
+\doxysubsubsection{\texorpdfstring{ChargingStation()}{ChargingStation()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Charging\+Station\+::\+Charging\+Station (\begin{DoxyParamCaption}\item[{Json\+Object \&}]{obj }\end{DoxyParamCaption})}
+
+
+
+Construct a new Charging Station object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classChargingStation_ab4c22d4de6332084aa4ff511582f3ac4}\label{classChargingStation_ab4c22d4de6332084aa4ff511582f3ac4}} 
+\index{ChargingStation@{ChargingStation}!````~ChargingStation@{$\sim$ChargingStation}}
+\index{````~ChargingStation@{$\sim$ChargingStation}!ChargingStation@{ChargingStation}}
+\doxysubsubsection{\texorpdfstring{$\sim$ChargingStation()}{~ChargingStation()}}
+{\footnotesize\ttfamily Charging\+Station\+::$\sim$\+Charging\+Station (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destroy the Charging Station object. 
+
+\mbox{\Hypertarget{classChargingStation_ab461ac21a9cebac475b1aa77924e9fd9}\label{classChargingStation_ab461ac21a9cebac475b1aa77924e9fd9}} 
+\index{ChargingStation@{ChargingStation}!ChargingStation@{ChargingStation}}
+\index{ChargingStation@{ChargingStation}!ChargingStation@{ChargingStation}}
+\doxysubsubsection{\texorpdfstring{ChargingStation()}{ChargingStation()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Charging\+Station\+::\+Charging\+Station (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classChargingStation}{Charging\+Station}} \&}]{charging\+Station }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Delete copy constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{classChargingStation}{Charging\+Station}}} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classChargingStation_a872577a6a92a262122ca753da22d65a3}\label{classChargingStation_a872577a6a92a262122ca753da22d65a3}} 
+\index{ChargingStation@{ChargingStation}!GetDestination@{GetDestination}}
+\index{GetDestination@{GetDestination}!ChargingStation@{ChargingStation}}
+\doxysubsubsection{\texorpdfstring{GetDestination()}{GetDestination()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVector3}{Vector3}} Charging\+Station\+::\+Get\+Destination (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Get the Destination vector. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classVector3}{Vector3}} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIEntity_a0dcaf865938ab1fb49c8389b5e580d90}{I\+Entity}}.
+
+\mbox{\Hypertarget{classChargingStation_a35b9862baf8bf8637a6d289e5078743d}\label{classChargingStation_a35b9862baf8bf8637a6d289e5078743d}} 
+\index{ChargingStation@{ChargingStation}!GetDetails@{GetDetails}}
+\index{GetDetails@{GetDetails}!ChargingStation@{ChargingStation}}
+\doxysubsubsection{\texorpdfstring{GetDetails()}{GetDetails()}}
+{\footnotesize\ttfamily Json\+Object Charging\+Station\+::\+Get\+Details (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Get the Details of the object. 
+
+\begin{DoxyReturn}{Returns}
+Json\+Object 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIEntity_a97c799400ce05e2ff2566adc4d7b9634}{I\+Entity}}.
+
+\mbox{\Hypertarget{classChargingStation_a08a5ad4bd5446d5bb471839a70f0cdda}\label{classChargingStation_a08a5ad4bd5446d5bb471839a70f0cdda}} 
+\index{ChargingStation@{ChargingStation}!GetDirection@{GetDirection}}
+\index{GetDirection@{GetDirection}!ChargingStation@{ChargingStation}}
+\doxysubsubsection{\texorpdfstring{GetDirection()}{GetDirection()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVector3}{Vector3}} Charging\+Station\+::\+Get\+Direction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Get the Direction vector. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classVector3}{Vector3}} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIEntity_aa99a8fef8b22195a5113c38ef51f086d}{I\+Entity}}.
+
+\mbox{\Hypertarget{classChargingStation_a594328be203162c9d9b2047ccd4ba43f}\label{classChargingStation_a594328be203162c9d9b2047ccd4ba43f}} 
+\index{ChargingStation@{ChargingStation}!GetPosition@{GetPosition}}
+\index{GetPosition@{GetPosition}!ChargingStation@{ChargingStation}}
+\doxysubsubsection{\texorpdfstring{GetPosition()}{GetPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVector3}{Vector3}} Charging\+Station\+::\+Get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Get the Position vector. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classVector3}{Vector3}} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIEntity_a9bc32587aab91761fc0e718612498199}{I\+Entity}}.
+
+\mbox{\Hypertarget{classChargingStation_ac5677b6df7c78d98f7e73e5b6c791004}\label{classChargingStation_ac5677b6df7c78d98f7e73e5b6c791004}} 
+\index{ChargingStation@{ChargingStation}!GetSpeed@{GetSpeed}}
+\index{GetSpeed@{GetSpeed}!ChargingStation@{ChargingStation}}
+\doxysubsubsection{\texorpdfstring{GetSpeed()}{GetSpeed()}}
+{\footnotesize\ttfamily float Charging\+Station\+::\+Get\+Speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Gets the speed of the entity. 
+
+\begin{DoxyReturn}{Returns}
+The speed of the entity. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIEntity_a6520d2b1dc71d092bab38ef9f5cc9ff4}{I\+Entity}}.
+
+\mbox{\Hypertarget{classChargingStation_a7f0b22a06ec7629ba90a029ab59f9dbd}\label{classChargingStation_a7f0b22a06ec7629ba90a029ab59f9dbd}} 
+\index{ChargingStation@{ChargingStation}!operator=@{operator=}}
+\index{operator=@{operator=}!ChargingStation@{ChargingStation}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classChargingStation}{Charging\+Station}}\& Charging\+Station\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classChargingStation}{Charging\+Station}} \&}]{charging\+Station }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Delete equals op. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{classChargingStation}{Charging\+Station}}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classChargingStation}{Charging\+Station}}\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classChargingStation_a0b5be2ccf3c15ec0aa40f3397b337669}\label{classChargingStation_a0b5be2ccf3c15ec0aa40f3397b337669}} 
+\index{ChargingStation@{ChargingStation}!SetDestination@{SetDestination}}
+\index{SetDestination@{SetDestination}!ChargingStation@{ChargingStation}}
+\doxysubsubsection{\texorpdfstring{SetDestination()}{SetDestination()}}
+{\footnotesize\ttfamily void Charging\+Station\+::\+Set\+Destination (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVector3}{Vector3}}}]{des\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Set the Destination vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em des\+\_\+} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity_aa473000823f673e9d7b89aed3cd3fc5c}{I\+Entity}}.
+
+\mbox{\Hypertarget{classChargingStation_a1cb1a8030f9eeff98212c582284298ab}\label{classChargingStation_a1cb1a8030f9eeff98212c582284298ab}} 
+\index{ChargingStation@{ChargingStation}!SetDirection@{SetDirection}}
+\index{SetDirection@{SetDirection}!ChargingStation@{ChargingStation}}
+\doxysubsubsection{\texorpdfstring{SetDirection()}{SetDirection()}}
+{\footnotesize\ttfamily void Charging\+Station\+::\+Set\+Direction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVector3}{Vector3}}}]{dir\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Set the Direction vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dir\+\_\+} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity_a64bfaa448a929ca71693ff3e2edb9d97}{I\+Entity}}.
+
+\mbox{\Hypertarget{classChargingStation_a24ca1ecdab7fc0de92066335a4d01280}\label{classChargingStation_a24ca1ecdab7fc0de92066335a4d01280}} 
+\index{ChargingStation@{ChargingStation}!SetPosition@{SetPosition}}
+\index{SetPosition@{SetPosition}!ChargingStation@{ChargingStation}}
+\doxysubsubsection{\texorpdfstring{SetPosition()}{SetPosition()}}
+{\footnotesize\ttfamily void Charging\+Station\+::\+Set\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVector3}{Vector3}}}]{pos\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Set the Position vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos\+\_\+} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity_af0475048b09dc13ed6cf8e7c7be2ae6b}{I\+Entity}}.
+
+\mbox{\Hypertarget{classChargingStation_a71a783288485906333a1d43622864069}\label{classChargingStation_a71a783288485906333a1d43622864069}} 
+\index{ChargingStation@{ChargingStation}!Update@{Update}}
+\index{Update@{Update}!ChargingStation@{ChargingStation}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Charging\+Station\+::\+Update (\begin{DoxyParamCaption}\item[{double}]{dt,  }\item[{std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$}]{scheduler }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Move the \mbox{\hyperlink{classChargingStation}{Charging\+Station}} with the sim. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & sim time \\
+\hline
+{\em scheduler} & entity scheduler/interaction \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity_a9a8e8588fd85c7b0d813d60686d4dc2c}{I\+Entity}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/brock450/csci3081w/csci-\/3081w-\/\+S23/\+Team-\/010-\/31-\/homework4/libs/transit/include/Charging\+Station.\+h\item 
+/home/brock450/csci3081w/csci-\/3081w-\/\+S23/\+Team-\/010-\/31-\/homework4/libs/transit/src/Charging\+Station.\+cc\end{DoxyCompactItemize}

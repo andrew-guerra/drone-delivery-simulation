@@ -1,0 +1,4 @@
+<map id="ChargingStation" name="ChargingStation">
+<area shape="rect" id="node1" title="The ChargingStation object itself." alt="" coords="5,80,132,107"/>
+<area shape="rect" id="node2" href="$classIEntity.html" title="Represents an entity in a physical system." alt="" coords="37,5,101,32"/>
+</map>

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['vector3_109',['Vector3',['../classVector3.html',1,'']]]
+  ['simulationmodel_142',['SimulationModel',['../classSimulationModel.html',1,'']]],
+  ['spindecorator_143',['SpinDecorator',['../classSpinDecorator.html',1,'']]]
 ];

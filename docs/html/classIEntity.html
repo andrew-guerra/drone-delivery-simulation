@@ -79,12 +79,14 @@ Inheritance diagram for IEntity:</div>
 <div class="dyncontent">
 <div class="center"><img src="classIEntity__inherit__graph.png" border="0" usemap="#IEntity_inherit__map" alt="Inheritance graph"/></div>
 <map name="IEntity_inherit__map" id="IEntity_inherit__map">
-<area shape="rect" title="Represents an entity in a physical system." alt="" coords="203,5,267,32"/>
-<area shape="rect" href="classDrone.html" title="Represents a drone in a physical system. Drones move using euler integration based on a specified vel..." alt="" coords="5,80,67,107"/>
-<area shape="rect" href="classHelicopter.html" title="Helicopter that goes float float chop chop Spawn one in when sim is started." alt="" coords="91,80,181,107"/>
-<area shape="rect" href="classHorse.html" title="A spawnable creature that walks around like a lil guy." alt="" coords="205,80,265,107"/>
-<area shape="rect" href="classHuman.html" title="A spawnable creature that walks around like a lil guy." alt="" coords="289,80,359,107"/>
-<area shape="rect" href="classRobot.html" title="Represents a robot in a physical system." alt="" coords="383,80,443,107"/>
+<area shape="rect" title="Represents an entity in a physical system." alt="" coords="414,5,478,32"/>
+<area shape="rect" href="classBatteryDecorator.html" title=" " alt="" coords="5,80,140,107"/>
+<area shape="rect" href="classChargingStation.html" title="The ChargingStation object itself." alt="" coords="164,80,291,107"/>
+<area shape="rect" href="classDrone.html" title="Represents a drone in a physical system. Drones move using euler integration based on a specified vel..." alt="" coords="315,80,377,107"/>
+<area shape="rect" href="classHelicopter.html" title="Helicopter that goes float float chop chop Spawn one in when sim is started." alt="" coords="401,80,491,107"/>
+<area shape="rect" href="classHorse.html" title="A spawnable creature that walks around like a lil guy." alt="" coords="515,80,575,107"/>
+<area shape="rect" href="classHuman.html" title="A spawnable creature that walks around like a lil guy." alt="" coords="599,80,669,107"/>
+<area shape="rect" href="classRobot.html" title="Represents a robot in a physical system." alt="" coords="693,80,753,107"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -134,9 +136,12 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <tr class="memitem:a9a8e8588fd85c7b0d813d60686d4dc2c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIEntity.html#a9a8e8588fd85c7b0d813d60686d4dc2c">Update</a> (double dt, std::vector&lt; <a class="el" href="classIEntity.html">IEntity</a> * &gt; scheduler)</td></tr>
 <tr class="memdesc:a9a8e8588fd85c7b0d813d60686d4dc2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the entity's position in the physical system.  <a href="classIEntity.html#a9a8e8588fd85c7b0d813d60686d4dc2c">More...</a><br /></td></tr>
 <tr class="separator:a9a8e8588fd85c7b0d813d60686d4dc2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b8b8eb627e8945fdc997f7a9d457df0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIEntity.html#a6b8b8eb627e8945fdc997f7a9d457df0">SetGraph</a> (const IGraph *graph)</td></tr>
-<tr class="memdesc:a6b8b8eb627e8945fdc997f7a9d457df0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the graph object used by the entity in the simulation.  <a href="classIEntity.html#a6b8b8eb627e8945fdc997f7a9d457df0">More...</a><br /></td></tr>
-<tr class="separator:a6b8b8eb627e8945fdc997f7a9d457df0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50b01c5c4fab1632c0289e30aa77faf2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIEntity.html#a50b01c5c4fab1632c0289e30aa77faf2">SetGraph</a> (const IGraph *graph)</td></tr>
+<tr class="memdesc:a50b01c5c4fab1632c0289e30aa77faf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the graph object used by the entity in the simulation.  <a href="classIEntity.html#a50b01c5c4fab1632c0289e30aa77faf2">More...</a><br /></td></tr>
+<tr class="separator:a50b01c5c4fab1632c0289e30aa77faf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf8fe370ae56a0612c6bc07cee6d9ee4"><td class="memItemLeft" align="right" valign="top">const IGraph *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIEntity.html#acf8fe370ae56a0612c6bc07cee6d9ee4">GetGraph</a> ()</td></tr>
+<tr class="memdesc:acf8fe370ae56a0612c6bc07cee6d9ee4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Graph object.  <a href="classIEntity.html#acf8fe370ae56a0612c6bc07cee6d9ee4">More...</a><br /></td></tr>
+<tr class="separator:acf8fe370ae56a0612c6bc07cee6d9ee4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af0475048b09dc13ed6cf8e7c7be2ae6b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIEntity.html#af0475048b09dc13ed6cf8e7c7be2ae6b">SetPosition</a> (<a class="el" href="classVector3.html">Vector3</a> pos_)</td></tr>
 <tr class="memdesc:af0475048b09dc13ed6cf8e7c7be2ae6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the position of the entity.  <a href="classIEntity.html#af0475048b09dc13ed6cf8e7c7be2ae6b">More...</a><br /></td></tr>
 <tr class="separator:af0475048b09dc13ed6cf8e7c7be2ae6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -155,6 +160,9 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <tr class="memitem:a4e8eb64a324e1196be039c5e2a293b7a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIEntity.html#a4e8eb64a324e1196be039c5e2a293b7a">Jump</a> (double height)</td></tr>
 <tr class="memdesc:a4e8eb64a324e1196be039c5e2a293b7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make the entity jump.  <a href="classIEntity.html#a4e8eb64a324e1196be039c5e2a293b7a">More...</a><br /></td></tr>
 <tr class="separator:a4e8eb64a324e1196be039c5e2a293b7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88156828efd557858fae968d5180f589"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classIEntity.html">IEntity</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIEntity.html#a88156828efd557858fae968d5180f589">GetEntity</a> ()</td></tr>
+<tr class="memdesc:a88156828efd557858fae968d5180f589"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the entity object associated with the class (if it exists)  <a href="classIEntity.html#a88156828efd557858fae968d5180f589">More...</a><br /></td></tr>
+<tr class="separator:a88156828efd557858fae968d5180f589"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -255,7 +263,7 @@ const IGraph *&#160;</td><td class="memItemRight" valign="bottom"><b>graph</b></
 <p>Gets the destination of the entity. </p>
 <dl class="section return"><dt>Returns</dt><dd>The destination of the entity. </dd></dl>
 
-<p>Implemented in <a class="el" href="classDrone.html#adaf61822f659e8ab22fb633569288752">Drone</a>, <a class="el" href="classHelicopter.html#adc65020147c682911cc8f15ab6bb11d6">Helicopter</a>, <a class="el" href="classHorse.html#ab8bb0bf7f19beacd0b9819a336d3a420">Horse</a>, <a class="el" href="classHuman.html#a8f37f4c1478eb559e0a3b603a0cea0db">Human</a>, and <a class="el" href="classRobot.html#abe629d465798403a706f574b33284659">Robot</a>.</p>
+<p>Implemented in <a class="el" href="classBatteryDecorator.html#a30d49a5e5efb93fad2ab4e5d77d26870">BatteryDecorator</a>, <a class="el" href="classDrone.html#adaf61822f659e8ab22fb633569288752">Drone</a>, <a class="el" href="classHelicopter.html#adc65020147c682911cc8f15ab6bb11d6">Helicopter</a>, <a class="el" href="classHorse.html#ab8bb0bf7f19beacd0b9819a336d3a420">Horse</a>, <a class="el" href="classHuman.html#a8f37f4c1478eb559e0a3b603a0cea0db">Human</a>, <a class="el" href="classRobot.html#abe629d465798403a706f574b33284659">Robot</a>, and <a class="el" href="classChargingStation.html#a872577a6a92a262122ca753da22d65a3">ChargingStation</a>.</p>
 
 </div>
 </div>
@@ -285,7 +293,7 @@ const IGraph *&#160;</td><td class="memItemRight" valign="bottom"><b>graph</b></
 <p>Gets the details of the entity. </p>
 <dl class="section return"><dt>Returns</dt><dd>The details of the entity. </dd></dl>
 
-<p>Implemented in <a class="el" href="classRobot.html#a0ac023c6fb5d7ad58b180903010d2924">Robot</a>, <a class="el" href="classDrone.html#aa038e4cb9540e6a4101ea70f311c8308">Drone</a>, <a class="el" href="classHelicopter.html#ae2d381f2ea007904fd7a5f5e6418cb83">Helicopter</a>, <a class="el" href="classHorse.html#a5b0294f6eceefc61fd7f325e10ab68e1">Horse</a>, and <a class="el" href="classHuman.html#a617078a653f30c134dcf87410cb0bbd0">Human</a>.</p>
+<p>Implemented in <a class="el" href="classRobot.html#a0ac023c6fb5d7ad58b180903010d2924">Robot</a>, <a class="el" href="classDrone.html#aa038e4cb9540e6a4101ea70f311c8308">Drone</a>, <a class="el" href="classHelicopter.html#ae2d381f2ea007904fd7a5f5e6418cb83">Helicopter</a>, <a class="el" href="classBatteryDecorator.html#a1334400df4041ca471b35ede6e978721">BatteryDecorator</a>, <a class="el" href="classHorse.html#a5b0294f6eceefc61fd7f325e10ab68e1">Horse</a>, <a class="el" href="classHuman.html#a617078a653f30c134dcf87410cb0bbd0">Human</a>, and <a class="el" href="classChargingStation.html#a35b9862baf8bf8637a6d289e5078743d">ChargingStation</a>.</p>
 
 </div>
 </div>
@@ -315,7 +323,65 @@ const IGraph *&#160;</td><td class="memItemRight" valign="bottom"><b>graph</b></
 <p>Gets the direction of the entity. </p>
 <dl class="section return"><dt>Returns</dt><dd>The direction of the entity. </dd></dl>
 
-<p>Implemented in <a class="el" href="classDrone.html#aaf51e8007322a36d481ce9a546099e44">Drone</a>, <a class="el" href="classHelicopter.html#aef5fe3c3a5029d6da923f123ed308898">Helicopter</a>, <a class="el" href="classHorse.html#a6099d74a25196d2c06458b4f78ee7005">Horse</a>, <a class="el" href="classHuman.html#a1355c2de4fce8dea092206861a1805ad">Human</a>, and <a class="el" href="classRobot.html#a2d6dd7a322d2d2c0bc1c44566253b9f1">Robot</a>.</p>
+<p>Implemented in <a class="el" href="classBatteryDecorator.html#a8487174df54456fe29406927f0542720">BatteryDecorator</a>, <a class="el" href="classDrone.html#aaf51e8007322a36d481ce9a546099e44">Drone</a>, <a class="el" href="classHelicopter.html#aef5fe3c3a5029d6da923f123ed308898">Helicopter</a>, <a class="el" href="classHorse.html#a6099d74a25196d2c06458b4f78ee7005">Horse</a>, <a class="el" href="classHuman.html#a1355c2de4fce8dea092206861a1805ad">Human</a>, <a class="el" href="classRobot.html#a2d6dd7a322d2d2c0bc1c44566253b9f1">Robot</a>, and <a class="el" href="classChargingStation.html#a08a5ad4bd5446d5bb471839a70f0cdda">ChargingStation</a>.</p>
+
+</div>
+</div>
+<a id="a88156828efd557858fae968d5180f589"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88156828efd557858fae968d5180f589">&#9670;&nbsp;</a></span>GetEntity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classIEntity.html">IEntity</a>* IEntity::GetEntity </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the entity object associated with the class (if it exists) </p>
+<dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="classIEntity.html" title="Represents an entity in a physical system.">IEntity</a> object associated with the class </dd></dl>
+
+<p>Reimplemented in <a class="el" href="classDrone.html#a08688da93092ce30f74fe66eca2bce17">Drone</a>.</p>
+
+</div>
+</div>
+<a id="acf8fe370ae56a0612c6bc07cee6d9ee4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf8fe370ae56a0612c6bc07cee6d9ee4">&#9670;&nbsp;</a></span>GetGraph()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const IGraph* IEntity::GetGraph </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the Graph object. </p>
+<dl class="section return"><dt>Returns</dt><dd>IGraph* </dd></dl>
 
 </div>
 </div>
@@ -373,7 +439,7 @@ const IGraph *&#160;</td><td class="memItemRight" valign="bottom"><b>graph</b></
 <p>Gets the position of the entity. </p>
 <dl class="section return"><dt>Returns</dt><dd>The position of the entity. </dd></dl>
 
-<p>Implemented in <a class="el" href="classDrone.html#a3d86b956f8722735b1d7e791dea703bc">Drone</a>, <a class="el" href="classHelicopter.html#a8db916733a82877fa98f9223854cdd54">Helicopter</a>, <a class="el" href="classHorse.html#ae5a5bb4c8f6809ff4d0648c7310a246c">Horse</a>, <a class="el" href="classHuman.html#a9c539ec43f19d6b6d7f1322b4ac9d5bc">Human</a>, and <a class="el" href="classRobot.html#a0505da0b08d679a828c005879da63b16">Robot</a>.</p>
+<p>Implemented in <a class="el" href="classBatteryDecorator.html#aaf2487adf2d58e855268877427cf5ba9">BatteryDecorator</a>, <a class="el" href="classDrone.html#a3d86b956f8722735b1d7e791dea703bc">Drone</a>, <a class="el" href="classHelicopter.html#a8db916733a82877fa98f9223854cdd54">Helicopter</a>, <a class="el" href="classHorse.html#ae5a5bb4c8f6809ff4d0648c7310a246c">Horse</a>, <a class="el" href="classHuman.html#a9c539ec43f19d6b6d7f1322b4ac9d5bc">Human</a>, <a class="el" href="classRobot.html#a0505da0b08d679a828c005879da63b16">Robot</a>, and <a class="el" href="classChargingStation.html#a594328be203162c9d9b2047ccd4ba43f">ChargingStation</a>.</p>
 
 </div>
 </div>
@@ -403,7 +469,7 @@ const IGraph *&#160;</td><td class="memItemRight" valign="bottom"><b>graph</b></
 <p>Gets the speed of the entity. </p>
 <dl class="section return"><dt>Returns</dt><dd>The speed of the entity. </dd></dl>
 
-<p>Implemented in <a class="el" href="classRobot.html#ad199885470ae6e1109153526c21473c5">Robot</a>, <a class="el" href="classDrone.html#a33d05f853306e480ab97049eb6408ef7">Drone</a>, <a class="el" href="classHelicopter.html#aff4570a488480c2cf70a6f96cec52d37">Helicopter</a>, <a class="el" href="classHorse.html#a51e66e108bff39c5e95f51469fd6f39e">Horse</a>, and <a class="el" href="classHuman.html#ad2c0bf2187d3c7187954ac3efe55f7af">Human</a>.</p>
+<p>Implemented in <a class="el" href="classRobot.html#ad199885470ae6e1109153526c21473c5">Robot</a>, <a class="el" href="classBatteryDecorator.html#a4ba88b753b061fcafe7b4891e375b199">BatteryDecorator</a>, <a class="el" href="classDrone.html#a33d05f853306e480ab97049eb6408ef7">Drone</a>, <a class="el" href="classHelicopter.html#aff4570a488480c2cf70a6f96cec52d37">Helicopter</a>, <a class="el" href="classHorse.html#a51e66e108bff39c5e95f51469fd6f39e">Horse</a>, <a class="el" href="classHuman.html#ad2c0bf2187d3c7187954ac3efe55f7af">Human</a>, and <a class="el" href="classChargingStation.html#ac5677b6df7c78d98f7e73e5b6c791004">ChargingStation</a>.</p>
 
 </div>
 </div>
@@ -613,7 +679,7 @@ const IGraph *&#160;</td><td class="memItemRight" valign="bottom"><b>graph</b></
   </dd>
 </dl>
 
-<p>Reimplemented in <a class="el" href="classDrone.html#a2dfb158a784d354d13740a40151fb312">Drone</a>, <a class="el" href="classRobot.html#a557af09ca03132837bc6574bca6fbe05">Robot</a>, <a class="el" href="classHorse.html#a307c28d71adb6411c73a57e86121a885">Horse</a>, <a class="el" href="classHuman.html#afafadfceb5333d5016dc1a463b5f77c9">Human</a>, and <a class="el" href="classHelicopter.html#a2ed1e8574f7b4d2dcf4f521008cf7286">Helicopter</a>.</p>
+<p>Reimplemented in <a class="el" href="classDrone.html#a2dfb158a784d354d13740a40151fb312">Drone</a>, <a class="el" href="classRobot.html#a557af09ca03132837bc6574bca6fbe05">Robot</a>, <a class="el" href="classHorse.html#a307c28d71adb6411c73a57e86121a885">Horse</a>, <a class="el" href="classHuman.html#afafadfceb5333d5016dc1a463b5f77c9">Human</a>, <a class="el" href="classHelicopter.html#a2ed1e8574f7b4d2dcf4f521008cf7286">Helicopter</a>, and <a class="el" href="classChargingStation.html#a0b5be2ccf3c15ec0aa40f3397b337669">ChargingStation</a>.</p>
 
 </div>
 </div>
@@ -649,12 +715,12 @@ const IGraph *&#160;</td><td class="memItemRight" valign="bottom"><b>graph</b></
   </dd>
 </dl>
 
-<p>Reimplemented in <a class="el" href="classDrone.html#a102651f93957b1dbe8199cbd30a9e26f">Drone</a>, <a class="el" href="classRobot.html#aaa0e41dbf57cb4040c0319b93c5a008c">Robot</a>, <a class="el" href="classHorse.html#a12026514ddcc466dc2d6d5b8718b3a68">Horse</a>, <a class="el" href="classHuman.html#a61b07f167a38968c9811eee2fb85d49d">Human</a>, and <a class="el" href="classHelicopter.html#a00794cb2f624ca1b3d01c5920377afaf">Helicopter</a>.</p>
+<p>Reimplemented in <a class="el" href="classDrone.html#a102651f93957b1dbe8199cbd30a9e26f">Drone</a>, <a class="el" href="classRobot.html#aaa0e41dbf57cb4040c0319b93c5a008c">Robot</a>, <a class="el" href="classHorse.html#a12026514ddcc466dc2d6d5b8718b3a68">Horse</a>, <a class="el" href="classHuman.html#a61b07f167a38968c9811eee2fb85d49d">Human</a>, <a class="el" href="classHelicopter.html#a00794cb2f624ca1b3d01c5920377afaf">Helicopter</a>, and <a class="el" href="classChargingStation.html#a1cb1a8030f9eeff98212c582284298ab">ChargingStation</a>.</p>
 
 </div>
 </div>
-<a id="a6b8b8eb627e8945fdc997f7a9d457df0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6b8b8eb627e8945fdc997f7a9d457df0">&#9670;&nbsp;</a></span>SetGraph()</h2>
+<a id="a50b01c5c4fab1632c0289e30aa77faf2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50b01c5c4fab1632c0289e30aa77faf2">&#9670;&nbsp;</a></span>SetGraph()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -663,7 +729,7 @@ const IGraph *&#160;</td><td class="memItemRight" valign="bottom"><b>graph</b></
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void IEntity::SetGraph </td>
+          <td class="memname">virtual void IEntity::SetGraph </td>
           <td>(</td>
           <td class="paramtype">const IGraph *&#160;</td>
           <td class="paramname"><em>graph</em></td><td>)</td>
@@ -672,7 +738,7 @@ const IGraph *&#160;</td><td class="memItemRight" valign="bottom"><b>graph</b></
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -719,7 +785,7 @@ const IGraph *&#160;</td><td class="memItemRight" valign="bottom"><b>graph</b></
   </dd>
 </dl>
 
-<p>Reimplemented in <a class="el" href="classDrone.html#a00150938e8dbfceaf81c9fb59994f6ef">Drone</a>, <a class="el" href="classRobot.html#a35ce73ea17f6cfbcbfe272c6bff038ba">Robot</a>, <a class="el" href="classHorse.html#a7c7f012a70098bbf2947809fc2f82e4a">Horse</a>, <a class="el" href="classHuman.html#aa0a0ca8e4482a77a3ac75cb09b14061f">Human</a>, and <a class="el" href="classHelicopter.html#a0a7386badb41e8f39b14095ffbfd4efd">Helicopter</a>.</p>
+<p>Reimplemented in <a class="el" href="classDrone.html#a00150938e8dbfceaf81c9fb59994f6ef">Drone</a>, <a class="el" href="classRobot.html#a35ce73ea17f6cfbcbfe272c6bff038ba">Robot</a>, <a class="el" href="classHorse.html#a7c7f012a70098bbf2947809fc2f82e4a">Horse</a>, <a class="el" href="classHuman.html#aa0a0ca8e4482a77a3ac75cb09b14061f">Human</a>, <a class="el" href="classHelicopter.html#a0a7386badb41e8f39b14095ffbfd4efd">Helicopter</a>, and <a class="el" href="classChargingStation.html#a24ca1ecdab7fc0de92066335a4d01280">ChargingStation</a>.</p>
 
 </div>
 </div>
@@ -802,7 +868,7 @@ const IGraph *&#160;</td><td class="memItemRight" valign="bottom"><b>graph</b></
   </dd>
 </dl>
 
-<p>Reimplemented in <a class="el" href="classDrone.html#a6798b0bd297ca7a930016cd2dda0b7ff">Drone</a>, <a class="el" href="classHorse.html#ac507238920606677c90d45260168ba12">Horse</a>, <a class="el" href="classHuman.html#ad01c878f8084b3146b53262bf7bf9898">Human</a>, and <a class="el" href="classHelicopter.html#a40a86f3aee09c2825dfe27851072791c">Helicopter</a>.</p>
+<p>Reimplemented in <a class="el" href="classDrone.html#a6798b0bd297ca7a930016cd2dda0b7ff">Drone</a>, <a class="el" href="classHorse.html#ac507238920606677c90d45260168ba12">Horse</a>, <a class="el" href="classHuman.html#ad01c878f8084b3146b53262bf7bf9898">Human</a>, <a class="el" href="classHelicopter.html#a40a86f3aee09c2825dfe27851072791c">Helicopter</a>, <a class="el" href="classChargingStation.html#a71a783288485906333a1d43622864069">ChargingStation</a>, and <a class="el" href="classBatteryDecorator.html#a9169f6180a73457ef5a593be987c09b4">BatteryDecorator</a>.</p>
 
 </div>
 </div>

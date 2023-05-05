@@ -1,0 +1,233 @@
+\hypertarget{classBatteryDecorator}{}\doxysection{Battery\+Decorator Class Reference}
+\label{classBatteryDecorator}\index{BatteryDecorator@{BatteryDecorator}}
+
+
+Inheritance diagram for Battery\+Decorator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=181pt]{classBatteryDecorator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Battery\+Decorator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classBatteryDecorator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classBatteryDecorator_a413f097a59e280c888fdc2d053c09a4a}\label{classBatteryDecorator_a413f097a59e280c888fdc2d053c09a4a}} 
+{\bfseries Battery\+Decorator} (\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$entity)
+\item 
+\mbox{\Hypertarget{classBatteryDecorator_a7f41875e9c4cee69f630b290ad3fb48f}\label{classBatteryDecorator_a7f41875e9c4cee69f630b290ad3fb48f}} 
+void {\bfseries Add\+Sim\+Entities} (std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$ entities)
+\item 
+void \mbox{\hyperlink{classBatteryDecorator_a9169f6180a73457ef5a593be987c09b4}{Update}} (double dt, std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$ scheduler)
+\begin{DoxyCompactList}\small\item\em Updates the entity\textquotesingle{}s position in the physical system. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classBatteryDecorator_adfd0f47f9f3e5b634104ec9e8daeb4c7}\label{classBatteryDecorator_adfd0f47f9f3e5b634104ec9e8daeb4c7}} 
+bool {\bfseries Can\+Reach\+Destination} ()
+\item 
+\mbox{\Hypertarget{classBatteryDecorator_a2d47f6c84d2648ccb4957006343b5140}\label{classBatteryDecorator_a2d47f6c84d2648ccb4957006343b5140}} 
+bool {\bfseries Can\+Make\+Trip} ()
+\item 
+\mbox{\Hypertarget{classBatteryDecorator_a688dc4cb97df64885fac44178a7dc190}\label{classBatteryDecorator_a688dc4cb97df64885fac44178a7dc190}} 
+bool {\bfseries Can\+Reach\+Location} (\mbox{\hyperlink{classVector3}{Vector3}} location)
+\item 
+\mbox{\Hypertarget{classBatteryDecorator_a14bc05b20d00c5e76335c2f3e83c77c7}\label{classBatteryDecorator_a14bc05b20d00c5e76335c2f3e83c77c7}} 
+bool {\bfseries Can\+Reach\+Location} (\mbox{\hyperlink{classVector3}{Vector3}} location, double battery)
+\item 
+\mbox{\Hypertarget{classBatteryDecorator_aa5a0c6d27af58c6f99395d7b8e0216e9}\label{classBatteryDecorator_aa5a0c6d27af58c6f99395d7b8e0216e9}} 
+bool {\bfseries Can\+Reach\+Charger} (\mbox{\hyperlink{classVector3}{Vector3}} location)
+\item 
+\mbox{\Hypertarget{classBatteryDecorator_ab257bd7edd56726ae084f8fc48359878}\label{classBatteryDecorator_ab257bd7edd56726ae084f8fc48359878}} 
+bool {\bfseries Can\+Reach\+Charger} (\mbox{\hyperlink{classVector3}{Vector3}} location, double battery)
+\item 
+\mbox{\Hypertarget{classBatteryDecorator_ae2e60da9af161ce1c7ad0391c85e0cff}\label{classBatteryDecorator_ae2e60da9af161ce1c7ad0391c85e0cff}} 
+\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ {\bfseries Get\+Closest\+Charging\+Station} (\mbox{\hyperlink{classVector3}{Vector3}} location)
+\item 
+\mbox{\Hypertarget{classBatteryDecorator_a8b9e4f229be851b7f36198343f82434d}\label{classBatteryDecorator_a8b9e4f229be851b7f36198343f82434d}} 
+\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ {\bfseries Get\+Closest\+Reachable\+Charging\+Station} (\mbox{\hyperlink{classVector3}{Vector3}} location)
+\item 
+\mbox{\Hypertarget{classBatteryDecorator_ac2775a4f70db6d458a86a7f12b6ea722}\label{classBatteryDecorator_ac2775a4f70db6d458a86a7f12b6ea722}} 
+double {\bfseries Get\+Distance\+To\+Destination} (\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$entity)
+\item 
+\mbox{\Hypertarget{classBatteryDecorator_abe02f6f59cd3ebc5f364a621cfc0de5c}\label{classBatteryDecorator_abe02f6f59cd3ebc5f364a621cfc0de5c}} 
+double {\bfseries Get\+Distance\+To\+Location} (\mbox{\hyperlink{classVector3}{Vector3}} start, \mbox{\hyperlink{classVector3}{Vector3}} des)
+\item 
+\mbox{\hyperlink{classVector3}{Vector3}} \mbox{\hyperlink{classBatteryDecorator_aaf2487adf2d58e855268877427cf5ba9}{Get\+Position}} () const
+\begin{DoxyCompactList}\small\item\em Gets the position of the entity. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVector3}{Vector3}} \mbox{\hyperlink{classBatteryDecorator_a8487174df54456fe29406927f0542720}{Get\+Direction}} () const
+\begin{DoxyCompactList}\small\item\em Gets the direction of the entity. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVector3}{Vector3}} \mbox{\hyperlink{classBatteryDecorator_a30d49a5e5efb93fad2ab4e5d77d26870}{Get\+Destination}} () const
+\begin{DoxyCompactList}\small\item\em Gets the destination of the entity. \end{DoxyCompactList}\item 
+Json\+Object \mbox{\hyperlink{classBatteryDecorator_a1334400df4041ca471b35ede6e978721}{Get\+Details}} () const
+\begin{DoxyCompactList}\small\item\em Gets the details of the entity. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classBatteryDecorator_a4ba88b753b061fcafe7b4891e375b199}{Get\+Speed}} () const
+\begin{DoxyCompactList}\small\item\em Gets the speed of the entity. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classBatteryDecorator_a3472d3d987d441cf81fffa5df9a51a0c}\label{classBatteryDecorator_a3472d3d987d441cf81fffa5df9a51a0c}} 
+double {\bfseries Get\+Battery} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classBatteryDecorator_aa44cc31e3ed3e42ef54bc29ff7e960b8}\label{classBatteryDecorator_aa44cc31e3ed3e42ef54bc29ff7e960b8}} 
+enum {\bfseries options} \{ {\bfseries to\+Charger}, 
+{\bfseries Charging}, 
+{\bfseries Default}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classBatteryDecorator_a17b3b9e8e5e3e014e4f729454da6952b}\label{classBatteryDecorator_a17b3b9e8e5e3e014e4f729454da6952b}} 
+\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ {\bfseries entity}
+\item 
+\mbox{\Hypertarget{classBatteryDecorator_a3152da8d9a961431af4e92ace50e3331}\label{classBatteryDecorator_a3152da8d9a961431af4e92ace50e3331}} 
+double {\bfseries battery\+\_\+life}
+\item 
+\mbox{\Hypertarget{classBatteryDecorator_aeb70f8636c69c80ab1c8364685f2d34b}\label{classBatteryDecorator_aeb70f8636c69c80ab1c8364685f2d34b}} 
+bool {\bfseries charging}
+\item 
+\mbox{\Hypertarget{classBatteryDecorator_a15bbff8ed9899fda3c94146516b0a112}\label{classBatteryDecorator_a15bbff8ed9899fda3c94146516b0a112}} 
+bool {\bfseries traveling\+To\+Charge}
+\item 
+\mbox{\Hypertarget{classBatteryDecorator_a56c3f093c430b9f7f9c67dede4957c4a}\label{classBatteryDecorator_a56c3f093c430b9f7f9c67dede4957c4a}} 
+bool {\bfseries delivering\+Robot}
+\item 
+\mbox{\Hypertarget{classBatteryDecorator_aa28b5eeeb4d35ef7048f1c3f31961cb8}\label{classBatteryDecorator_aa28b5eeeb4d35ef7048f1c3f31961cb8}} 
+\mbox{\hyperlink{classVector3}{Vector3}} {\bfseries closest\+Charger\+Position}
+\item 
+\mbox{\Hypertarget{classBatteryDecorator_af1e4dc8f10558a8b7162cd743b85aa30}\label{classBatteryDecorator_af1e4dc8f10558a8b7162cd743b85aa30}} 
+std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$ {\bfseries sim\+\_\+entities}
+\item 
+\mbox{\Hypertarget{classBatteryDecorator_a3bb6a6ebb5a1018d72f345fc4da6dfe6}\label{classBatteryDecorator_a3bb6a6ebb5a1018d72f345fc4da6dfe6}} 
+bool {\bfseries need\+To\+Calc\+Dist}
+\item 
+\mbox{\Hypertarget{classBatteryDecorator_a24fe0a29c1dc10a472f4841735a58b93}\label{classBatteryDecorator_a24fe0a29c1dc10a472f4841735a58b93}} 
+bool {\bfseries can\+Reach}
+\item 
+\mbox{\Hypertarget{classBatteryDecorator_a3b6b3e45fd1bcd0bdbdcc1beefbea89f}\label{classBatteryDecorator_a3b6b3e45fd1bcd0bdbdcc1beefbea89f}} 
+\mbox{\hyperlink{classDataCollection}{Data\+Collection}} $\ast$ {\bfseries data\+Collection}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classBatteryDecorator_a30d49a5e5efb93fad2ab4e5d77d26870}\label{classBatteryDecorator_a30d49a5e5efb93fad2ab4e5d77d26870}} 
+\index{BatteryDecorator@{BatteryDecorator}!GetDestination@{GetDestination}}
+\index{GetDestination@{GetDestination}!BatteryDecorator@{BatteryDecorator}}
+\doxysubsubsection{\texorpdfstring{GetDestination()}{GetDestination()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVector3}{Vector3}} Battery\+Decorator\+::\+Get\+Destination (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Gets the destination of the entity. 
+
+\begin{DoxyReturn}{Returns}
+The destination of the entity. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIEntity_a0dcaf865938ab1fb49c8389b5e580d90}{I\+Entity}}.
+
+\mbox{\Hypertarget{classBatteryDecorator_a1334400df4041ca471b35ede6e978721}\label{classBatteryDecorator_a1334400df4041ca471b35ede6e978721}} 
+\index{BatteryDecorator@{BatteryDecorator}!GetDetails@{GetDetails}}
+\index{GetDetails@{GetDetails}!BatteryDecorator@{BatteryDecorator}}
+\doxysubsubsection{\texorpdfstring{GetDetails()}{GetDetails()}}
+{\footnotesize\ttfamily Json\+Object Battery\+Decorator\+::\+Get\+Details (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Gets the details of the entity. 
+
+\begin{DoxyReturn}{Returns}
+The details of the entity. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIEntity_a97c799400ce05e2ff2566adc4d7b9634}{I\+Entity}}.
+
+\mbox{\Hypertarget{classBatteryDecorator_a8487174df54456fe29406927f0542720}\label{classBatteryDecorator_a8487174df54456fe29406927f0542720}} 
+\index{BatteryDecorator@{BatteryDecorator}!GetDirection@{GetDirection}}
+\index{GetDirection@{GetDirection}!BatteryDecorator@{BatteryDecorator}}
+\doxysubsubsection{\texorpdfstring{GetDirection()}{GetDirection()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVector3}{Vector3}} Battery\+Decorator\+::\+Get\+Direction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Gets the direction of the entity. 
+
+\begin{DoxyReturn}{Returns}
+The direction of the entity. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIEntity_aa99a8fef8b22195a5113c38ef51f086d}{I\+Entity}}.
+
+\mbox{\Hypertarget{classBatteryDecorator_aaf2487adf2d58e855268877427cf5ba9}\label{classBatteryDecorator_aaf2487adf2d58e855268877427cf5ba9}} 
+\index{BatteryDecorator@{BatteryDecorator}!GetPosition@{GetPosition}}
+\index{GetPosition@{GetPosition}!BatteryDecorator@{BatteryDecorator}}
+\doxysubsubsection{\texorpdfstring{GetPosition()}{GetPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVector3}{Vector3}} Battery\+Decorator\+::\+Get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Gets the position of the entity. 
+
+\begin{DoxyReturn}{Returns}
+The position of the entity. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIEntity_a9bc32587aab91761fc0e718612498199}{I\+Entity}}.
+
+\mbox{\Hypertarget{classBatteryDecorator_a4ba88b753b061fcafe7b4891e375b199}\label{classBatteryDecorator_a4ba88b753b061fcafe7b4891e375b199}} 
+\index{BatteryDecorator@{BatteryDecorator}!GetSpeed@{GetSpeed}}
+\index{GetSpeed@{GetSpeed}!BatteryDecorator@{BatteryDecorator}}
+\doxysubsubsection{\texorpdfstring{GetSpeed()}{GetSpeed()}}
+{\footnotesize\ttfamily float Battery\+Decorator\+::\+Get\+Speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Gets the speed of the entity. 
+
+\begin{DoxyReturn}{Returns}
+The speed of the entity. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIEntity_a6520d2b1dc71d092bab38ef9f5cc9ff4}{I\+Entity}}.
+
+\mbox{\Hypertarget{classBatteryDecorator_a9169f6180a73457ef5a593be987c09b4}\label{classBatteryDecorator_a9169f6180a73457ef5a593be987c09b4}} 
+\index{BatteryDecorator@{BatteryDecorator}!Update@{Update}}
+\index{Update@{Update}!BatteryDecorator@{BatteryDecorator}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Battery\+Decorator\+::\+Update (\begin{DoxyParamCaption}\item[{double}]{dt,  }\item[{std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$}]{scheduler }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Updates the entity\textquotesingle{}s position in the physical system. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & The time step of the update. \\
+\hline
+{\em scheduler} & The list of all entities in the system. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity_a9a8e8588fd85c7b0d813d60686d4dc2c}{I\+Entity}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/brock450/csci3081w/csci-\/3081w-\/\+S23/\+Team-\/010-\/31-\/homework4/libs/transit/include/Battery\+Decorator.\+h\item 
+/home/brock450/csci3081w/csci-\/3081w-\/\+S23/\+Team-\/010-\/31-\/homework4/libs/transit/src/Battery\+Decorator.\+cc\end{DoxyCompactItemize}

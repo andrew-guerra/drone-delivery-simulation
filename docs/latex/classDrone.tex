@@ -51,6 +51,8 @@ bool \mbox{\hyperlink{classDrone_a479442805072af27a7ee628ed59d621e}{Get\+Availab
 \begin{DoxyCompactList}\small\item\em Gets the availability of the drone. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classDrone_a21d9dc799ee8a6c10b579fcab401bd57}{Get\+Nearest\+Entity}} (std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$ scheduler)
 \begin{DoxyCompactList}\small\item\em Gets the nearest entity in the scheduler. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ \mbox{\hyperlink{classDrone_a08688da93092ce30f74fe66eca2bce17}{Get\+Entity}} ()
+\begin{DoxyCompactList}\small\item\em Gets the nearest entity. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classDrone_a6798b0bd297ca7a930016cd2dda0b7ff}{Update}} (double dt, std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$ scheduler)
 \begin{DoxyCompactList}\small\item\em Updates the drone\textquotesingle{}s position. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classDrone_a00150938e8dbfceaf81c9fb59994f6ef}{Set\+Position}} (\mbox{\hyperlink{classVector3}{Vector3}} pos\+\_\+)
@@ -179,6 +181,23 @@ The direction of the drone
 
 
 Implements \mbox{\hyperlink{classIEntity_aa99a8fef8b22195a5113c38ef51f086d}{I\+Entity}}.
+
+\mbox{\Hypertarget{classDrone_a08688da93092ce30f74fe66eca2bce17}\label{classDrone_a08688da93092ce30f74fe66eca2bce17}} 
+\index{Drone@{Drone}!GetEntity@{GetEntity}}
+\index{GetEntity@{GetEntity}!Drone@{Drone}}
+\doxysubsubsection{\texorpdfstring{GetEntity()}{GetEntity()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classIEntity}{I\+Entity}}$\ast$ Drone\+::\+Get\+Entity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Gets the nearest entity. 
+
+\begin{DoxyReturn}{Returns}
+Returns the drone\textquotesingle{}s nearest entity 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity_a88156828efd557858fae968d5180f589}{I\+Entity}}.
 
 \mbox{\Hypertarget{classDrone_a21d9dc799ee8a6c10b579fcab401bd57}\label{classDrone_a21d9dc799ee8a6c10b579fcab401bd57}} 
 \index{Drone@{Drone}!GetNearestEntity@{GetNearestEntity}}

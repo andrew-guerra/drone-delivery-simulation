@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['pathstrategy_104',['PathStrategy',['../classPathStrategy.html',1,'']]]
+  ['jumpdecorator_137',['JumpDecorator',['../classJumpDecorator.html',1,'']]]
 ];

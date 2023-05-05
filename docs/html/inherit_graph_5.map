@@ -1,3 +1,10 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classVector3.html" title="A class built solely to handle 3D vector mathematics." alt="" coords="5,5,77,32"/>
+<area shape="rect" id="node1" href="$classIEntityFactory.html" title="Composite Factory Interface." alt="" coords="5,157,117,184"/>
+<area shape="rect" id="node2" href="$classChargingStationFactory.html" title="Charging Station Factory: creates the charging station objects." alt="" coords="165,5,340,32"/>
+<area shape="rect" id="node3" href="$classCompositeFactory.html" title="Factory method for composite class. Inherits from IEntityFactory." alt="" coords="183,56,323,83"/>
+<area shape="rect" id="node4" href="$classDroneFactory.html" title="Drone Factory to produce Drones class." alt="" coords="198,107,307,133"/>
+<area shape="rect" id="node5" href="$classHelicopterFactory.html" title="Helicopter factory to create helicopters." alt="" coords="184,157,321,184"/>
+<area shape="rect" id="node6" href="$classHorseFactory.html" title="Horse factory to create Horses." alt="" coords="199,208,307,235"/>
+<area shape="rect" id="node7" href="$classHumanFactory.html" title="Factory to make humans." alt="" coords="194,259,311,285"/>
+<area shape="rect" id="node8" href="$classRobotFactory.html" title="Drone Factory to produce Drones class." alt="" coords="199,309,307,336"/>
 </map>

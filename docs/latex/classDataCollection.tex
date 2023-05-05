@@ -1,0 +1,288 @@
+\hypertarget{classDataCollection}{}\doxysection{Data\+Collection Class Reference}
+\label{classDataCollection}\index{DataCollection@{DataCollection}}
+
+
+A Singleton that collects data from drones and robots.  
+
+
+
+
+{\ttfamily \#include $<$Data\+Collection.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDataCollection_ab51334bac2a9cadc5d0c02142fa752a9}{$\sim$\+Data\+Collection}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the Data Collection object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDataCollection_aff579f0550681a8ad0c652f999cb3325}{operator=}} (const \mbox{\hyperlink{classDataCollection}{Data\+Collection}} \&)=delete
+\item 
+void \mbox{\hyperlink{classDataCollection_aed04a7e13377d9ef1af49c359c63f75a}{add\+Drone}} (\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$drone)
+\begin{DoxyCompactList}\small\item\em track a new drone\textquotesingle{}s data \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDataCollection_a2d4668975276baecbcd68fe4e4899d4e}{add\+Robot}} (\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$robot)
+\begin{DoxyCompactList}\small\item\em track a new robot\textquotesingle{}s data \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDataCollection_a8126c3c5ce123b3eaf94bd061500fe4a}{add\+Station\+Stop}} (\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$drone)
+\begin{DoxyCompactList}\small\item\em update number of charge station stops \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDataCollection_a2523da85e58bfbe71194c271fe25aaa3}{update\+Distance\+Drone}} (\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$drone)
+\begin{DoxyCompactList}\small\item\em update distance traveled for drone \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDataCollection_a8e29fc4d8b4851cf541b180ae7171c4d}{update\+Battery\+Drone}} (\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$drone, double battery)
+\begin{DoxyCompactList}\small\item\em updates drone battery data \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDataCollection_a3baabaccc2bf67cf76d7377f62336a8d}{add\+Delivery}} (\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$drone)
+\begin{DoxyCompactList}\small\item\em update number of passengers dropped off \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDataCollection_a439361956304816bc123d21cdf733f4a}{add\+New\+Delivery\+Time}} (\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$drone)
+\begin{DoxyCompactList}\small\item\em add a new time for delivery (uses current simulation time) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDataCollection_a1ba5f7c018b58a2d438660bd7338679f}{add\+New\+Position\+Drone}} (\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$drone, \mbox{\hyperlink{classVector3}{Vector3}} pos)
+\begin{DoxyCompactList}\small\item\em add a new position to the vector of previous positions \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDataCollection_a9faf6df38ffd75763b7ac598fecda8fc}{update\+Distance\+Robot}} (\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$robot)
+\begin{DoxyCompactList}\small\item\em update distance traveled for robot \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDataCollection_aeb2d1659b48fd8bedce614576e298204}{add\+New\+Position\+Robot}} (\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$robot, \mbox{\hyperlink{classVector3}{Vector3}} pos)
+\begin{DoxyCompactList}\small\item\em add a new position to the vector of previous positions \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDataCollection_a2b02cbf63675198873190c451076171d}{update\+Sim\+Time}} (double dt)
+\begin{DoxyCompactList}\small\item\em update the total simulation \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDataCollection_abb5de7c3eabe7374043cb475bb9cdf99}\label{classDataCollection_abb5de7c3eabe7374043cb475bb9cdf99}} 
+void {\bfseries Notify} ()
+\item 
+Json\+Object \mbox{\hyperlink{classDataCollection_ab9bdfca752fd810a55d73157f5a93400}{generate\+Web\+J\+S\+ON}} ()
+\item 
+void \mbox{\hyperlink{classDataCollection_a95f303c392794ec59ce1bd17410d6eb9}{generate\+J\+S\+ON}} ()
+\begin{DoxyCompactList}\small\item\em creates a csv file with all of the simulation\textquotesingle{}s current data \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classDataCollection}{Data\+Collection}} $\ast$ \mbox{\hyperlink{classDataCollection_a2d70e7d8f3d7551d74ca2887b94ada03}{Get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Get the Instance object (on first run it creates it. On subsequent runs it returns the existing static object) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A Singleton that collects data from drones and robots. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classDataCollection_ab51334bac2a9cadc5d0c02142fa752a9}\label{classDataCollection_ab51334bac2a9cadc5d0c02142fa752a9}} 
+\index{DataCollection@{DataCollection}!````~DataCollection@{$\sim$DataCollection}}
+\index{````~DataCollection@{$\sim$DataCollection}!DataCollection@{DataCollection}}
+\doxysubsubsection{\texorpdfstring{$\sim$DataCollection()}{~DataCollection()}}
+{\footnotesize\ttfamily Data\+Collection\+::$\sim$\+Data\+Collection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destroy the Data Collection object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classDataCollection_a3baabaccc2bf67cf76d7377f62336a8d}\label{classDataCollection_a3baabaccc2bf67cf76d7377f62336a8d}} 
+\index{DataCollection@{DataCollection}!addDelivery@{addDelivery}}
+\index{addDelivery@{addDelivery}!DataCollection@{DataCollection}}
+\doxysubsubsection{\texorpdfstring{addDelivery()}{addDelivery()}}
+{\footnotesize\ttfamily void Data\+Collection\+::add\+Delivery (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$}]{drone }\end{DoxyParamCaption})}
+
+
+
+update number of passengers dropped off 
+
+
+\begin{DoxyParams}{Parameters}
+{\em drone} & pointer to a drone object \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDataCollection_aed04a7e13377d9ef1af49c359c63f75a}\label{classDataCollection_aed04a7e13377d9ef1af49c359c63f75a}} 
+\index{DataCollection@{DataCollection}!addDrone@{addDrone}}
+\index{addDrone@{addDrone}!DataCollection@{DataCollection}}
+\doxysubsubsection{\texorpdfstring{addDrone()}{addDrone()}}
+{\footnotesize\ttfamily void Data\+Collection\+::add\+Drone (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$}]{drone }\end{DoxyParamCaption})}
+
+
+
+track a new drone\textquotesingle{}s data 
+
+
+\begin{DoxyParams}{Parameters}
+{\em drone} & a pointer to a drone object \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDataCollection_a439361956304816bc123d21cdf733f4a}\label{classDataCollection_a439361956304816bc123d21cdf733f4a}} 
+\index{DataCollection@{DataCollection}!addNewDeliveryTime@{addNewDeliveryTime}}
+\index{addNewDeliveryTime@{addNewDeliveryTime}!DataCollection@{DataCollection}}
+\doxysubsubsection{\texorpdfstring{addNewDeliveryTime()}{addNewDeliveryTime()}}
+{\footnotesize\ttfamily void Data\+Collection\+::add\+New\+Delivery\+Time (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$}]{drone }\end{DoxyParamCaption})}
+
+
+
+add a new time for delivery (uses current simulation time) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em drone} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDataCollection_a1ba5f7c018b58a2d438660bd7338679f}\label{classDataCollection_a1ba5f7c018b58a2d438660bd7338679f}} 
+\index{DataCollection@{DataCollection}!addNewPositionDrone@{addNewPositionDrone}}
+\index{addNewPositionDrone@{addNewPositionDrone}!DataCollection@{DataCollection}}
+\doxysubsubsection{\texorpdfstring{addNewPositionDrone()}{addNewPositionDrone()}}
+{\footnotesize\ttfamily void Data\+Collection\+::add\+New\+Position\+Drone (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$}]{drone,  }\item[{\mbox{\hyperlink{classVector3}{Vector3}}}]{pos }\end{DoxyParamCaption})}
+
+
+
+add a new position to the vector of previous positions 
+
+
+\begin{DoxyParams}{Parameters}
+{\em drone} & pointer to a drone object \\
+\hline
+{\em pos} & The position to be added (Usually the drone\textquotesingle{}s new location) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDataCollection_aeb2d1659b48fd8bedce614576e298204}\label{classDataCollection_aeb2d1659b48fd8bedce614576e298204}} 
+\index{DataCollection@{DataCollection}!addNewPositionRobot@{addNewPositionRobot}}
+\index{addNewPositionRobot@{addNewPositionRobot}!DataCollection@{DataCollection}}
+\doxysubsubsection{\texorpdfstring{addNewPositionRobot()}{addNewPositionRobot()}}
+{\footnotesize\ttfamily void Data\+Collection\+::add\+New\+Position\+Robot (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$}]{robot,  }\item[{\mbox{\hyperlink{classVector3}{Vector3}}}]{pos }\end{DoxyParamCaption})}
+
+
+
+add a new position to the vector of previous positions 
+
+
+\begin{DoxyParams}{Parameters}
+{\em robot} & pointer to a robot object \\
+\hline
+{\em pos} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDataCollection_a2d4668975276baecbcd68fe4e4899d4e}\label{classDataCollection_a2d4668975276baecbcd68fe4e4899d4e}} 
+\index{DataCollection@{DataCollection}!addRobot@{addRobot}}
+\index{addRobot@{addRobot}!DataCollection@{DataCollection}}
+\doxysubsubsection{\texorpdfstring{addRobot()}{addRobot()}}
+{\footnotesize\ttfamily void Data\+Collection\+::add\+Robot (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$}]{robot }\end{DoxyParamCaption})}
+
+
+
+track a new robot\textquotesingle{}s data 
+
+
+\begin{DoxyParams}{Parameters}
+{\em robot} & a pointer to a new robot object \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDataCollection_a8126c3c5ce123b3eaf94bd061500fe4a}\label{classDataCollection_a8126c3c5ce123b3eaf94bd061500fe4a}} 
+\index{DataCollection@{DataCollection}!addStationStop@{addStationStop}}
+\index{addStationStop@{addStationStop}!DataCollection@{DataCollection}}
+\doxysubsubsection{\texorpdfstring{addStationStop()}{addStationStop()}}
+{\footnotesize\ttfamily void Data\+Collection\+::add\+Station\+Stop (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$}]{drone }\end{DoxyParamCaption})}
+
+
+
+update number of charge station stops 
+
+
+\begin{DoxyParams}{Parameters}
+{\em drone} & pointer to a drone object \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDataCollection_a95f303c392794ec59ce1bd17410d6eb9}\label{classDataCollection_a95f303c392794ec59ce1bd17410d6eb9}} 
+\index{DataCollection@{DataCollection}!generateJSON@{generateJSON}}
+\index{generateJSON@{generateJSON}!DataCollection@{DataCollection}}
+\doxysubsubsection{\texorpdfstring{generateJSON()}{generateJSON()}}
+{\footnotesize\ttfamily void Data\+Collection\+::generate\+J\+S\+ON (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+creates a csv file with all of the simulation\textquotesingle{}s current data 
+
+\mbox{\Hypertarget{classDataCollection_ab9bdfca752fd810a55d73157f5a93400}\label{classDataCollection_ab9bdfca752fd810a55d73157f5a93400}} 
+\index{DataCollection@{DataCollection}!generateWebJSON@{generateWebJSON}}
+\index{generateWebJSON@{generateWebJSON}!DataCollection@{DataCollection}}
+\doxysubsubsection{\texorpdfstring{generateWebJSON()}{generateWebJSON()}}
+{\footnotesize\ttfamily Json\+Object Data\+Collection\+::generate\+Web\+J\+S\+ON (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+Json\+Object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDataCollection_a2d70e7d8f3d7551d74ca2887b94ada03}\label{classDataCollection_a2d70e7d8f3d7551d74ca2887b94ada03}} 
+\index{DataCollection@{DataCollection}!GetInstance@{GetInstance}}
+\index{GetInstance@{GetInstance}!DataCollection@{DataCollection}}
+\doxysubsubsection{\texorpdfstring{GetInstance()}{GetInstance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classDataCollection}{Data\+Collection}} $\ast$ Data\+Collection\+::\+Get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the Instance object (on first run it creates it. On subsequent runs it returns the existing static object) 
+
+\begin{DoxyReturn}{Returns}
+Data\+Collection$\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDataCollection_aff579f0550681a8ad0c652f999cb3325}\label{classDataCollection_aff579f0550681a8ad0c652f999cb3325}} 
+\index{DataCollection@{DataCollection}!operator=@{operator=}}
+\index{operator=@{operator=}!DataCollection@{DataCollection}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily void Data\+Collection\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classDataCollection}{Data\+Collection}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+Singletons should not be assignable. \mbox{\Hypertarget{classDataCollection_a8e29fc4d8b4851cf541b180ae7171c4d}\label{classDataCollection_a8e29fc4d8b4851cf541b180ae7171c4d}} 
+\index{DataCollection@{DataCollection}!updateBatteryDrone@{updateBatteryDrone}}
+\index{updateBatteryDrone@{updateBatteryDrone}!DataCollection@{DataCollection}}
+\doxysubsubsection{\texorpdfstring{updateBatteryDrone()}{updateBatteryDrone()}}
+{\footnotesize\ttfamily void Data\+Collection\+::update\+Battery\+Drone (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$}]{drone,  }\item[{double}]{battery }\end{DoxyParamCaption})}
+
+
+
+updates drone battery data 
+
+
+\begin{DoxyParams}{Parameters}
+{\em drone} & pointer to a drone object \\
+\hline
+{\em battery} & battery for drone \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDataCollection_a2523da85e58bfbe71194c271fe25aaa3}\label{classDataCollection_a2523da85e58bfbe71194c271fe25aaa3}} 
+\index{DataCollection@{DataCollection}!updateDistanceDrone@{updateDistanceDrone}}
+\index{updateDistanceDrone@{updateDistanceDrone}!DataCollection@{DataCollection}}
+\doxysubsubsection{\texorpdfstring{updateDistanceDrone()}{updateDistanceDrone()}}
+{\footnotesize\ttfamily void Data\+Collection\+::update\+Distance\+Drone (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$}]{drone }\end{DoxyParamCaption})}
+
+
+
+update distance traveled for drone 
+
+
+\begin{DoxyParams}{Parameters}
+{\em drone} & pointer to a drone object \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDataCollection_a9faf6df38ffd75763b7ac598fecda8fc}\label{classDataCollection_a9faf6df38ffd75763b7ac598fecda8fc}} 
+\index{DataCollection@{DataCollection}!updateDistanceRobot@{updateDistanceRobot}}
+\index{updateDistanceRobot@{updateDistanceRobot}!DataCollection@{DataCollection}}
+\doxysubsubsection{\texorpdfstring{updateDistanceRobot()}{updateDistanceRobot()}}
+{\footnotesize\ttfamily void Data\+Collection\+::update\+Distance\+Robot (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$}]{robot }\end{DoxyParamCaption})}
+
+
+
+update distance traveled for robot 
+
+
+\begin{DoxyParams}{Parameters}
+{\em robot} & pointer to a robot object \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDataCollection_a2b02cbf63675198873190c451076171d}\label{classDataCollection_a2b02cbf63675198873190c451076171d}} 
+\index{DataCollection@{DataCollection}!updateSimTime@{updateSimTime}}
+\index{updateSimTime@{updateSimTime}!DataCollection@{DataCollection}}
+\doxysubsubsection{\texorpdfstring{updateSimTime()}{updateSimTime()}}
+{\footnotesize\ttfamily void Data\+Collection\+::update\+Sim\+Time (\begin{DoxyParamCaption}\item[{double}]{dt }\end{DoxyParamCaption})}
+
+
+
+update the total simulation 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & amount to adjust total time by \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/brock450/csci3081w/csci-\/3081w-\/\+S23/\+Team-\/010-\/31-\/homework4/libs/transit/include/Data\+Collection.\+h\item 
+/home/brock450/csci3081w/csci-\/3081w-\/\+S23/\+Team-\/010-\/31-\/homework4/libs/transit/src/Data\+Collection.\+cc\end{DoxyCompactItemize}
