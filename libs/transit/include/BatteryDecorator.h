@@ -14,6 +14,12 @@ const double MAX_BATTERY = 70.00;
 // Represents how close a battery can be from its minimum charge state
 const double BATTERY_DELTA_THREASHOLD = 1.00;
 
+// Represents increase in battery discarge weight based on drone movement
+const double BATTERY_MOVEMENT_BIAS = 1.1;
+
+// Represents increase in battery discarge weight based on robot weight
+const double BATTERY_ROBOT_LOAD_BIAS = 1.3;
+
 class BatteryDecorator : public IEntity {
  protected:
   IEntity* entity;
@@ -21,6 +27,7 @@ class BatteryDecorator : public IEntity {
   // This is the number of units of time (seconds) that the drone can stay in
   // the air
   double battery_life;
+  double battery_discharge_rate_bias;
   bool charging;
   bool travelingToCharge;
   bool deliveringRobot;
