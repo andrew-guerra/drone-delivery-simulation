@@ -61,7 +61,7 @@ class BatteryDecorator : public IEntity{
         Vector3 GetDestination() const;
         JsonObject GetDetails() const;
         float GetSpeed() const;
-
+        double GetBattery() const;
 };
 
 #endif

@@ -307,6 +307,9 @@ void BatteryDecorator::Update(double dt, std::vector<IEntity*> scheduler){
         this->battery_life -= dt;
     }
 
+    //std::cout << this->GetBattery() << std::endl;
+    dataCollection->updateBatteryDrone(entity, this->battery_life);
+
     if(battery_life < 0){
         std::cout << "uh oh" << std::endl;
     }
@@ -330,4 +333,8 @@ JsonObject BatteryDecorator::GetDetails() const {
 
 float BatteryDecorator::GetSpeed() const {
     return entity->GetSpeed();
+}
+
+double BatteryDecorator::GetBattery() const {
+    return this->battery_life;
 }

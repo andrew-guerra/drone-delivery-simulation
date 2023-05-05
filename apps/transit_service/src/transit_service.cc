@@ -60,7 +60,7 @@ public:
             // Drone battery lives
             // dist for each drone
             // num passengers picked up for each drone
-            // SendEventToView("data_update", newJson);
+            SendEventToView("data_update", newJson);
         }
         else if (cmd == "generateJSON") {
             DataCollection* dataCollection = DataCollection::GetInstance();
@@ -126,7 +126,6 @@ public:
     void SendEventToView(const std::string& event, const JsonObject& details) {
         JsonObject eventData;
         eventData["event"] = event;
-        std::cout << "event = " << event << std::endl;
         eventData["details"] = details;
         sendMessage(eventData.ToString());
     }

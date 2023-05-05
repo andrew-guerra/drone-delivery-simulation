@@ -1,3 +1,4 @@
+#include "../include/BatteryDecorator.h"
 #include "../include/DataCollection.h"
 
 // Define the instance pointer
@@ -81,7 +82,6 @@ void DataCollection::addNewPositionDrone(IEntity* drone, Vector3 pos){
     JsonObject details = drone->GetDetails();
     std::string name = details["name"];
     Vector3 previous_position;
-    // std::cout << name << std::endl;
     if(this->drone_data[name]->positions.empty()){
         previous_position = drone->GetPosition();
     }else{
@@ -113,6 +113,12 @@ void DataCollection::addNewPositionRobot(IEntity* robot, Vector3 pos){
 
 }
 
+void DataCollection::updateBatteryDrone(IEntity* drone, double battery) {
+    JsonObject details = drone->GetDetails();
+    std::string name = details["name"];
+
+    this->drone_data[name]->battery = battery;
+}
 
 // updates the total time of the simulation
 void DataCollection::updateSimTime(double dt){
@@ -121,7 +127,32 @@ void DataCollection::updateSimTime(double dt){
 }
 
 JsonObject DataCollection::generateWebJSON(){
-    return JsonObject();
+    JsonObject obj = JsonObject();
+
+   
+    for (auto it = this->drone_data.begin(); it != this->drone_data.end(); ++it) {
+        JsonObject droneJson = JsonObject();
+
+        DroneData* droneData = this->drone_data.at(it->first);
+        droneJson["name"] = it->first;
+        droneJson["battery-percentage"] = (droneData->battery / MAX_BATTERY) * 100;
+        droneJson["distance"] = droneData->distance_traveled;
+        droneJson["deliveries"] = droneData->num_deliveries;
+
+        obj[it->first] = droneJson;
+    }
+    /*DroneData* drone1Data = this->drone_data.at("Drone-1");
+    drone1["name"] = "Drone-1";
+    drone1["battery-percentage"] = 100;
+    drone1["distance"] = drone1Data->distance_traveled;
+    drone1["deliveries"] = drone1Data->num_deliveries;
+    
+    obj["drone1"] = drone1;*/
+    //obj["drone2"];
+    //obj["drone3"];
+    //obj["drone4"];
+
+    return obj;
 }
 
 void DataCollection::Notify() {

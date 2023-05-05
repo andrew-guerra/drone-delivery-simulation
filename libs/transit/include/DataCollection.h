@@ -24,6 +24,7 @@ typedef struct DroneData {
     int num_deliveries;
     int num_charging_station_stops;
     double distance_traveled;
+    double battery;
 } DroneData;
 
 typedef struct RobotData {
@@ -78,6 +79,14 @@ class DataCollection {
          * @param drone pointer to a drone object
          */
         void updateDistanceDrone(IEntity* drone);
+
+        /**
+         * @brief updates drone battery data
+         * 
+         * @param drone pointer to a drone object
+         * @param battery battery for drone
+         */
+        void updateBatteryDrone(IEntity* drone, double battery);
 
         /**
          * @brief update number of passengers dropped off
