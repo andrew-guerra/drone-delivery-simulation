@@ -135,7 +135,8 @@ void DataCollection::updateSimTime(double dt) {
 
 JsonObject DataCollection::generateWebJSON() {
   JsonObject obj = JsonObject();
-
+  obj["time-elapsed"] = total_elapsed_time;
+  
   for (auto it = this->drone_data.begin(); it != this->drone_data.end(); ++it) {
     JsonObject droneJson = JsonObject();
 
