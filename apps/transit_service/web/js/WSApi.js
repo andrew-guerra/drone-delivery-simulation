@@ -14,21 +14,39 @@ function WSApi(host = null) {
 
         if(data.event == "data_update") {
             console.log("event = ",data);
-            // update fields for data in html
-            
-            $('#drone1-battery').text(`Battery: ${dataJson["Drone-1"]["battery-percentage"]}%`)
+
+            // get the battery percentage value
+            const batteryPercentage1 = dataJson["Drone-1"]["battery-percentage"];
+            const batteryPercentage2 = dataJson["Drone-2"]["battery-percentage"];
+            const batteryPercentage3 = dataJson["Drone-3"]["battery-percentage"];
+            const batteryPercentage4 = dataJson["Drone-4"]["battery-percentage"];
+            // set the hue value based on the battery percentage
+            const hue1 = (batteryPercentage1/100) * 120; //120 is value for green
+            const hue2 = (batteryPercentage2/100) * 120; //120 is value for green
+            const hue3 = (batteryPercentage3/100) * 120; //120 is value for green
+            const hue4 = (batteryPercentage4/100) * 120; //120 is value for green
+            // Set the saturation and lightness values to a fixed value (you can adjust these values as desired)
+            const saturation = 100;
+            const lightness = 50;
+            // Set the color of the text using the HSL color mode
+            $('#drone1-battery').css("color", "hsl(" + hue1 + ", " + saturation + "%, " + lightness + "%)");
+            $('#drone2-battery').css("color", "hsl(" + hue2 + ", " + saturation + "%, " + lightness + "%)");
+            $('#drone3-battery').css("color", "hsl(" + hue3 + ", " + saturation + "%, " + lightness + "%)");
+            $('#drone4-battery').css("color", "hsl(" + hue4 + ", " + saturation + "%, " + lightness + "%)");
+
+            $('#drone1-battery').text(`Battery: ${dataJson["Drone-1"]["battery-percentage"].toFixed(2)}%`)
             $('#drone1-distance').text(`Distance Traveled: ${dataJson["Drone-1"]["distance"]}`)
             $('#drone1-passengers-delivered').text(`Passengers Delivered: ${dataJson["Drone-1"]["deliveries"]}`)
 
-            $('#drone2-battery').text(`Battery: ${dataJson["Drone-2"]["battery-percentage"]}%`)
+            $('#drone2-battery').text(`Battery: ${dataJson["Drone-2"]["battery-percentage"].toFixed(2)}%`)
             $('#drone2-distance').text(`Distance Traveled: ${dataJson["Drone-2"]["distance"]}`)
             $('#drone2-passengers-delivered').text(`Passengers Delivered: ${dataJson["Drone-2"]["deliveries"]}`)
 
-            $('#drone3-battery').text(`Battery: ${dataJson["Drone-3"]["battery-percentage"]}%`)
+            $('#drone3-battery').text(`Battery: ${dataJson["Drone-3"]["battery-percentage"].toFixed(2)}%`)
             $('#drone3-distance').text(`Distance Traveled: ${dataJson["Drone-3"]["distance"]}`)
             $('#drone3-passengers-delivered').text(`Passengers Delivered: ${dataJson["Drone-3"]["deliveries"]}`)
 
-            $('#drone4-battery').text(`Battery: ${dataJson["Drone-4"]["battery-percentage"]}%`)
+            $('#drone4-battery').text(`Battery: ${dataJson["Drone-4"]["battery-percentage"].toFixed(2)}%`)
             $('#drone4-distance').text(`Distance Traveled: ${dataJson["Drone-4"]["distance"]}`)
             $('#drone4-passengers-delivered').text(`Passengers Delivered: ${dataJson["Drone-4"]["deliveries"]}`)
         }
