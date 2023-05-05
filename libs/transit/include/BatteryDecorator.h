@@ -37,7 +37,7 @@ class BatteryDecorator : public IEntity {
    * @brief Destroy the Battery Decorator object
    * 
    */
-  ~BatteryDecorator(){};
+  ~BatteryDecorator() {}
 
   /**
    * @brief Add each entity in the vector to the simulation 
@@ -153,21 +153,20 @@ class BatteryDecorator : public IEntity {
    */
   double GetBattery() const;
 
-  protected:
-   IEntity* entity;
- 
-   // This is the number seconds that the drone can stay in the air
-   double batteryLife;
-   double batteryDischargeRateBias;
-   bool charging;
-   bool travelingToCharger;
-   bool deliveringRobot;
-   Vector3 closestChargerPosition;
-   std::vector<IEntity*> simEntities;
-   bool needToCalcDist;
-   bool canReach;
-   enum options { toCharger, Charging, Default };
-   DataCollection* dataCollection;
+ protected:
+    IEntity* entity;
+    // This is the number seconds that the drone can stay in the air
+    double batteryLife;
+    double batteryDischargeRateBias;
+    bool charging;
+    bool travelingToCharger;
+    bool deliveringRobot;
+    Vector3 closestChargerPosition;
+    std::vector<IEntity*> simEntities;
+    bool needToCalcDist;
+    bool canReach;
+    enum options { toCharger, Charging, Default };
+    DataCollection* dataCollection;
 };
 
 #endif

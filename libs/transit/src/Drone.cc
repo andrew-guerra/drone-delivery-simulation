@@ -39,7 +39,7 @@ void Drone::GetNearestEntity(std::vector<IEntity*> scheduler) {
 
   if (nearestEntity) {
     // set availability to the nearest entity
-    nearestEntity->SetAvailability(false);  
+    nearestEntity->SetAvailability(false);
     available = false;
     pickedUp = false;
     destination = nearestEntity->GetPosition();
@@ -61,14 +61,17 @@ void Drone::Update(double dt, std::vector<IEntity*> scheduler) {
         destination = nearestEntity->GetDestination();
         std::string strategyName = nearestEntity->GetStrategyName();
         if (strategyName.compare("astar") == 0) {
-          pathStrategy = new AstarStrategy(position, destination, nearestEntity->GetGraph());
+          pathStrategy = new AstarStrategy(position, destination,
+                                            nearestEntity->GetGraph());
           pathStrategy = new JumpDecorator(pathStrategy);
         } else if (strategyName.compare("dfs") == 0) {
-          pathStrategy = new DfsStrategy(position, destination, nearestEntity->GetGraph());
+          pathStrategy = new DfsStrategy(position, destination,
+                                          nearestEntity->GetGraph());
           pathStrategy = new JumpDecorator(pathStrategy);
           pathStrategy = new SpinDecorator(pathStrategy);
         } else if (strategyName.compare("dijkstra") == 0) {
-          pathStrategy = new DijkstraStrategy(position, destination, nearestEntity->GetGraph());
+          pathStrategy = new DijkstraStrategy(position, destination,
+                                              nearestEntity->GetGraph());
           pathStrategy = new SpinDecorator(pathStrategy);
           pathStrategy = new JumpDecorator(pathStrategy);
         }
@@ -87,8 +90,9 @@ void Drone::Update(double dt, std::vector<IEntity*> scheduler) {
       nearestEntity->SetPosition(position);
       // Add a new position to the Drone's and Robot's position log
       dataCollection->addNewPositionDrone(this, GetPosition());
-      dataCollection->addNewPositionRobot(nearestEntity, nearestEntity->GetPosition());
-      if (pathStrategy->IsCompleted()) {  
+      dataCollection->addNewPositionRobot(nearestEntity,
+                                          nearestEntity->GetPosition());
+      if (pathStrategy->IsCompleted()) {
         // when strategy completes, update availability
         available = true;
         pickedUp = false;

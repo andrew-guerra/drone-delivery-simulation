@@ -15,7 +15,6 @@ ChargingStation::ChargingStation(JsonObject& obj) : details(obj) {
 }
 
 void ChargingStation::Update(double dt, std::vector<IEntity*> scheduler) {
-  
 }
 
 ChargingStation::~ChargingStation() { delete graph; }

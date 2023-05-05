@@ -79,14 +79,14 @@ void DataCollection::addNewPositionDrone(IEntity* drone, Vector3 pos) {
     previous_position = drone->GetPosition();
   } else {
     // The last element of the vector
-    previous_position =this->droneData[name]->positions.back();  
+    previous_position = this->droneData[name]->positions.back();
   }
 
   // Add the new position to the vector
-  this->droneData[name]->positions.push_back(pos);  
+  this->droneData[name]->positions.push_back(pos);
 
   // Add the (linear) distance between the two positions
-  this->droneData[name]->distanceTraveled += previous_position.Distance(pos);  
+  this->droneData[name]->distanceTraveled += previous_position.Distance(pos);
 }
 
 void DataCollection::addNewPositionRobot(IEntity* robot, Vector3 pos) {
@@ -98,12 +98,13 @@ void DataCollection::addNewPositionRobot(IEntity* robot, Vector3 pos) {
     previous_position = robot->GetPosition();
   } else {
      // The last element of the vector
-    previous_position =this->robotData[name]->positions.back();
+    previous_position = this->robotData[name]->positions.back();
   }
-  this->robotData[name]->positions.push_back(pos);  // Add the new position to the vector
+  // Add the new position to the vector
+  this->robotData[name]->positions.push_back(pos);
 
   // Add the (linear) distance between the two positions
-  this->robotData[name]->distanceTraveled += previous_position.Distance(pos);  
+  this->robotData[name]->distanceTraveled += previous_position.Distance(pos);
 }
 
 void DataCollection::updateBatteryDrone(IEntity* drone, double battery) {
@@ -122,7 +123,7 @@ void DataCollection::updateSimTime(double dt) {
 JsonObject DataCollection::generateWebJSON() {
   JsonObject obj = JsonObject();
   obj["time-elapsed"] = totalElapsedTime;
-  
+
   for (auto it = this->droneData.begin(); it != this->droneData.end(); ++it) {
     JsonObject droneJson = JsonObject();
 
@@ -142,7 +143,7 @@ void DataCollection::Notify() { this->observer->SetJSON(generateWebJSON()); }
 
 void DataCollection::generateJSON() {
   std::cout << "Generating JSON file\n";
-  
+
   std::map<std::string, DroneData*>::iterator it;
   std::map<std::string, RobotData*>::iterator it2;
   int i = 1;
