@@ -32,18 +32,15 @@ DataCollection::DataCollection() {
 }
 
 void DataCollection::addDrone(IEntity* drone) {
-  std::cout << "Added Drone to data collection: ";
   DroneData* new_drone_data = new DroneData();
   JsonObject details = drone->GetDetails();
   std::string name = details["name"];
-  // std::cout << "name: " << name << std::endl;
 
   // Map the drone's name to the new DroneData object
   this->drone_data[name] = new_drone_data;
 }
 
 void DataCollection::addRobot(IEntity* robot) {
-  std::cout << "Added Robot to data collection\n";
   RobotData* new_robot_data = new RobotData();
   JsonObject details = robot->GetDetails();
   std::string name = details["name"];
@@ -53,7 +50,6 @@ void DataCollection::addRobot(IEntity* robot) {
 }
 
 void DataCollection::addStationStop(IEntity* drone) {
-  std::cout << "Added station stop to data collection\n";
   JsonObject details = drone->GetDetails();
   std::string name = details["name"];
 
@@ -61,7 +57,6 @@ void DataCollection::addStationStop(IEntity* drone) {
 }
 
 void DataCollection::addDelivery(IEntity* drone) {
-  std::cout << "Added new delivery to data collection\n";
   JsonObject details = drone->GetDetails();
   std::string name = details["name"];
 
@@ -69,7 +64,6 @@ void DataCollection::addDelivery(IEntity* drone) {
 }
 
 void DataCollection::addNewDeliveryTime(IEntity* drone) {
-  std::cout << "Added new delivery time to data collection\n";
   // add the new delivery time in terms of global simulation time
   JsonObject details = drone->GetDetails();
   std::string name = details["name"];
@@ -78,46 +72,38 @@ void DataCollection::addNewDeliveryTime(IEntity* drone) {
 }
 
 void DataCollection::addNewPositionDrone(IEntity* drone, Vector3 pos) {
-  // std::cout << "Adding new drone position to data collection\n";
   JsonObject details = drone->GetDetails();
   std::string name = details["name"];
   Vector3 previous_position;
   if (this->drone_data[name]->positions.empty()) {
     previous_position = drone->GetPosition();
   } else {
-    previous_position =
-        this->drone_data[name]
-            ->positions.back();  // The last element of the vector
+    // The last element of the vector
+    previous_position =this->drone_data[name]->positions.back();  
   }
 
-  this->drone_data[name]->positions.push_back(
-      pos);  // Add the new position to the vector
+  // Add the new position to the vector
+  this->drone_data[name]->positions.push_back(pos);  
 
-  this->drone_data[name]->distance_traveled += previous_position.Distance(
-      pos);  // Add the (linear) distance between the two positions
-             // std::cout << "fin\n";
+  // Add the (linear) distance between the two positions
+  this->drone_data[name]->distance_traveled += previous_position.Distance(pos);  
 }
 
 void DataCollection::addNewPositionRobot(IEntity* robot, Vector3 pos) {
-  // std::cout << "Adding new robot position to data collection\n";
   JsonObject details = robot->GetDetails();
   std::string name = details["name"];
-  // std::cout << name << std::endl;
 
   Vector3 previous_position;
   if (this->robot_data[name]->positions.empty()) {
     previous_position = robot->GetPosition();
   } else {
-    previous_position =
-        this->robot_data[name]
-            ->positions.back();  // The last element of the vector
+     // The last element of the vector
+    previous_position =this->robot_data[name]->positions.back();
   }
-  this->robot_data[name]->positions.push_back(
-      pos);  // Add the new position to the vector
+  this->robot_data[name]->positions.push_back(pos);  // Add the new position to the vector
 
-  this->robot_data[name]->distance_traveled += previous_position.Distance(
-      pos);  // Add the (linear) distance between the two positions}
-             // std::cout << "fin\n";
+  // Add the (linear) distance between the two positions
+  this->robot_data[name]->distance_traveled += previous_position.Distance(pos);  
 }
 
 void DataCollection::updateBatteryDrone(IEntity* drone, double battery) {
@@ -148,16 +134,6 @@ JsonObject DataCollection::generateWebJSON() {
 
     obj[it->first] = droneJson;
   }
-  /*DroneData* drone1Data = this->drone_data.at("Drone-1");
-  drone1["name"] = "Drone-1";
-  drone1["battery-percentage"] = 100;
-  drone1["distance"] = drone1Data->distance_traveled;
-  drone1["deliveries"] = drone1Data->num_deliveries;
-
-  obj["drone1"] = drone1;*/
-  // obj["drone2"];
-  // obj["drone3"];
-  // obj["drone4"];
 
   return obj;
 }
@@ -166,38 +142,7 @@ void DataCollection::Notify() { this->observer->Update(generateWebJSON()); }
 
 void DataCollection::generateJSON() {
   std::cout << "Generating JSON file\n";
-  /* Format of json file
-      *Name of file is timestamp
-      {
-          "total_simulation_time": <total simulation time>,
-          "Drone_1":{
-              "distance_traveled": <Dist Traveled>,
-              "number_of_charging_station_visits": <num charging station stops>,
-              "number_of_deliveries": <num deliveries>,
-              "delivery_times":[d1, d2, ... dn],
-              "position_log":[
-                  [x1, y1, z1],
-                  ...
-                  [xn, yn, zn]
-              ]
-          },
-          ...
-          "Drone_N":{...
-          },
-          "Robot_1":{
-              "distance_traveled": <Dist Traveled>,
-              "position_log":[
-                  [x1, y1, z1],
-                  ...
-                  [xn, yn, zn]
-              ]
-          },
-          ...
-          "Robot_N":{...
-          }
-      }
-
-  */
+  
   std::map<std::string, DroneData*>::iterator it;
   std::map<std::string, RobotData*>::iterator it2;
   int i = 1;
@@ -287,5 +232,4 @@ void DataCollection::generateJSON() {
   outfile << "\n\t}";  // close "robots": {
   outfile << "\n}";    // close json data
   outfile.close();
-  std::cout << "end" << std::endl;
 }

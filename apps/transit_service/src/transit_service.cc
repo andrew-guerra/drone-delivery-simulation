@@ -19,7 +19,6 @@ public:
 
     /// Handles specific commands from the web server
     void ReceiveCommand(const std::string& cmd, JsonObject& data, JsonObject& returnValue) {
-        //std::cout << cmd << ": " << data << std::endl;
         if (cmd == "CreateEntity") {
             model.CreateEntity(data);
         }

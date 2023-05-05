@@ -27,8 +27,8 @@ void Helicopter::Update(double dt, std::vector<IEntity*> scheduler) {
     pathStrategy = new BeelineStrategy(position, destination);
     pathStrategy->Move(this, dt);
   } else {
-    if (pathStrategy
-            ->IsCompleted()) {  // when strategy completes, update availability
+    if (pathStrategy->IsCompleted()) {  
+      // when strategy completes, update availability
       available = true;
     } else {
       pathStrategy->Move(this, dt);
