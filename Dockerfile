@@ -1,7 +1,7 @@
 # for M1/M2 mac users, use this FROM instruction instead
 # FROM --platform=linux/amd64 ubuntu:20.04
 
-FROM ubuntu:20.04
+# FROM ubuntu:20.04
 
 RUN apt-get update && apt-get install -y \
   build-essential \  
