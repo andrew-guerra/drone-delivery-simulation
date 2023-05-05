@@ -16,6 +16,8 @@ function WSApi(host = null) {
             console.log("event = ",data);
             // update fields for data in html
             
+            $('#time-elapsed').text(`Time Elapsed: ${dataJson["time-elapsed"]}`)
+
             $('#drone1-battery').text(`Battery: ${dataJson["Drone-1"]["battery-percentage"]}%`)
             $('#drone1-distance').text(`Distance Traveled: ${dataJson["Drone-1"]["distance"]}`)
             $('#drone1-passengers-delivered').text(`Passengers Delivered: ${dataJson["Drone-1"]["deliveries"]}`)
