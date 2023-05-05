@@ -117,10 +117,10 @@ class IEntity {
 
   /**
    * @brief Get the Graph object
-   * 
-   * @return IGraph* 
+   *
+   * @return IGraph*
    */
-  const IGraph *GetGraph() { return graph; }
+  const IGraph* GetGraph() { return graph; }
 
   /**
    * @brief Sets the position of the entity.
@@ -161,7 +161,7 @@ class IEntity {
   /**
    * @brief Get the entity object associated with the class (if it exists)
    * @return The IEntity object associated with the class
-  */
+   */
   virtual IEntity* GetEntity() {}
 
  protected:

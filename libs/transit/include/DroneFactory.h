@@ -3,8 +3,8 @@
 
 #include <vector>
 
-#include "IEntityFactory.h"
 #include "Drone.h"
+#include "IEntityFactory.h"
 
 /**
  *@brief Drone Factory to produce Drones class.

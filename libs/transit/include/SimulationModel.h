@@ -68,6 +68,7 @@ class SimulationModel {
   std::vector<IEntity*> scheduler;
   const IGraph* graph;
   CompositeFactory* compFactory;
+  DataCollection* dataCollection;
 };
 
 #endif

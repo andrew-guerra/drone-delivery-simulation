@@ -10,6 +10,28 @@ function WSApi(host = null) {
 
     this.socket.onmessage = function (msg) {
         var data = JSON.parse(msg.data);
+        const dataJson = data.details
+
+        if(data.event == "data_update") {
+            console.log("event = ",data);
+            // update fields for data in html
+            
+            $('#drone1-battery').text(`Battery: ${dataJson["Drone-1"]["battery-percentage"]}%`)
+            $('#drone1-distance').text(`Distance Traveled: ${dataJson["Drone-1"]["distance"]}`)
+            $('#drone1-passengers-delivered').text(`Passengers Delivered: ${dataJson["Drone-1"]["deliveries"]}`)
+
+            $('#drone2-battery').text(`Battery: ${dataJson["Drone-2"]["battery-percentage"]}%`)
+            $('#drone2-distance').text(`Distance Traveled: ${dataJson["Drone-2"]["distance"]}`)
+            $('#drone2-passengers-delivered').text(`Passengers Delivered: ${dataJson["Drone-2"]["deliveries"]}`)
+
+            $('#drone3-battery').text(`Battery: ${dataJson["Drone-3"]["battery-percentage"]}%`)
+            $('#drone3-distance').text(`Distance Traveled: ${dataJson["Drone-3"]["distance"]}`)
+            $('#drone3-passengers-delivered').text(`Passengers Delivered: ${dataJson["Drone-3"]["deliveries"]}`)
+
+            $('#drone4-battery').text(`Battery: ${dataJson["Drone-4"]["battery-percentage"]}%`)
+            $('#drone4-distance').text(`Distance Traveled: ${dataJson["Drone-4"]["distance"]}`)
+            $('#drone4-passengers-delivered').text(`Passengers Delivered: ${dataJson["Drone-4"]["deliveries"]}`)
+        }
 
         if (typeof(data) == 'number') {
             self.id = +msg.data;
