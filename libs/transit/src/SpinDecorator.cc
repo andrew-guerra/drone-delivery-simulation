@@ -11,7 +11,6 @@ void SpinDecorator::Move(IEntity* entity, double dt) {
     while (time < 4) {
       entity->Rotate(.5 * dt);
       time += dt;
-      // std::cout << time << std::endl;
     }
   } else {
     this->strategy->Move(entity, dt);

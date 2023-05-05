@@ -28,8 +28,8 @@ void Horse::Update(double dt, std::vector<IEntity*> scheduler) {
     pathStrategy = new DijkstraStrategy(position, destination, graph);
     pathStrategy->Move(this, dt);
   } else {
-    if (pathStrategy
-            ->IsCompleted()) {  // when strategy completes, update availability
+    if (pathStrategy->IsCompleted()) {  
+      // when strategy completes, update availability
       available = true;
     } else {
       pathStrategy->Move(this, dt);
