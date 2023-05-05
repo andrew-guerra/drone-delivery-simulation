@@ -31,7 +31,7 @@ docker pull brock450/uber_drone_sim
 2. Then in your terminal, type the command as follows. This will build the simulation.
 
 ```bash
-docker build -t brock450/uber_drone_sim
+docker build -t brock450/uber_drone_sim .
 ```
 
 3. Finally, type in your terminal the following command. This will start running the simulation!
@@ -93,10 +93,8 @@ The simulation model class manages the scheduling and creation of entities. It s
 
 <p align="center"> <img src="pics/BatteryDecoratorUML.png" alt="battery decorator uml" class="shadow" style="height:auto;width:auto;border-radius:5px;1"></p>
 
-What does it do?
-Why is it significantly interesting?
-How does it add to the existing work?
-Which design pattern did you choose to implement it and why?
+The battery decorator implements the concept of each drone not lasting forever. They will run out of battery over the course of the simulation and have to recharge. This is significantly interesting as it can be applied to the logistical problem of recharge stations for electric vehicles in the real world.
+It adds to the existing work by wrapping batteries around the drones as well as adding charging stations in four locations around the map. We utilized the decorator design pattern to implement this. The reasoning for this is that in a hypothetical, not all drones may be electric and would be some other variation. This abides by SOLID principles and specifically the O in being open to extensions.
 
 ## Data Collection and Analysis
 
@@ -104,10 +102,7 @@ Which design pattern did you choose to implement it and why?
 
 <p align="center"> <img src="pics/DataCollectionUML.png" alt="data collection uml" class="shadow" style="height:auto;width:auto;border-radius:5px;1"></p>
 
-What does it do?
-Why is it significantly interesting?
-How does it add to the existing work?
-Which design pattern did you choose to implement it and why?
+The Data Collection extension has a couple components involved. There is an added GUI to the simulation that tracks passengers delivered and battery charge. Behind the scenes it is also tracking data points. The data points are number of deliveries, number of stops at charging stations, a vector of positions, and a vector of delivery times. This is significantly interesting as it represents some sort of useful data in improving efficiency. For example, if a drone in a certain area has to recharge more often and has less deliveries then put a new charging station. There was quite a bit of effort put in to formatting the data, creating the web elements, connecting the existing system, and analyzing the data. This used the singleton and observer patterns. The singleton is the one object responsible for taking in and outputting the data. The observer looks at this and displays it in the GUI.
 
 ## Sprint Retrospective
 
