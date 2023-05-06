@@ -9,7 +9,7 @@
 
 // Battery life is just the number of seconds the drone can fly for (or stay
 // idle it's all the same)
-const double MAX_BATTERY = 70.00;
+const double MAX_BATTERY = 160.00;
 
 // Represents how close a battery can be from its minimum charge state
 const double BATTERY_DELTA_THREASHOLD = 1.00;
