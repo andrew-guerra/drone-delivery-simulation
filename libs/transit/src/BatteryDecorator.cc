@@ -239,6 +239,7 @@ void BatteryDecorator::Update(double dt, std::vector<IEntity*> scheduler) {
     opts = toCharger;
   } else if (!entity->GetAvailability()) {
     if (needToCalcDist) {
+      deliveringRobot = true;
       double combinedBias = BATTERY_MOVEMENT_BIAS * BATTERY_ROBOT_LOAD_BIAS;
       batteryDischargeRateBias = combinedBias;
       canReach = CanReachDestination();
