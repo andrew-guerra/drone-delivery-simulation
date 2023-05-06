@@ -107,6 +107,7 @@ The Data Collection extension has a couple components involved. There is an adde
 ## Product Demo
 
 ### Youtube Product Demo Link:
+<p align="center"> <img src="pics/Thumbnail_resize.jpg" alt="data collection uml" class="shadow" style="height:auto;width:auto;border-radius:5px;1"></p>
 [https://youtu.be/LhoHu2iOCaQ](https://youtu.be/LhoHu2iOCaQ)
 
 ## Sprint Retrospective
