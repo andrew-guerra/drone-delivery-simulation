@@ -31,14 +31,14 @@ class CelebrationDecorator : public IStrategy {
    * @param entity the entity to move (and check how to move)
    * @param dt simulation time
    */
-  virtual void Move(IEntity* entity, double dt){};
+  virtual void Move(IEntity* entity, double dt) {}
   /**
    * @brief Check if the strategy is completed
    *
    * @return true
    * @return false
    */
-  virtual bool IsCompleted(){};
+  virtual bool IsCompleted() {}
 };
 
 #endif

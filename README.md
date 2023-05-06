@@ -104,6 +104,12 @@ It adds to the existing work by wrapping batteries around the drones as well as 
 
 The Data Collection extension has a couple components involved. There is an added GUI to the simulation that tracks passengers delivered and battery charge. Behind the scenes it is also tracking data points. The data points are number of deliveries, number of stops at charging stations, a vector of positions, and a vector of delivery times. This is significantly interesting as it represents some sort of useful data in improving efficiency. For example, if a drone in a certain area has to recharge more often and has less deliveries then put a new charging station. There was quite a bit of effort put in to formatting the data, creating the web elements, and connecting the existing system. This used the singleton and observer patterns. The singleton is the one object responsible for taking in and outputting the data. The observer looks at this and displays it in the GUI. It is not a notification system necessarily, but it updates to the user live. This is fairly different from the default singleton, as a much larger portion of this extension was displaying the active status of the drones to the user rather than rigorously analyzing the data. The data is stored in JSON format and there are examples in the tests directory. There is some light discussion of patterns found in the file DataDiscussion.md, but in sum it was pretty much just the normal distribution.
 
+## Product Demo
+
+### Youtube Product Demo Link:
+<p align="center"> <img src="pics/thumbnail_resize.jpg" alt="data collection uml" class="shadow" style="height:auto;width:auto;border-radius:5px;1"></p>
+https://youtu.be/LhoHu2iOCaQ
+
 ## Sprint Retrospective
 
 ### What worked well?
@@ -124,4 +130,3 @@ See section above titled, "Using the Docker Container"
 
 <https://hub.docker.com/repository/docker/brock450/uber_drone_sim/general>
 
-## Youtube Presentation Link
