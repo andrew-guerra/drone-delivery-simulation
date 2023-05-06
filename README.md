@@ -108,7 +108,7 @@ The Data Collection extension has a couple components involved. There is an adde
 
 ### Youtube Product Demo Link:
 <p align="center"> <img src="pics/thumbnail_resize.jpg" alt="data collection uml" class="shadow" style="height:auto;width:auto;border-radius:5px;1"></p>
-[https://youtu.be/LhoHu2iOCaQ](https://youtu.be/LhoHu2iOCaQ)
+https://youtu.be/LhoHu2iOCaQ
 
 ## Sprint Retrospective
 
@@ -130,6 +130,3 @@ See section above titled, "Using the Docker Container"
 
 <https://hub.docker.com/repository/docker/brock450/uber_drone_sim/general>
 
-## Youtube Presentation Link
-
-https://youtu.be/LhoHu2iOCaQ
